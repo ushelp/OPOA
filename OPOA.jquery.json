@@ -1,0 +1,41 @@
+{
+    "name": "OPOA",
+    "title": "OPOA Framework,OPOA standards setters",
+    "description": "OPOA Framework,OPOA standards setters!EasyOPOA is a framework OPOA program development progresses, program development for the OPOA define the concept of a complete set of standards and norms. Just a few simple configuration that is capable of fast, flexible, high-quality OPOA development program.",
+    "keywords": [
+               "opoa",
+        "easyopoa",
+"onePage",
+"oneApplication",
+"onePageOneApplication",
+"easy",
+"easyproject"
+    ],
+    "version": "2.0.0",
+    "author": {
+        "name": "Ray",
+"email": "inthinkcolor@gmail.com",
+        "url": ""
+    },
+    "maintainers": [
+        {
+            "name": "Ray",
+            "email": "inthinkcolor@gmail.com",
+            "url": ""
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/srchulo/jQuery-Facets/blob/master/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/ushelp/OPOA/issues",
+    "homepage": "https://github.com/ushelp/OPOA",
+    "docs": "https://github.com/ushelp/OPOA/blob/master/readme.md",
+    "download": "https://github.com/ushelp/OPOA/archive/master.zip",
+	"demo":"http://www.lightfeel.com/easy/easyopoa/en/index.jsp",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}

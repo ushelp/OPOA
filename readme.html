@@ -1,0 +1,1385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>readme</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1 id="easyopoa-framework-development-manual">EasyOPOA framework Development Manual</h1>
+<p>中文版请进入<a href="https://github.com/ushelp/EasyOPOA/">EasyOPOA</a></p>
+<p>EasyOPOA is a framework OPOA program development progresses, program development for the OPOA define the concept of a complete set of standards and norms. Just a few simple configuration that is capable of fast, flexible, high-quality OPOA development program.</p>
+<blockquote>
+<p>OPOA(One Page，One Application)，Also known as Single Page Application，which is a popular use of Ajax in a single page to complete the processing of all requests for the design and development methods. Has loads fast, save traffic, efficient, facilitate the design and many other advantages.</p>
+<p>Core OPOA development is Ajax, Ajax itself due to the characteristics of the address is not updated. Development OPOA procedures also take into account the positioning and movement forward and back two problems. Location.hash completed by positioning the main action, forward and back need help History API’s.<br>In addition to the customer experience, search engine friendly and also very important, because the existing search engine technology and will not load content from Ajax, the contents of the different hash anchor will be ignored, so take a Web design program OPOA , because there is only one page, the search engine can not crawl into Ajax loaded content, can not be included, is not conducive to SEO, affecting OPOA practicality.</p>
+<p>These different traditions customer experience issues affecting both the user program on OPOA better use experience, but also affect the OPOA practicality.</p>
+</blockquote>
+<h3 id="the-main-features-of-the-development-framework-easyopoa-">The main features of the development framework EasyOPOA：</h3>
+<ol>
+<li><p>Support action to locate and solve the problem OPOA action orientation program, to achieve save bookmarks stored, allowing users to share links collection. In the same URL can be loaded with different requests through different hash action.</p>
+</li>
+<li><p>Supported browser forward and back, to solve OPOA program forward and back using a browser problem (need HTML5 support, low version of the browser is compatible strategies adopted hash, the user is completely transparent).</p>
+</li>
+<li><p>Support search engines to crawl the content of the program and included OPOA solve OPOA program in the search engines can not crawl difficulties. Combined RSP (Rich Server Page, rich server-side page design / fat server design, and thin server-side design of the corresponding conventional OPOA) is designed to provide a more friendly SEO optimization. </p>
+</li>
+<li><p>Support in a number of different areas to achieve OPOA One Page page, you can use multiple independent OPOA programs in different areas of a page.</p>
+</li>
+<li><p>Supports the use of data parameters (routing configuration), so that the action matching more flexible RESTful style to achieve the client advanced custom action in the action.</p>
+</li>
+<li><p>Support action memory function, can record the action last visited achieve OPOA motor recovery.</p>
+</li>
+<li><p>Compatible with various browsers (Trident, Gecko, Webkit, Presto), support for multi-platform systems and applications (PC, TabletPC, Mobile).</p>
+</li>
+</ol>
+<p>EasyOPOA framework allows OPOA program specific internal structure is completely transparent to developers and users, and both meet the customer need for traditional Web applications using the experience, but also take into account the developer of a good user experience and search engine friendly. Confusion OPOA cumbersome procedures can become <strong>orderly, unified, standard</strong>, easy maintenance and management, will focus more on the development of the energy business.</p>
+<p>EasyOPOA adhering to the author always adhere to “<strong>More Easy, More Powerful.</strong>“ Pursuit of philosophy: lightweight, simple, flexible and comprehensive. Under the premise of providing a powerful comprehensive feature does not limit the user flexibility in development.</p>
+<h3 id="-official-website-home-page-http-www-lightfeel-com-easy-easyopoa-en-index-jsp-easyopoa-official-website-home-page-"><a href="http://www.lightfeel.com/easy/easyopoa/en/index.jsp" title="EasyOPOA official website home page">Official website home page</a></h3>
+<hr>
+<h2 id="1-easyopoa-core-presentation-framework">1, EasyOPOA core presentation framework</h2>
+<p>EasyOPOA framework from the global level, the depth of analysis and a new understanding of the OPOA procedures, program development for the OPOA define the concept of a complete set of standards and norms. Face of traditional OPOA development, EasyOPOA framework of disorderly orderly, of decentralized to centralized, uniform of confusion as to provide a comprehensive and flexible framework layer support for program development OPOA level.</p>
+<p>EasyOPOA framework of traditional disorderly OPOA program development were highly abstract, the EasyOPOA each request as a “<strong>Hash action instances (Hash Action Instance) </strong>“, and the configuration associated with the request to “<strong>OPOA instance (OPOA Instance) </strong>“in the form of packages.</p>
+<ul>
+<li><h3 id="hash-action-instances">Hash action instances</h3>
+</li>
+</ul>
+<p> Hash operation examples (Hash Action Instance) is the core object EasyOPOA frame, each request is to be executed EasyOPOA a “<strong>Hash operation examples (Hash Action Instance) </strong>“, each instance of a Hash operation (Hash Action Instance) by <code>hash</code>, <code>url</code>, <code>OPOAInstance</code> composed of three related parts:</p>
+<pre><code>{
+    hash : [ url, OPOAInstance ]
+};</code></pre>
+<p><strong><code>hash</code></strong>：Hash action name (also called action hash), strings. Hash is a unique identifier EasyOPOA trigger action instance in EasyOPOA, all requests are to be triggered by the hash.</p>
+<p><strong><code>url</code></strong>：URL defines the action to load the request string.</p>
+<p><strong><code>OPOAInstance</code></strong>：OPOA instance, defines the action to perform when the load request, rendering and detail the parameters of the page.</p>
+<h4 id="hash-operation-to-complete-a-three-step-example-">Hash operation to complete a three-step example：</h4>
+<p>1, Use <code>hash</code> trigger action instance Hash (hash value is displayed in the browser URL <code>#hash</code>)</p>
+<pre><code>http://domain/home.jsp#hash</code></pre>
+<p>2, Examples of backstage action automatically use Ajax request <code>url</code></p>
+<pre><code>http://domain/hash</code></pre>
+<p>3, According to <code>opoaInstance</code> (OPOA instance) loading and rendering</p>
+<ul>
+<li><h3 id="opoa-examples-opoa-instance-">OPOA examples（OPOA Instance）：</h3>
+</li>
+</ul>
+<p>Examples OPOA (OPOA Instance) is one example of a part of the Hash operation. When describing the actions performed on the url in the process of loading and rendering methods and specific details of the request.</p>
+<p>An instance of an object that contains eleven OPOA with Ajax requests and page rendering related properties：<code>actions</code>,<code>show</code>,<code>hash</code>,<code>url</code>,<code>find</code>,<code>notfound</code>,<code>method</code>,<code>prevent</code>,<code>actionMaps</code>,<code>urlErrors</code>,<code>loading</code>。</p>
+<p>opoa instance of the default definitions：</p>
+<pre><code class="lang-JS">var opoa = {
+    // JQuery &#39;s DOM selector, let DOM action trigger with the ability to automatically create instances of Hash action
+    // Click (click) that will trigger a Hash action when the DOM element instance
+    //  ( Can get &#39;Hash action instance&#39; desired hash, url selected from the DOM )
+    // ( When combined with the current opoa instance , click triggered automatically created DOM &#39;Hash action instance&#39; )
+    // For example, select menu options via the parameter , so OPOA program menu options can trigger the action instance Hash
+    &quot;actions&quot;: null,
+    // JQuery &#39;s DOM selector display is loaded from the request url to content
+    // The results returned by url / / display the action request to the selector designated area
+    &quot;show&quot;: null,
+    // Get the DOM attribute name &#39;Hash action instance&#39; of the hash value from the DOM node
+    // Default value : hash
+    &quot;hash&quot; : &quot;hash&quot;,
+    // Get the DOM attribute name &#39;Hash action instance&#39; the url value from a DOM node
+    // Default value : hash (url default value is also equivalent to the hash value )
+    &quot;url&quot;:&quot;hash&quot;,
+    // Get the data from the server , using the specified jQuery DOM find selector filter out the data of the specified region
+    // For example , the data returned from the server gets only the contents of a DIV
+    &quot;find&quot; : null,
+    // When the find parameter selector, did not find the content of the data returned from the server to display the contents of the
+    // Optional value &quot;empty&quot;, &quot;all&quot;, &quot; custom content &quot;, function
+    //  &quot;Empty&quot; Show Empty contents
+    // &quot;All&quot; to display all of the data is loaded into the
+    // &quot;Custom Content&quot; will display the contents of custom content ( messages or pictures can be used to prompt the user )
+    //  Function execution of the function
+    //  Default: empty
+    &quot;notfound&quot; : &quot;empty&quot;,
+    //Specific methods / / on the url Ajax request : post / get        
+    //Post mode parameters will be automatically converted to the request url parameter to send post
+    // Default value : post
+    &quot;method&quot;: &quot;post&quot;,
+    // Prevent the default event action . If the label does not trigger when clicked href A
+    &quot;prevent&quot;: true,
+    // Use actionMaps modify the default url specified hash corresponding to other values
+    // Hash action mapping `opoaInstance` default is the current object this opoa
+    &quot;actionMaps&quot;: {
+        // &quot;hash&quot;:&quot;url&quot;,
+        // &quot;demo&quot;:&quot;demo.jsp&quot;
+    },
+    // When the request url error code returned from the server when handling
+    // Set the value of the HTTP code and function objects , when in response to the call of the corresponding code.
+    &quot;urlErrors&quot;: {
+        // If the action performed 404 error occurs, how to deal with
+        // Default: 404 load if an error occurs , the page does not have any response
+        404: function () {
+        },
+        // If the action performed 500 error occurs, how to deal with
+        // Default: 500 load if an error occurs , the page does not have any response
+        500: function () {
+        }
+        // Also define other states
+    },
+    // Function ajax request in different states are called, can be used for loading tips
+    &quot;loading&quot;: {
+        // Ajax request begins
+        &quot;start&quot;: function (hash, url, opoa, postData) {
+        },
+        // Ajax request is successful
+        &quot;success&quot;: function (hash, url, opoa, postData) {
+        },
+        // Ajax request error
+        &quot;error&quot;: function (hash, url, opoa, postData) {
+        },
+        // Ajax request ends ( regardless of success or failure will be called )
+        &quot;end&quot;: function (hash, url, opoa, postData) {
+        }
+    }
+};</code></pre>
+<h3 id="-easyopoa-configs-global-configuration-object"><code>EasyOPOA.Configs</code> global configuration object</h3>
+<p><code>EasyOPOA.Configs</code> save the default values ​​OPOA instance properties globally.</p>
+<p>Therefore, the above OPOA instance configuration parameter global defaults , both by <code>EasyOPOA.Configs</code> re set the example :</p>
+<pre><code class="lang-JS">// If you do not find the find the specified content data returned from the server , then displays all
+EasyOPOA.Configs.notFound = &quot;all&quot;;
+// Get the url DOM attribute values
+EasyOPOA.Configs.url = &quot;href&quot;;
+...</code></pre>
+<h2 id="2-easyopoa-framework-for-rapid-development">2, EasyOPOA framework for rapid development</h2>
+<ul>
+<li><h3 id="opoa-surface-design">OPOA surface design</h3>
+</li>
+</ul>
+<p><strong>OPOA Home home.jsp:</strong></p>
+<pre><code class="lang-html">&lt;body&gt;
+    &lt;!-- Header DIV --&gt;
+    &lt;div id=&quot;headDIV&quot;&gt;
+        &lt;h1&gt; EasyOPOA Development Framework &lt;/h1&gt;
+        &lt;h3&gt; realize the browser forward and back, only supported in HTML5 &lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;!--Menu DIV --&gt;
+    &lt;div id=&quot;menuDIV&quot;&gt;
+        &lt;!-- Increased href, point to grab the corresponding real address --&gt;
+        &lt;a class=&quot;menu&quot; hash=&quot;demo.jsp&quot;&gt; examples &lt;/a&gt;
+        &lt;a class = &quot;menu&quot; hash = &quot;readme.jsp&quot; documentation &lt;/a&gt;
+        &lt;a class=&quot;menu&quot; hash=&quot;about.jsp&quot;&gt; About &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- Content DIV --&gt;
+    &lt;div id=&quot;contentDIV&quot;&gt;
+        &lt;h1&gt; Welcome ! &lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;!-- Bottom DIV --&gt;
+    &lt;div id=&quot;footDIV&quot;&gt;
+        © 2013 - 2014 Ray &lt;br /&gt; Email: &lt;a href=&quot;mailto:in.think@gmail.com&quot;&gt; in.think @ gmail.com &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+<p>Main page home.jsp structure OPOA very clear and simple, click on the menu , load content , the content is displayed in the DIV . <code>Examples</code>, <code>documentation</code>, <code>on</code> three menu corresponding load <code>demo.jsp</code>, <code>content readme.jsp</code>, <code>about.jsp</code> a (<code>url</code> and <code>hash</code> values ​​default values. ) .</p>
+<p>This is due to OPOA program content is loaded using Ajax , so A tab menu does not use <code>href</code> attribute to jump , but added a <code>hash</code> attribute specifies the different actions to be loaded , hash DOM object properties Hash values ​​are used as examples of action <code>hash</code> and <code>url</code>. Similarly, as does the use of and dependency href attribute A label , the label can be used to trigger any action, such as DIV can also serve as menus.</p>
+<p>class = “menu” can be identified which is a clickable menu , easy to use jQuery on the back of the menu items were screened using EasyOPOA framework for automatic Hahs action triggers binding.</p>
+<p><strong>OPOA Home home.jsp instance to CSS: </strong></p>
+<pre><code class="lang-html">&lt;style type=&quot;text/css&quot;&gt;
+    *{Margin: 0; padding: 0;}
+
+    #headDIV { margin-top: 0; height: 100px; background-color: #008400; color:#fff; text-align: center; line-height: 50px; }
+
+    #menuDIV { margin: 20px auto; height: 50px; border-bottom: 1px solid #ddd; text-align: center; }
+    #menuDIV A { margin: 10 30px; color: #0084C6; text-decoration: underline; font-weight: bold; font-size: 24px; cursor: pointer;}
+    #menuDIV A:hover { color: #840000; text-decoration: none; font-weight: bold; font-size: 24px; cursor: pointer;}
+
+    #footDIV { padding-top: 10px; border-top: 1px solid #ddd; text-align: center; line-height: 28px;}
+    #footDIV A { color: #007BC3;}
+&lt;/style&gt;</code></pre>
+<p><strong>html content pages menu is loaded : </strong></p>
+<p>demo.jsp:</p>
+<pre><code>&lt;h1 style=&quot;color:red&quot;&gt; This is DEMO. &lt;/h1&gt;</code></pre>
+<p>readme.jsp:</p>
+<pre><code>&lt;h1 style=&quot;color:green&quot;&gt; This is documentation. &lt;/h1&gt;</code></pre>
+<p>about.jsp:</p>
+<pre><code>&lt;h1 style=&quot;color:blue&quot;&gt; This is about us . &lt;/h1&gt;</code></pre>
+<ul>
+<li><h3 id="start-opoa-program-easyopoa-start-">Start OPOA program : EasyOPOA.start ()</h3>
+</li>
+</ul>
+<p>Introducing the necessary JS files (EasyOPOA be dependent on jQuery DOM processing ) , use <code>EasyOPOA.start (opoaList)</code> initialize Hash action instance and started directly OPOA program .</p>
+<p><code>opoaList</code>: a collection OPOA instance ( array collection , a collection of objects ) .</p>
+<p><strong>EasyOPOA framework startup code: </strong></p>
+<pre><code class="lang-JS">    &lt;!-- Introducing jQuery and EasyOPOA (EasyOPOA be dependent on jQuery DOM processing ) --&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.10.2.min.js&quot;&gt; &lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/easy.opoa.min.js&quot;&gt; &lt;/script&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        /  Define opoa instance
+        var opoa={
+
+            // Trigger action Hash instance DOM element
+            &quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+
+            // Display URL is loaded into the DOM element content
+            &quot;show&quot;:&quot;#contentDIV&quot;
+
+        }
+
+        // Start OPOA, the parameters for the collection
+        EasyOPOA.start ([ opoa ]);
+    &lt;/script&gt;</code></pre>
+<p><strong>OPOA instance parameters: </strong></p>
+<p><code>actions</code> and <code>show</code> are the two core parameters OPOA instance.</p>
+<p><code>actions</code>: jQuery ‘s DOM selector, specify the instance has the ability to trigger action Hash DOM elements EasyOPOA automatically created Hash action instance. Let selector specified DOM element in the click -click when the action can be triggered Hash instance .</p>
+<pre><code>&lt;a class = &quot;menu&quot; hash = &quot;readme.jsp&quot;&gt;documentation &lt;/a&gt;</code></pre>
+<p>Examples of default triggered action url hash value and the values ​​are values ​​in the current DOM element <code>hash</code> attribute ( depending on the value <code>EasyOPOA.Configs.hash</code> and <code>EasyOPOA.Configs.href</code> a ) of . As the code , because EasyOPOA the <code>EasyOPOA.Configs.hash</code> and <code>EasyOPOA.Configs.href</code> default is <code>hash</code>, then the DOM element is clicked, the action triggered hash of <code>readme.jsp</code>, url also to <code>readme.jsp</code>.</p>
+<p><code>show</code>: hash triggered action request url returned results will appear in the show rendering the specified DOM element.</p>
+<p><strong>Initialization code EasyOPOA and start start function , not mandatory to be executed after the page has finished loading , and without the registration page load event handler to complete the call. You can write in any position . </strong></p>
+<ul>
+<li><h3 id="completed">Completed</h3>
+</li>
+</ul>
+<p>Requires only a few simple lines of code above , it has been realized based on EasyOPOA framework OPOA program development.</p>
+<p>EasyOPOA design is not only very simple to use , but also to simultaneously solve two major problems OPOA program design :</p>
+<ol>
+<li><p><strong>Address bar bookmark storage , movement positioning</strong></p>
+<p> When clicking on the appropriate menu in the browser address bar will add a different hash value in the current link home.jsp Home page, representing different requests :</p>
+<pre><code> http://127.0.0.1:8080/opoa/home.jsp#demo.jsp
+ http://127.0.0.1:8080/opoa/home.jsp#readme.jsp
+ http://127.0.0.1:8080/opoa/home.jsp#about.jsp</code></pre>
+<p> And the users to store bookmarks, direct access to the hash with a link .</p>
+<p> The different hash value after the request to add HOME HOME (#demo.jsp,#readme.jsp,#about.jsp), to complete the request to locate the different actions.</p>
+</li>
+<li><p><strong>Browser forward and back ( requires HTML5 support ) </strong></p>
+<p> EasyOPOA support the use of the browser’s forward and back buttons , and traditional Web applications to provide the same customer experience for the user experience . Do not support HTML5 browsers , EasyOPOA use compatibility practices without any additional processing , completely transparent , does not affect programs.</p>
+</li>
+</ol>
+<h2 id="3-an-increase-of-search-engines-to-crawl-opoa-program-content-features">3 , an increase of search engines to crawl OPOA program content features</h2>
+<p>In addition to addressing the positioning and movement forward and back issues outside of the browser , EasyOPOA frame design, but also takes into account the right of the search engines friendly solution to the traditional OPOA program content can not be crawled by search engine problems .<br><strong><br>To solve this problem , just look at the transformation of menu links , add</strong>href<strong>attribute menu links to reptiles require crawling seURL (SearchEgine URL) can be.
+</strong></p>
+<pre><code class="lang-html">&lt;!-- Menu DIV =-&gt;
+&lt;div id=&quot;menuDIV&quot;&gt;
+    &lt;!-- Increased href, point to grab the corresponding real address seURL (SearchEgine URL) --&gt;
+    &lt;a class=&quot;menu&quot; hash=&quot;demo.jsp&quot; href=&quot;demo.jsp&quot;&gt; examples &lt;/a&gt;
+    &lt;a class=&quot;menu&quot; hash=&quot;readme.jsp&quot; href=&quot;readme.jsp&quot;&gt; documentation &lt;/a&gt;
+    &lt;a class=&quot;menu&quot; hash=&quot;about.jsp&quot; href=&quot;about.jsp&quot;&gt; About &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<p>Such a search engine to climb on the appropriate link href address to access specific content alone can crawl into the action associated with the current ( in order to allow reptiles to get relevant information , the server needs to provide the current seURL (SearchEgine URL) requests related handler returns information )</p>
+<p><strong>Note: </strong><code>href</code> attribute defines the link to add as <strong>seUrl (SearchEngine URL, search engine crawling address )</strong> , and will not be EasyOPOA triggered , it will not trigger a url Hash instance when the action request address. This property is only used as a search engine crawlers provide crawling pages.</p>
+<h2 id="4-easyopoa-the-hash-url-seurl-searchengine-url-of-the-three-configurations-and-relationships-">4, EasyOPOA the hash, url, seURL (SearchEngine URL) of the three configurations and relationships :</h2>
+<ul>
+<li><p><strong>Hash</strong>:<br>Hash is the name of the user triggers the action instance , responsible for triggering action , the executive behind the corresponding Ajax request. hash values ​​can be displayed in the browser address bar.</p>
+<p> Hash value as the request was demo.jsp and demo:</p>
+<pre><code>http://127.0.0.1:8080/opoa/home.jsp#demo.jsp
+http://127.0.0.1:8080/opoa/home.jsp#demo</code></pre>
+</li>
+</ul>
+<ul>
+<li><p><strong>url</strong>:<br>Hash instances when the action is triggered , the actual implementation of the url address behind Ajax request, does not appear in the address bar , the user can not see and know. The value and the hash value has nothing to do , but by default they match ( both get the value from the hash property of DOM ) .</p>
+<p> <strong>By EasyOPOA.Configs.url modify the default configuration : </strong></p>
+<pre><code class="lang-JS">// Let the action url value is read from the DOM href attribute
+EasyOPOA.Configs.url=&quot;href&quot;;</code></pre>
+<p> <strong>Note : </strong>After the above configuration, <code>href</code> attribute EasyOPOA framework from DOM objects get <code>url</code> value if the specified property can not be found or is empty in the DOM, hash action mapping configuration parameters that will be scanned to find the matching hash specify the url, or can not find, it will be the last EasyOPOA url hash value as the value.</p>
+<p> <strong>Or via the action mapping addActionMap function configuration: </strong></p>
+<pre><code class="lang-JS">// The demo hash mapped to mydemo.jsp url
+EasyOPOA.addActionMap (&quot;demo&quot;, &quot;mydemo.jsp&quot;, opoa);</code></pre>
+<p> After the above configuration, the following hash when a request for the demo , the action is triggered url performed mydemo.jsp</p>
+<pre><code>http://127.0.0.1:8080/opoa/home.jsp # demo</code></pre>
+</li>
+</ul>
+<ul>
+<li><strong>SeURL</strong>: A label specified by the href value , used to tell the search engines need to crawl the page path. searchURL and hash value , url are unrelated . EasyOPOA will not be triggered .</li>
+</ul>
+<p>Generally , url and server to crawl content seURL OPOA process customer requests show should be the same ( so the content is the same) .</p>
+<h3 id="-design-reasons-"><strong>Design reasons : </strong></h3>
+<p>Due to the use of Ajax request data , does not rely on the href attribute A label , so any element (DIV, P, ……) can be triggered by clicking Hash action instance , complete the request load . So EasyOPOA defined by the concept of <code>hash</code> action trigger request identification , and then use <code>url</code> Hash mapping list associated with the line of action inside the <code>hash</code> action with a request to avoid reliance on <code>href</code>, for example, DIV or Button when the request does not have to be action to force users to add <code>href</code> attribute of DIV and Button.</p>
+<p>Meanwhile , EasyOPOA take this design allows users to trigger action <code>hash</code> values ​​, <code>url</code> value behind Ajax requests executed , the search engine crawling <code>seURL</code> value of three completely unrelated (<code>hash</code>, <code>url</code> , <code>seURL</code> may be the same or different ) . In advanced applications and content also allows the user to load the request (url) loaded with search engines and content requests (seURL) different , more flexible personalized programs to choose from.</p>
+<p><code>Href</code> in EasyOPOA in a property can be omitted entirely , but the use of <code>href tag in the</code>A<code>to specify the server load path</code>seURL` allows search engines to crawl the content of the program and included OPOA solve the OPOA the program can not be included in the search engine problems , combined with RSP provides more friendly SEO optimization.</p>
+<h2 id="5-the-use-of-search-engine-optimization-rsp-design-crawling">5, the use of search engine optimization RSP design crawling</h2>
+<p>To make the search engines crawl the content can be obtained at the time to more meaningful information , such as web keywords, description, etc. …… seURL corresponding server-side pages can be taken RSP designed to provide a more user-friendly search engine optimization.</p>
+<p><strong>RSP: Rich Server Page, rich server-side page design/fat server design , server-side with the traditional design of the corresponding thin . </strong></p>
+<p>For example , the traditional design can be based OPOA demo.jsp page :</p>
+<pre><code>&lt;h1 style=&quot;color: red&quot;&gt; This is DEMO.&lt;/h1&gt;</code></pre>
+<p>Convert RSP designed demo.jsp page :</p>
+<pre><code class="lang-HTML">&lt;html&gt;
+
+  &lt;head&gt;
+    &lt;title&gt; OPOA demo DEMO &lt;/title&gt;
+    &lt;meta http-equiv=&quot;keywords&quot; content=&quot;easyopoa,opoa,demo,single page&quot;&gt;
+    &lt;meta http-equiv=&quot;description&quot; content=&quot;EasyOPOA框架开发实例&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;!--Because HTML page can have only one body, wrapped in a div content --&gt;
+      &lt;div id=&quot;content&quot;&gt;
+          &lt;h1 style=&quot;color:red&quot;&gt; This is a demo DEMO. &lt;/h1&gt;
+      &lt;/div&gt;
+  &lt;body&gt;
+&lt;/html&gt;</code></pre>
+<p>This will help SEO and search engines .</p>
+<h2 id="6-the-data-returned-from-the-rsp-the-extraction-of-the-specified-content-filtering-find-notfound">6, the data returned from the RSP , the extraction of the specified content filtering find, notFound</h2>
+<p>In RSP design, the server returns the contents of the content contains some information not directly related . Typically page titles, keywords, descriptions and other information will not have any impact load and display . However, if the information is loaded into Ajax, hope remove unwanted label items , or filter to extract the contents of the specified , can take advantage of <code>find</code> and <code>notFound</code> parameters to achieve .</p>
+<p><strong><code>find</code></strong>: jQuery DOM selectors to filter out data from a specified area of the obtained data server</p>
+<p><strong><code>notFound</code></strong>: When the <code>find</code> parameter selectors did not find the content of the data returned from the server , the contents of the displayed function or call. There are four possible values ​​”<code>empty</code>“, “<code>all</code>“, “<code>custom content</code>“, <code>function</code>. Default value : <code>empty</code>.</p>
+<ul>
+<li>“<code>empty</code>“: Show Empty contents</li>
+<li>“<code>all</code>“: displays all the data is loaded into the</li>
+<li>“<code>Custom Content</code>“: custom content display ( messages or pictures can be used to prompt the user )</li>
+<li><code>Function</code>: the function is executed</li>
+</ul>
+<ul>
+<li><h4 id="use-easyopoa-configs-modify-global-find-and-notfound-value">Use<code>EasyOPOA.Configs</code>modify global find and notFound value</h4>
+<p>  Global Review:</p>
+<pre><code class="lang-JS">  // Returned from the server contents , extract the contents of #content display html
+  EasyOPOA.Configs.find=&quot;#contentDIV&quot;;
+
+  // If find the specified #content is not found, show all content
+  EasyOPOA.Configs.notFound=&quot;#all&quot;;</code></pre>
+</li>
+</ul>
+<ul>
+<li><h4 id="use-find-and-notfound-attribute-modification-examples-in-opoa">Use <code>find</code> and <code>notFound</code> attribute modification examples in OPOA</h4>
+<p>  Example 1:</p>
+<pre><code class="lang-JS">// opoa instance
+var opoa = {
+&quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+&quot;show&quot;:&quot;#contentDIV&quot;,
+
+// Returned from the server contents , extract the contents of #content display html
+&quot;find&quot;:&quot;#content&quot;,
+// If find the specified #content is not found, show all content
+&quot;notFound&quot;:&quot;all&quot;
+}</code></pre>
+<p>  Example 2 :</p>
+<pre><code class="lang-JS">// opoa instance
+var opoa = {
+&quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+&quot;show&quot;:&quot;#contentDIV&quot;,
+
+/ / Returned from the server contents , extract the contents of #content display html
+&quot;find&quot;:&quot;#content&quot;,
+/ / If find the specified #content is not found, show all content
+&quot;notFound&quot;:function () {
+    console.info (&quot;NOT FOUND CONTENT!&quot;);
+}
+}</code></pre>
+</li>
+</ul>
+<h2 id="7-easyopoa-page-static-and-dynamic-configuration-program">7, EasyOPOA page ( static and dynamic ) configuration program</h2>
+<p>Common OPOA home design program has two modes :</p>
+<p>1 . <strong>Static page</strong> ( home page content is static content , to show the contents of the written directly in the content area )</p>
+<pre><code class="lang-html">&lt;!-- Static content DIV --&gt;
+&lt;div id=&quot;contentDIV&quot;&gt;
+   &lt;h1&gt; Welcome ! &lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+<p>2 . <strong>Dynamic page</strong> ( Home need to use Ajax to load a specific request, the request returns the contents displayed in the content area )</p>
+<p>  For example , when the home is loaded request through Ajax welcome.jsp, content and welcome.jsp displayed in the content area .</p>
+<p>  <strong> Welcome.jsp:</strong></p>
+<pre><code class="lang-html"> &lt;h1&gt; Welcome. Welcome EasyOPOA frame ! &lt;/h1&gt;</code></pre>
+<h3 id="easyopoa-framework-of-the-forward-and-backward-processing-">EasyOPOA framework of the forward and backward processing :</h3>
+<p><strong>When the user through the browser ‘s forward and back buttons to advance or return , in EasyOPOA will automatically trigger and load -related information and automatically displays the current hash to solve the problem of static content updates . For information on the Home Show , EasyOPOA framework recommendations when EasyOPOA program initialization, assign specific page content loading scheme according to Home mode to prevent the information can not be updated back to the home page and load . </strong></p>
+<ul>
+<li><h3 id="static-home-page-design-configurations-by-easyopoa-hemefun-parameter-handler-registered-home">Static home page design configurations : by EasyOPOA.hemeFun parameter handler registered Home</h3>
+<p>  Use EasyOPOA.homeFun parameters can be specified function static home triggered when the function is called automatically when accessing home settings, since carried home with content initialized.</p>
+<p>  For example:</p>
+<pre><code class="lang-JS">  EasyOPOA.homeFun = function () {
+      $(&quot;#contentDIV&quot;).html(&quot;&lt;h1&gt;Welcome！&lt;/h1&gt;&quot;);
+  }</code></pre>
+<p>  <strong>Note: </strong>be static HTML content in JavaScript is an initialization operation is very tedious and bad choices. Static content can be home to hide the DIV form definition, then loaded homeFun in .</p>
+<p>  Home static content be defined :</p>
+<pre><code class="lang-html">  &lt;div id=&quot;homeStaticContent&quot; style=&quot;display: none&quot;&gt;
+      &lt;h1&gt;Welcome！&lt;/h1&gt;
+  &lt;/div&gt;</code></pre>
+<p>  The use of JavaScript to get the display to the content area :</p>
+<pre><code class="lang-JS">  EasyOPOA.homeFun=function(){
+      $(&quot;#contentDIV&quot;).html($(&quot;#homeStaticContent&quot;).html());
+  }</code></pre>
+</li>
+</ul>
+<ul>
+<li><h3 id="dynamic-home-page-design-configuration-use-easyopoa-homeurl-to-load-content-from-a-url-home">Dynamic home page design configuration: Use EasyOPOA.homeUrl() to load content from a url Home</h3>
+<p>Use <code>EasyOPOA.homeUrl (url, opoa [, postData])</code> function can be defined Home corresponding <code>url</code>, when accessing the home page , it will automatically request and load <code>url</code>.</p>
+<p>URL address to be loaded : <code>url</code><br><code>opoa</code>: the decision rendered loading instances of opoa<br><code>postData</code>: data request submitted by optional parameters (<code>param1 = value1 &amp; param2 = value2 ...</code>).</p>
+<p>For example, specify automatic loading welcome.jsp content Home Show:</p>
+<pre><code class="lang-JS">EasyOPOA.home (&quot;welcome.jsp&quot;, opoa);</code></pre>
+</li>
+</ul>
+<ul>
+<li><h3 id="dynamic-home-page-design-configuration-use-easyopoa-home-use-hash-action-content-loaded-home">Dynamic home page design configuration: Use EasyOPOA.home() use hash action content loaded Home</h3>
+<p>homeUrl request data directly from the specified url address. The use of <code>EasyOPOA.home (hash [, postData])</code> function can be defined Home corresponding <code>hash</code> value when accessing the home page, the Hash action instance automatically be triggered.</p>
+<p><code>hash</code>: hash name of the action to be triggered<br><code>postData</code>: data request submitted by optional parameters (<code>param1 = value1 &amp; param2 = value2 ...</code>).</p>
+<p>For example, specify page automatically trigger action called welcome the Hash instance , loads the content is displayed :</p>
+<pre><code class="lang-JS">EasyOPOA.home (&quot;welcome&quot;);</code></pre>
+</li>
+</ul>
+<ul>
+<li><h3 id="special-parameters-using-easyopoa-hemefun">Special parameters using EasyOPOA.hemeFun</h3>
+<p> Static Home handler <code>EasyOPOA.hemeFun</code>, not only load static content. Hash action can also be loaded through the contents page, registration EasyOPOA.hemeFun function, in which the call load function to load the content using hash.</p>
+<pre><code class="lang-JS">  // Load the URL
+  // OPOA.home (&quot;readme.jsp&quot;);
+
+  // Load the action for the readme page via hash
+  OPOA.homeFun = function () {
+      OPOA.load (&quot;readme&quot;);
+  };</code></pre>
+</li>
+</ul>
+<h2 id="8-easyopoa-frame-parameter-data-submitted-to-the-server-when-the-url-request">8, EasyOPOA frame parameter data submitted to the server when the url request</h2>
+<p><strong>You can submit a request to the framework EasyOPOA url parameter data postData, there are two ways : </strong></p>
+<p><em>(postData option is the parameter string, such as key1 = value1 &amp; key2 = value2)</em></p>
+<ol>
+<li>directly through the <code>url?postdata</code> implementation:<pre><code class="lang-JS">EasyOPOA.home (&quot;Welcome.jsp?user=jack&amp;role=admin&quot;, opoa);</code></pre>
+</li>
+<li><code>postdata</code> parameters defined by the function realization (<code>EasyOPOA.home ( url, opoa [, postData])</code>):<pre><code class="lang-JS">EasyOPOA.home(&quot;welcome.jsp&quot;, opoa, &quot;user=jack&amp;role=admin&quot;);</code></pre>
+</li>
+</ol>
+<p>The above two methods can be used :</p>
+<pre><code class="lang-JS">EasyOPOA.home(&quot;welcome.jsp?a=1&amp;b=2&quot;, opoa, &quot;user=jack&amp;role=admin&quot;);</code></pre>
+<h2 id="9-easyopoa-framework-submit-the-request-mode-post-get-set">9,EasyOPOA framework submit the request mode (post / get) set</h2>
+<p>When requested url in EasyOPOA framework post submitted by default , by way of method parameters can be adjusted to submit a request .</p>
+<ul>
+<li><h4 id="use-easyopoa-configs-submit-a-request-to-modify-the-way-the-global">Use <code>EasyOPOA.Configs</code> submit a request to modify the way the global</h4>
+<p>  Global Review:</p>
+<pre><code class="lang-JS">EasyOPOA.Configs.method=&quot;get&quot;;</code></pre>
+</li>
+</ul>
+<ul>
+<li><h4 id="use-method-attribute-opoa-instance-submit-a-request-to-modify-the-way-the-specified-action">Use <code>method</code> attribute OPOA instance submit a request to modify the way the specified action</h4>
+<p>  The following <code># menuDiv menu</code> DOM element specified actions related Hash instance , trigger action , presented in a way both get:</p>
+<pre><code class="lang-JS">// opoa instance
+var opoa={
+  &quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+  &quot;show&quot;:&quot;#contentDIV&quot;,
+  //Presented in a way to get
+  &quot;method&quot;:&quot;get&quot;
+}</code></pre>
+</li>
+</ul>
+<h3 id="if-you-submit-way-post-">If you submit way post:</h3>
+<p><strong>Internally EasyOPOA framework for post request will automatically extract all the parameters in the url , and post the submission . </strong></p>
+<p>For example , in the post to submit the request to the following address :</p>
+<pre><code>welcome.jsp?user=jack&amp;role=admin</code></pre>
+<p>The url in the address Ajax request is <code>welcome.jsp</code>, parameter <code>user=jack&amp;role=admin</code> not at the request of the url, but in the post submission .</p>
+<h2 id="10-opoalist-opoa-collection-of-entities-defined">10, opoaList OPOA collection of entities defined</h2>
+<p>In EasyOPOA in , opoaList OPOA entity set parameters framework must be initiated . <code>EasyOPOA.start (opoaList)</code> function is completed by opoaList OPOA entity framework initialization EasyOPOA collection parameters.</p>
+<p>EasyOPOA supports a variety of ways to define a collection ( array collection and a collection of objects ) :</p>
+<ol>
+<li><p>array collection method:</p>
+<pre><code class="lang-JS">// opoa instance
+var opoa={
+   &quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+   &quot;show&quot;:&quot;#contentDIV&quot;
+}
+
+// ...
+
+// Array collection opoa instance
+var opoaList = [opoa, ...];
+
+// Use opoaList start
+EasyOPOA.start(opoaList);</code></pre>
+</li>
+<li><p>collection of by objects :</p>
+<p> An array of ways in obtaining relevant opoa specified instances from the list defined not intuitive and easy way to define a collection of objects can specify a name for the OPOA instance different functions and roles , citing instances opoa other action would be more convenient:</p>
+<pre><code class="lang-JS">// opoa instance
+var opoa={
+   &quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+   &quot;show&quot;:&quot;#contentDIV&quot;
+}
+
+//....
+
+// opoa instance object collection
+var opoaList={
+   // For the specified opoa instance , specify a name for the menu
+   &quot;menu&quot;: opoa,
+   //...
+}
+
+//Use opoaList start
+EasyOPOA.start (opoaList);</code></pre>
+</li>
+</ol>
+<p>You can use the <code>opoaList.menu</code> instances cited opoa menu configuration.</p>
+<h2 id="11-the-action-and-the-url-mapping-configuration-hash">11, the action and the url mapping configuration hash</h2>
+<p>Each instance of an action Hash (Hash Action Instance) structures are Hash action can be mapped objects as instances and actions through the same thing <strong>Action mapping object (ActionMap Object) </strong>organize and save ( because Hash action instance itself is defined by mapping object movement and storage ) .</p>
+<p>A standard action mapping object (ActionMap Object) is structured as follows :</p>
+<pre><code class="lang-JS">    {
+        hash: [ url, opoaInstance ]
+    }</code></pre>
+<p><strong> One set of multiple hash and url can share a OPOA instance. </strong></p>
+<p>Action mapping object responsible <code>hash</code>, <code>url</code>, <code>opoaInstance</code> bind certain . Hash action to complete a three-step examples :</p>
+<p>1,the use of <code>hash</code> trigger action instance Hash (hash value is displayed in the browser URL <code># hash</code>)</p>
+<pre><code>http://domain/home.jsp#hash</code></pre>
+<p>2,the action instance Ajax request <code>url</code></p>
+<pre><code>http://domain/hash</code></pre>
+<p>3,according to the <code>opoaInstance</code> (OPOA instance ) loading and rendering</p>
+<p><strong>actions attribute opoa instance using DOM selector to set the trigger DOM object , and also can automatically obtain the desired hash and url attributes from DOM to create the appropriate action to define Hash action mapping object instance . In addition , EasyOPOA also supports a variety of ways to define a more flexible configuration action mapping . </strong></p>
+<h3 id="11-1-use-dom-attribute-specifies-the-mapping-of-hash-and-url">11.1 . Use DOM attribute specifies the mapping of hash and url</h3>
+<p>The default action to create a Hash instance <code>hash</code> and <code>url</code> DOM are the hash value of the property . This is the default configuration defined by the EasyOPOA.Configs and decisions .</p>
+<pre><code class="lang-JS">// Get the DOM attribute name &#39;Hash action instance&#39; of the hash value from the DOM node
+// Default value : hash
+&quot;hash&quot;: &quot;hash&quot;,
+// Get the DOM attribute name &#39;Hash action instance&#39; the url value from a DOM node
+// Default value : hash (url default value is also equivalent to the hash value )
+&quot;url&quot;:&quot;hash&quot;,</code></pre>
+<p>Modify hash and url configuration allows the value <code>hash</code> and <code>url</code> values ​​from different attributes. For example, let DOM object attributes define <code>hash</code> hash value , href attribute defines the <code>url</code> value.</p>
+<pre><code class="lang-html">&lt;a class=&quot;menu&quot; hash=&quot;demo&quot; href=&quot;demo.jsp&quot;&gt; instance 2 &lt;/a&gt;
+&lt;a class=&quot;menu&quot; hash=&quot;readme&quot; href=&quot;readme.jsp&quot;&gt; documentation &lt;/a&gt;</code></pre>
+<ul>
+<li><h4 id="use-easyopoa-configs-for-global-configuration-">Use EasyOPOA.Configs for global configuration:</h4>
+<pre><code class="lang-JS">EasyOPOA.Configs.hash=&quot;hash&quot;;
+EasyOPOA.Configs.url=&quot;href&quot;;</code></pre>
+</li>
+<li><h4 id="opoa-instance-using-local-configuration-">Opoa instance using local configuration:</h4>
+<pre><code class="lang-JS">var opoa={
+  actions:&quot;#menuDIV .menu&quot;,
+  show:&quot;#contentDIV&quot;,
+
+  hash:&quot;hash&quot;,
+  url:&quot;href&quot;
+}</code></pre>
+</li>
+</ul>
+<h3 id="11-2-use-opoa-instance-actionmaps-property-configuration-map">11.2 . Use OPOA instance actionMaps property configuration map</h3>
+<p><strong><code>actionMaps</code> attribute can modify the default url specified hash corresponding to a different value . </strong></p>
+<p>EasyOPOA property values ​​based on the current hash Hash DOM to create instances of the default action , which action <code>hash</code> Hash values ​​and examples are <code>url</code> DOM hash value of the property . Such as:</p>
+<pre><code class="lang-html">&lt;a class=&quot;menu&quot; hash=&quot;demo.jsp&quot;&gt;examples&lt;/a&gt;</code></pre>
+<p>The default action is mapped to :</p>
+<pre><code class="lang-JS">//{ hash : [url, opoaInstance] }
+
+{&quot;demo.jsp&quot; : [&quot;demo.jsp&quot; , this]}</code></pre>
+<p>The use of <code>actionMaps</code> attribute can modify the default url specified hash corresponding to a different value . Syntax:</p>
+<pre><code class="lang-JS">actionMaps: {
+    // &quot;hashname&quot; : &quot;executeurl&quot;
+    &quot;demo&quot;:&quot;demo.jsp&quot;,
+    &quot;about&quot;:&quot;about.jsp&quot;,
+    //...
+}</code></pre>
+<p><strong>Configuration: </strong></p>
+<p>Configure the following code will hash to <code>demo</code> and <code>readme</code> DOM element that triggered the action url Hash instance execution.</p>
+<pre><code class="lang-JS">var opoa = {
+    // Use actionMaps modify the default url specified hash corresponding to other values
+    actionMaps: {
+        // &quot;Hashname &quot;: &quot; executeurl&quot;
+        &quot;demo&quot;:&quot;demo.jsp&quot;,
+        &quot;readme&quot;:&quot;readme.jsp&quot;
+    },
+    actions:&quot;#menuDIV .menu&quot;,
+    show:&quot;#contentDIV&quot;
+}</code></pre>
+<p><strong>Test: </strong></p>
+<p>Defined as an instance of the action can be triggered Hash hash hyperlinks are demo and readme:</p>
+<pre><code class="lang-html">&lt;a class=&quot;menu&quot; hash=&quot;demo&quot;&gt; instance 2 &lt;/a&gt;
+&lt;a class=&quot;menu&quot; hash=&quot;readme&quot;&gt; documentation &lt;/a&gt;</code></pre>
+<p>Click to Example 2 , the browser address bar (hash as demo):</p>
+<pre><code>http://127.0.0.1:8080/opoa/home.jsp#demo
+http://127.0.0.1:8080/opoa/home.jsp#readme</code></pre>
+<p>Request for load (request to demo.jsp):</p>
+<pre><code>http://127.0.0.1:8080/opoa/demo.jsp
+http://127.0.0.1:8080/opoa/readme.jsp</code></pre>
+<h3 id="11-3-directly-addactionmap-hash-url-opoa-configuration-mapping-function">11.3 . Directly addActionMap (hash, url, opoa) configuration mapping function</h3>
+<p>Modify the default url specified hash corresponding to a different value , you must specify OPOA render specific examples related .</p>
+<pre><code class="lang-JS">//hash, url, opoa
+EasyOPOA.addActionMap(&quot;demo&quot;,  &quot;demo.jsp&quot; ,opoaList.menu);
+EasyOPOA.addActionMap(&quot;readme&quot;,  &quot;readme.jsp&quot; ,opoaList.menu);</code></pre>
+<p><strong> AddActionMap function also supports passing parameters array list ( action mapping element can be represented using the object or array ) : </strong></p>
+<ul>
+<li><strong>Based on standard action mapping array list object’s parameters : </strong></li>
+</ul>
+<p>Syntax:</p>
+<pre><code class="lang-JS">[
+    // Standard action mapping object -based
+    {hash: [url, opoaInstance]},
+    {hash: [url, opoaInstance]},
+    ...
+]</code></pre>
+<p>Example:</p>
+<pre><code class="lang-JS"> EasyOPOA.addActionMap([
+    // Standard action mapping object -based
+    // {hash: [ url, opoaInstance ]}
+    {&quot;demo&quot; : [ &quot;demo.jsp&quot; ,opoaList.menu]},
+    {&quot;readme&quot; : [ &quot;readme.jsp&quot;,opoaList.menu ]}
+ ]) ;</code></pre>
+<ul>
+<li><strong>Based on an array of array parameter list : </strong></li>
+</ul>
+<p>Syntax:</p>
+<pre><code class="lang-JS">[
+    // Array-based
+    [hash, url, opoaInstance] , 
+    [hash, url, opoaInstance] , 
+    ... 
+]</code></pre>
+<p>Example:</p>
+<pre><code class="lang-JS"> EasyOPOA.addActionMap([
+    // Array-based
+    // [hash, url, opoaInstance]
+    [&quot;demo&quot;, &quot;demo.jsp&quot;, opoaList.menu],
+    [&quot;readme&quot;, &quot;readme.jsp&quot;, opoaList.menu]
+]);</code></pre>
+<h3 id="11-4-use-actionmaps-parameter-start-function-start">11.4 . Use actionMaps parameter start () function start</h3>
+<p>start (opoaList [, actionMaps ]): start start function has an optional parameter actionMaps, mapping defined objects can be passed at startup .</p>
+<p><code>actionMaps</code>: action can be mapped to a standard array list object or parameter ( action mapping element can be represented using the object or array ) .</p>
+<ul>
+<li><strong>When activated, incoming standard action mapping object : </strong></li>
+</ul>
+<pre><code class="lang-JS">// Standard action mapping object
+var actionMap={&quot;demo&quot;:[ &quot;demo.jsp&quot; ,opoaList.menu]};
+
+// Use opoaList and actionMaps start
+EasyOPOA.start(opoaList,actionMap);</code></pre>
+<ul>
+<li><strong>At startup, the list of parameters passed in the array ( based on the standard mapping object ) : </strong></li>
+</ul>
+<pre><code class="lang-JS">var actionMaps=[
+    // Standard action mapping object -based
+    // {hash: [ url, opoaInstance ]}
+    {&quot;demo&quot; : [ &quot;demo.jsp&quot; ,opoaList.menu]},
+    {&quot;readme&quot; : [ &quot;readme.jsp&quot;,opoaList.menu ]}
+];
+
+// Use opoaList and actionMaps start
+EasyOPOA.start(opoaList,actionMap);</code></pre>
+<ul>
+<li><strong>When activated, a list of parameters passed in the array ( array-based like ) : </strong></li>
+</ul>
+<pre><code class="lang-JS">var actionMaps2=[
+    // Array-based
+    // [hash, url, opoaInstance]
+    [&quot;demo&quot;, &quot;demo.jsp&quot;, opoaList.menu],
+    [&quot;readme&quot;, &quot;readme.jsp&quot;, opoaList.menu]
+];
+
+// Use opoaList and actionMaps start
+EasyOPOA.start(opoaList,actionMap2);</code></pre>
+<h2 id="12-get-dom-attribute-specified-hash-value">12, get DOM attribute specified hash value</h2>
+<p>By default EasyOPOA frame starts , it will automatically get from <code>actions</code> attribute OPOA instance selector to select DOM elements , binding action trigger events and automatically creates a corresponding action Hash instance .</p>
+<p>Hash action when creating an instance , the default <code>hash</code> and <code>url</code> value and the hash value DOM attribute is the same .</p>
+<pre><code class="lang-html">&lt;a class=&quot;menu&quot; hash=&quot;demo.jsp&quot;&gt;examples&lt;/a&gt; 
+&lt;a class=&quot;menu&quot; hash=&quot;readme.jsp&quot;&gt;documentation&lt;/a&gt; 
+&lt;a class=&quot;menu&quot; hash=&quot;about.jsp&quot;&gt;about&lt;/a&gt;</code></pre>
+<p>If , in some cases , hash attribute conflicts with other elements , or want to use other attributes instead of hash property, can be modified by the following method.</p>
+<ul>
+<li><h4 id="use-easyopoa-configs-modify-global-default-definition-hash-value-of-dom-attribute-name">Use <code>EasyOPOA.Configs</code> modify global default definition hash value of DOM attribute name</h4>
+<p>  Global Review:</p>
+<pre><code class="lang-JS">// Get the hash of the DOM attribute opoahash
+EasyOPOA.Configs.hash=&quot;opoahash&quot;;</code></pre>
+</li>
+</ul>
+<ul>
+<li><h4 id="use-dom-attribute-name-hash-hash-value-of-the-property-changes-defined-instances-in-opoa">Use DOM attribute name <code>hash</code> hash value of the property changes defined instances in OPOA</h4>
+<p>  The following <code># menuDiv .menu</code> specified DOM element , use opoahash property instead of the default hash DOM attributes:</p>
+<pre><code class="lang-JS">// opoa instance
+var opoa={
+  &quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+  &quot;show&quot;:&quot;#contentDIV&quot;,
+
+  // Get the hash of the DOM attribute opoahash
+  &quot;hash&quot;:&quot;opoahash&quot;
+}</code></pre>
+</li>
+</ul>
+<p>Use <code>opoahash</code> attribute instead of the default <code>hash</code> is defined :</p>
+<pre><code class="lang-html">&lt;a class=&quot;menu&quot; opoahash=&quot;demo.jsp&quot; href=&quot;demo.jsp&quot;&gt; examples &lt;/a&gt;
+&lt;a class=&quot;menu&quot; opoahash=&quot;readme.jsp&quot; href=&quot;readme.jsp&quot;&gt; documentation &lt;/a&gt;
+&lt;a class=&quot;menu&quot; opoahash=&quot;about.jsp&quot; href=&quot;about.jsp&quot;&gt; About &lt;/a&gt;</code></pre>
+<p><strong>Note that in the framework of the internal EasyOPOA if hash specified property is not found, loaded href attribute as the action url hash value and the value it will try . </strong></p>
+<h2 id="13-invalid-hash-positioning-action-handler-nothash">13,invalid hash positioning action handler notHash</h2>
+<p>Sometimes users to store bookmarks or connection collection has failed or passed an invalid user undefined hash action. EasyOPOA framework calls <code>EasyOPOA.notHash (hash)</code> function (default is empty ) .</p>
+<p>Below , to access a nonexistent hash action orientation <code>mydemo</code>:</p>
+<pre><code>http://127.0.0.1:8080/opoa/home.jsp#mydemo</code></pre>
+<p>NotHash parameters can now be registered with a parameter EasyOPOA framework handler function is invalid hash value for the current user request:</p>
+<pre><code class="lang-JS">EasyOPOA.notHash=function(hash){
+            alter (&quot;you specify the action &#39;&quot;+hash+&quot;&#39; has failed!&quot; ) ;
+    // EasyOPOA.load(&quot;welcome.jsp&quot;,&quot;&quot;);
+}</code></pre>
+<p><strong>Note that the low version IE (6,7,8) does not support console.info (), replace the post in order to run for the alter or otherwise. </strong></p>
+<h2 id="14-using-the-loading-process-object-state-management-for-ajax-requests">14 , using the loading process object state management for Ajax requests</h2>
+<p>In Ajax application development, because the browser does not refresh, so the process of requesting a URL, use the text or image to be loading Loading prompt the customer experience is very important. There are also some cases when Hash action request loading the update is complete pages also need to perform new tasks or complete some content (for example, after loading, the current state of the menu to change).</p>
+<p>EasyOPOA framework supports the definition <strong> loading process object (loadingObject) </strong> for state management, a loading handle Ajax request object contains four state registration function for processing : Request start (<strong> start </strong>), the request is successful (<strong> success </strong> , before rendering the page ) , request error (<strong> error </strong>), requesting end (<strong> end </strong>, regardless of success or failure will be called ) . Function when ajax request different states are called, can be used for loading tips.</p>
+<p>Each state handler can pass four optional parameters : <code>hash</code>, <code>url</code>, <code>opoa</code>, <code>postData</code>.<br><code>hash</code>: current trigger action of hash value<br><code>url</code>: the current request url<br><code>opoa</code>: opoa instance<br><code>postData</code>: Data submitted to the server</p>
+<p>Syntax:</p>
+<pre><code class="lang-JS">// Loading process object
+&quot;loading&quot;: {
+        // Ajax request begins
+        start:function(hash,url,opoa,postData){},
+        // Ajax request is successful
+        success: function(hash,url,opoa,postData){},
+        // Ajax request error
+        error: function(hash,url,opoa,postData){},
+        //Ajax request ends( regardless of success or failure will be called )
+        end:function(hash,url,opoa,postData){}
+}</code></pre>
+<p><strong>Tip: end state handler used to load after the completion of the request status updates menu, sub-page action to initialize and start.</strong></p>
+<p>On the page content DIV <code>contentDIV</code> define a display Loading prompt <code>loadingDIV</code>:</p>
+<pre><code class="lang-html">&lt;!-- Loading Tips DIV --&gt;
+&lt;div id=&quot;loadingDIV&quot;&gt;
+    &lt;h1&gt;Loading ......&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+<p>Show LoadingDIV Ajax request at the beginning of the end of the request hide LoadingDIV.</p>
+<ul>
+<li><h3 id="use-easyopoa-configs-modify-global-default-definition-of-loading-process-object-">Use <code>EasyOPOA.Configs</code> modify global default definition of loading process object :</h3>
+<p>  Global Review:</p>
+<pre><code class="lang-JS">// ajax request begins
+EasyOPOA.Configs.loading [&quot;start&quot;] = function(){
+    console.info (&quot;Ajax request to begin ! &quot; ) ;
+}
+
+// ajax request ends ( regardless of success or failure will be called )
+   EasyOPOA.Configs.loading [&quot;end&quot;] = function () {
+    console.info (&quot;Ajax request ends ! &quot; ) ;
+}
+
+//...</code></pre>
+<p>  Or :</p>
+<pre><code class="lang-JS">EasyOPOA.Configs.loading={
+      // ajax request begins
+      &quot;start&quot;:function(){
+          console.info (&quot;Ajax request to begin ! &quot; ) ;
+          $(&quot;#contentDIV&quot;).html(&quot;&quot;);
+          $(&quot;#loadingDIV&quot;).show();
+      },
+      // ajax request is successful
+      &quot;success&quot;:function(){
+          console.info (&quot;Ajax request was successful ! &quot; ) ;
+          $(&quot;#loadingDIV&quot;).hide();
+      },
+      // ajax request error
+      &quot;error&quot;:function(hash,url){
+          console.info (&quot;Ajax request failed ...! [&quot; + hash + &quot;:&quot; + url + &quot;]&quot;);
+      },
+      // ajax request ends ( regardless of success or failure will be called )
+      &quot;end&quot;:function(){
+          console.info (&quot;Ajax request ends ! &quot; ) ;
+          $(&quot;#loadingDIV&quot;).hide();
+      }
+}</code></pre>
+</li>
+</ul>
+<ul>
+<li><h3 id="use-loading-attributes-opoa-loading-process-object-instance-is-defined-as-dom-">Use <code>loading</code> attributes OPOA loading process object instance is defined as DOM:</h3>
+<p>  To <code># menuDiv menu</code> DOM element associated with the specified action Hash instance , specify the loading process object :</p>
+<pre><code class="lang-JS">// opoa instance
+var opoa={
+  &quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+  &quot;show&quot;:&quot;#contentDIV&quot;,
+
+  // loading process object :
+  &quot;loading&quot;:{
+      // ajax request begins
+      &quot;start&quot;:function(){
+          $(&quot;#loadingDIV&quot;).show();
+      },
+                      // ajax request is successful
+      &quot;success&quot;:function(){
+          $(&quot;#loadingDIV&quot;).hide();
+      },
+      // ajax request ends ( regardless of success or failure will be called )
+      &quot;end&quot;:function(){
+          $(&quot;#loadingDIV&quot;).hide();
+      }
+  }
+}</code></pre>
+</li>
+</ul>
+<ul>
+<li><h3 id="use-addactionloadings-function-to-specify-the-loading-process-object-to-hash-actions-">Use addActionLoadings () function to specify the loading process object to hash actions:</h3>
+<p>  Use <code>addActionLoadings (hashs, loadingObject)</code> set the loading process object for the specified hashs.</p>
+<p>  hashs: a single hash value can also be an array of hash value</p>
+<p>  <strong>Single hash value: </strong></p>
+<pre><code class="lang-JS">// For the hash value of the Action demo.jsp loading process object instance of the specified action
+EasyOPOA.addActionLoadings (&quot;demo.jsp&quot;,{
+          // ajax request begins
+      &quot;start&quot;:function(){
+          $(&quot;#loadingDIV&quot;).show();
+      },
+      // ajax request is successful
+      &quot;success&quot;:function(){
+          $(&quot;#loadingDIV&quot;).hide();
+      },
+      // ajax request ends ( regardless of success or failure will be called )
+      &quot;end&quot;:function(){
+          $(&quot;#loadingDIV&quot;).hide();
+      }
+});</code></pre>
+<p>  <strong>hash value of the array: </strong></p>
+<pre><code class="lang-JS">//For the hash value of the Action about.jsp and readme.jsp loading process object instance of the specified action
+EasyOPOA.addActionLoadings ([&quot;about.jsp&quot;, &quot;readme.jsp&quot;], {
+          // ajax request begins
+      &quot;start&quot;:function(){
+          $(&quot;#loadingDIV&quot;).show();
+      }
+      // ajax request is successful
+      &quot;success&quot;:function(){
+          $(&quot;#loadingDIV&quot;).hide();
+      },
+      // ajax request ends ( regardless of success or failure will be called )
+      &quot;end&quot;:function(){
+          $(&quot;#loadingDIV&quot;).hide();
+      }
+});</code></pre>
+</li>
+</ul>
+<h2 id="15-using-the-loading-object-processing-url-page-action-returns">15, using the loading object processing url page action returns</h2>
+<p>In actual OPOA development and use, and not simply load request , obtain content from the request and displayed it. Request the return of the loaded content often may also contain a new trigger EasyOPOA action DOM object, you need to initialize an instance of these actions through the start Hash function .</p>
+<ul>
+<li><p>In general, these initialization code can be written directly in the page ( eg demo.jsp) requests here:</p>
+<pre><code class="lang-JS">// Finish initialization new action in demo.jsp
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    // opoa instance
+    var opoa={
+          &quot;actions&quot;:&quot;#show A&quot;,
+        &quot;show&quot;:&quot;#contentDIV&quot;
+    };
+
+    // Start
+    EasyOPOA.start([opoa]);
+&lt;/script&gt;</code></pre>
+<p><strong> Note : </strong>Because , so no need to repeat the request url page framework document and other introduced easyopoa.js been introduced in Home page dependencies ( in IE this behavior will lead to an error ) . In fact, this program also reflects the OPOA efficient and easy to maintain.</p>
+</li>
+</ul>
+<ul>
+<li><p>If you do not want to deal with code EasyOPOA framework distributed to each request pages ( such as the need to focus on the Home page or a single JS file unified maintenance management ) . May also be implemented in the state handler loading object.</p>
+<p> After loading end , by judging hash parameters, the corresponding initial start :</p>
+<pre><code class="lang-JS">OPOA.Configs.loading={
+    // ajax request begins
+    &quot;start&quot;:function(){
+        $(&quot;#contentDIV&quot;).html(&quot;&quot;);
+        $(&quot;#loadingDIV&quot;).show();
+    },
+    // ajax request is successful
+    &quot;success&quot;:function(){
+        $(&quot;#loadingDIV&quot;).hide();
+    },
+    &quot;error&quot;:function(){
+        $(&quot;#contentDIV&quot;).html(&quot;&lt;h2&gt;Sorry, an error occurred , please try again later request!&lt;/h2&gt;&quot;);
+    },
+    // ajax request ends ( regardless of success or failure will be called )
+    &quot;end&quot;:function(hash){
+      $(&quot;#loadingDIV&quot;).hide();
+
+         // After finished loading a request to determine hash, Hash action on the request page instance initialization
+        if(hash=&quot;demo&quot;){
+            // opoa instance
+            var opoa={
+                &quot;actions&quot;:&quot;#show A&quot;,
+                &quot;show&quot;:&quot;#contentDIV&quot;
+            };
+            // Initialize the requested action page, start
+            EasyOPOA.start([opoa]);
+
+       } 
+    } 
+};</code></pre>
+</li>
+</ul>
+<h2 id="16-for-handling-http-response-code">16,for handling HTTP response code</h2>
+<p>In addition to the Loading friendly tips , the server may generate an error in the Ajax request process, for different errors should also be given the necessary time to the user prompts . For example, 404 on behalf of the request is not found, server error 500 delegates ……</p>
+<p>Each request will be submitted by the HTTP server returns the corresponding numerical code , EasyOPOA use <code>urlErrors</code> representatives <strong>HTTP response code object (urlErrors Object)</strong>, different support when returning HTTP code , call the appropriate function response.</p>
+<ul>
+<li><h3 id="use-easyopoa-configs-modify-global-default-object-defined-http-response-code-">Use <code>EasyOPOA.Configs</code> modify global default object defined HTTP response code :</h3>
+<p>  Global Review:</p>
+<pre><code class="lang-JS">// 404 HTTP code
+EasyOPOA.Configs.urlErrors[404] = function() {
+   console.info (&quot; does not exist ! &quot; );
+};
+
+// 500 HTTP code
+EasyOPOA.Configs.urlErrors[500] = function() {
+   console.info (&quot; Server Error ! &quot; );
+};
+
+//...</code></pre>
+<p>  Or :</p>
+<pre><code class="lang-JS">EasyOPOA.Configs.urlErrors={
+           // 404 HTTP code
+          404:function(){
+              console.info (&quot; does not exist ! &quot; ) ;
+          },
+           // 500 HTTP code
+          500:function(){
+              console.info (&quot; Server Error ! &quot;);
+          }
+}</code></pre>
+</li>
+</ul>
+<ul>
+<li><h3 id="use-urlerrors-attributes-opoa-instance-as-dom-object-defined-http-response-code-">Use <code>urlErrors</code> attributes OPOA instance as DOM object defined HTTP response code :</h3>
+<p>  To <code># menuDiv menu</code> DOM element associated with the specified action Hash instance , the code specifies the HTTP response function :</p>
+<pre><code class="lang-JS">// opoa instance
+var opoa={
+    &quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+    &quot;show&quot;:&quot;#contentDIV&quot;,
+
+    // Use urlErrors attribute defines HTTP response object code
+    &quot;urlErrors&quot;:{
+         // 404 HTTP code
+         404:function(){
+              console.info (&quot;does not exist !&quot;);
+         },
+         // 500 HTTP code
+         500:function(){
+             console.info (&quot; Server Error ! &quot; ) ;
+         }
+    }
+}</code></pre>
+</li>
+</ul>
+<ul>
+<li><h3 id="use-addactionurlerrors-function-is-defined-http-response-object-code-for-the-hash-action-">Use addActionUrlErrors () function is defined HTTP response object code for the hash action :</h3>
+<p>  Use <code>addActionUrlErrors (hashs, urlErrorsObject)</code> set the HTTP response code for the specified object hashs.</p>
+<p>  hashs: a single hash value can also be an array of hash value</p>
+<p>  <strong>Single hash value : </strong></p>
+<pre><code class="lang-JS">// Instance Specified HTTP response object code for the hash value demo.jsp of Action Action
+EasyOPOA.addActionUrlErrors(&quot;demo.jsp&quot;,{
+       // 404 HTTP code
+       404:function () {
+          console.info (&quot;Donation page not found!&quot;);
+      },
+       // 500 HTTP code
+      500:function(){}
+  } );</code></pre>
+<p>  <strong>hash value of the array: </strong></p>
+<pre><code class="lang-JS">// Values ​​demo.jsp and about.jsp of Action action response object instance of the specified HTTP code for the hash
+EasyOPOA.addActionUrlErrors([&quot;demo.jsp&quot;,&quot;about.jsp&quot;],{
+   // 404 HTTP code
+  404:function(){
+      console.info(&quot;Donation page not found!&quot;);
+  },
+   // 500 HTTP code
+  500:function(){}
+} );</code></pre>
+</li>
+</ul>
+<h2 id="17-easyopoa-framework-action-triggered-manually-hash-load">17, EasyOPOA framework action triggered manually hash load</h2>
+<p>load function allows control over the actions triggered by the developers to manage .</p>
+<p>Under normal circumstances EasyOPOA default management framework to automatically trigger actions , before the action is triggered by clicking on the page ‘s DOM element triggered. If you want to manually trigger a defined Hash action instance , use <code>EasyOPOA.load</code> function .</p>
+<p><code>EasyOPOA.load (hash [, postData])</code>: Manually trigger the specified hash action , postData submit a request for the optional parameter data (key1 = value1 &amp; key2 = value2).</p>
+<p><strong>Note : load function must be called after the start function to start ( for instance initialization is complete Hash action ) to be used in EasyOPOA framework. </strong></p>
+<pre><code class="lang-JS">EasyOPOA.load(&quot;readme.jsp&quot;);</code></pre>
+<ul>
+<li><h3 id="use-load-manual-trigger-function-used-to-submit-a-form-in-easyopoa">Use load manual trigger function used to submit a form in EasyOPOA</h3>
+<p> In OPOA program to modify, add , will need to submit the form data is loaded , this time to manually submit .<br> Using jQuery ‘s $ (‘# editForm’) serialize ()) to specify the content of the form can be obtained :</p>
+<pre><code class="lang-html">&lt;form id=&quot;editForm&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;&quot; /&gt;
+    &lt;input type=&quot;text&quot; name=&quot;title&quot; value=&quot;&quot; /&gt;
+    &lt;textarea name=&quot;content&quot; &gt;&lt;/textarea&gt;
+
+    &lt;input type=&quot;button&quot; value=&quot;Add&quot; onclick=&quot;OPOA.load(&#39;doEdit&#39;,$(&#39;#editForm&#39;).serialize())&quot; /&gt; 
+&lt;/form&gt;</code></pre>
+<p>Configuration mapping doEdit action submitted to doEdit.jsp:</p>
+<pre><code class="lang-JS">EasyOPOA.addActionMap(&quot;doEdit&quot;,&quot;do/doEdit.jsp&quot;,opoa);</code></pre>
+</li>
+<li><h3 id="at-the-confirmation-prompt-to-load-using-the-load-carried-on-the-elements">At the confirmation prompt to load using the load carried on the elements</h3>
+<p>Before deleting data often require confirmation prompt , use the load after the user confirms trigger action ( due EasyOPOA framework Hash DOM element to trigger automatic registration click event , so do not use actions in opoa automatically initializes the instance DOM )</p>
+</li>
+</ul>
+<pre><code class="lang-html"> &lt;a onclick=&quot;if(confirm(&#39;You sure you want to delete it?&#39;)){EasyOPOA.load(&#39;delete/1&#39;)}return false;&quot; href=&quot;do/doDelete.jsp?id=1&quot;&gt;deleted&lt;/a&gt;</code></pre>
+<h2 id="18-hash-action-mapping-configuration-with-parameters">18, hash action mapping configuration with parameters</h2>
+<p>The traditional hash, hash value as the default request url. If the url hash and requests inconsistent, you need to use addActionMap hash function specified separately for each specific request url.</p>
+<p>For example:</p>
+<pre><code>&lt;a class=&quot;menu&quot; href=&quot;demo&quot;&gt;examples&lt;/a&gt;
+// ...
+
+EasyOPOA.addActionMap(&quot;demo&quot;,  &quot;demo.jsp&quot; ,opoaList.menu);
+// ...</code></pre>
+<p>However, if the hash is generated dynamically and is inconsistent url , url request parameters need to get the data submitted from the hash value , then by this method is very feasible :</p>
+<pre><code>// Define a hash (demo/version/logo )
+&lt;a class=&quot;menu&quot; hash=&quot;demo/v1/123&quot;&gt;instance A &lt;/a&gt;
+&lt;a class=&quot;menu&quot; hash=&quot;demo/v2/456&quot;&gt;instance A &lt;/a&gt;
+// ...
+
+// hash obtain parameter values ​​, convert url (demo.jsp?v=release &amp;id=identity)
+demo.jsp?v=v1&amp;id=123
+demo.jsp?v=v2&amp;id=456
+// ...</code></pre>
+<p><strong><br>EasyOPOA only provides a load engine OPOA program . Also provides flexible configuration actions , support the use of data parameters in the action ( routing configuration ) , so that the action is more flexible matching in style RESTful client implementation senior custom action .
+</strong></p>
+<p><strong><br>When using the hash action with data parameters , simply specify a placeholder in the hash action configuration, you can reference parameter values ​​corresponding placeholders in the url . hash action configuration supports two types of placeholders:
+</strong></p>
+<p><code>:param</code>:  URL placeholder component parameters , a colon ( :) at the beginning , matching slash / between .</p>
+<p><code>*splat</code>： (*) at the beginning of a wildcard placeholder asterisk matches multiple URL component that supports matching slash / .</p>
+<ul>
+<li>( If you are familiar with Backbone of Backbone.Router , here ‘s configuration parameters are identical. ) *</li>
+</ul>
+<ul>
+<li><h3 id="use-parameter-placeholders-">Use parameter placeholders (:) :</h3>
+<p>For example , is defined as follows RESTful style hash action.</p>
+<pre><code class="lang-html">&lt;!-- demo/:version/:id --&gt;
+
+&lt;a class=&quot;menu&quot; hash=&quot;demo/v1/123&quot;&gt;instance A&lt;/a&gt;
+&lt;a class=&quot;menu&quot; hash=&quot;demo/v1/456&quot;&gt;instance B&lt;/a&gt;
+&lt;a class=&quot;menu&quot; hash=&quot;demo/v2/123&quot;&gt;instance C&lt;/a&gt;</code></pre>
+<p>  Wildcard URL mappings defined by parameters (parameter placeholders can match URL components slash / between ) .</p>
+<pre><code class="lang-JS">//hash,url,opoa
+EasyOPOA.addActionMap(&quot;demo/:version/:id&quot;,  &quot;demo.jsp?v={version}&amp;id={id}&quot; ,opoaList.menu);</code></pre>
+<p>  Use parameter placeholders in the hash <code>:param</code> defines the parameters :<code>version</code> and <code>id</code>.</p>
+<p>  Use the URL <code>{param}</code> to refer to the corresponding parameter values ​​: <code>{version}</code>, <code>{id}</code> values ​​are quoted <code>version</code> and <code>id</code> placeholder hash defined .</p>
+<p>  When the hash action trigger , extract parameters from the hash , the url convert .</p>
+<pre><code>demo.jsp?v=v1&amp;id=123
+demo.jsp?v=v1&amp;id=456
+demo.jsp?v=v2&amp;id=123</code></pre>
+</li>
+</ul>
+<ul>
+<li><h3 id="use-wildcards-placeholder-">Use wildcards (*) placeholder :</h3>
+<p>  For example , is defined as follows RESTful style hash action.</p>
+<pre><code class="lang-JS">&lt;!-- about/*info --&gt;    
+
+&lt;a class=&quot;menu&quot; href=&quot;about/author/2&quot;&gt;About the author 2 &lt;/a&gt;
+&lt;a class=&quot;menu&quot; href=&quot;about/company&quot;&gt;About Company&lt;/a&gt;</code></pre>
+<p>  URL parameters defined by the wildcard mapping ( to match the slash / ) .</p>
+<pre><code>EasyOPOA.addActionMap(&quot;about/*info&quot;,  &quot;about.jsp?info={info}&quot; ,opoaList.menu);</code></pre>
+<p>  When the hash action trigger , extract parameters from the hash , the url convert .</p>
+<pre><code>about.jsp?info=author/2
+about.jsp?info=company</code></pre>
+</li>
+</ul>
+<ul>
+<li><h3 id="get-two-methods-of-parameter-values-in-the-url-">Get two methods of parameter values ​​in the URL :</h3>
+<p>  In addition to using the URL <code>{param}</code> to get the value of the specified parameter , EasyOPOA framework also supports the use of indexing <code>{index}</code> get the value of the parameter.</p>
+<pre><code class="lang-JS">EasyOPOA.addActionMap(&quot;demo/:version/:id&quot;,  &quot;demo.jsp?v={0}&amp;id={1}&quot; ,opoaList.menu);
+
+EasyOPOA.addActionMap(&quot;readme/*info&quot;,  &quot;about.jsp?info={0}&quot; ,opoaList.menu);</code></pre>
+</li>
+<li><h3 id="sub-page-to-define-the-action-in-special-instructions">Sub-page to define the action in special instructions</h3>
+<p>  In OPOA application, if requested within the sub-page to define the mapping object and initializes , then only when the request is triggered, there are parameters defined action mapping to initialize . So, this will lead to a child if the page is loaded directly inside the action requested by the browser’s action can not match , no corresponding action mapping , perform notFound.</p>
+<p>  Therefore, in order to avoid such a situation , you can map the sub- page action with wildcard parameter is defined to the Home page, so that when the page is loaded with sub-pages can be scanned into the match action, and execute the corresponding load .</p>
+<p>  home.jsp</p>
+<pre><code class="lang-JS">// Register Home page there reference Hash action
+EasyOPOA.addActionMap(&quot;list/:pageNo&quot;,  &quot;list.jsp?pageNo={pageNo}&quot; ,opoa);
+
+// Register the child has a reference page Hash action
+EasyOPOA.addActionMap(&quot;show/:id&quot;,  &quot;show.jsp?id={id}&quot; ,opoa); 
+EasyOPOA.addActionMap(&quot;edit/:id&quot;,  &quot;edit.jsp?id={id}&quot; ,opoa); 
+EasyOPOA.addActionMap(&quot;delete/:id&quot;,  &quot;delete.jsp?id={id}&quot; ,opoa);</code></pre>
+</li>
+<li><h3 id="easyopoa-get-priority-and-order-of-the-url">EasyOPOA get priority and order of the URL</h3>
+<p> <strong>Average DOM object in the default URL specified values ​​have higher priority than the Senate Hash action specified URL. EasyOPOA internal frame Find URL in the following order:</strong></p>
+<ol>
+<li><p>(specified by <code>EasyOPOA.Configs.url</code>) DOM object from the properties acquired in <code>url</code> value to be loaded. If does not exist or is empty, then go to Step 2</p>
+</li>
+<li><p>scans have all defined parameters Hash action, get <code>url</code> value specified for the corresponding <code>hash</code> values​​. If not, go to step 3</p>
+</li>
+<li><p>as the <code>hash</code> value <code>url</code> value</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="19-action-orientation-and-memory-function-action-state-recovery-">19,action orientation and memory function ( action state recovery )</h2>
+<p>When a user accesses OPOA program directly home page , such as when <a href="http://127.0.0.1:8080/opoa/home.jsp">http://127.0.0.1:8080/opoa/home.jsp</a>, generally show the same load each time the default home page content.</p>
+<p>If you want when the user next visit home.jsp home , to show the contents of their last last action performed by the user , to provide users save and restore the state ‘s action . Open action can locate memory function in EasyOPOA framework.</p>
+<p>EasyOPOA framework action memory function is enabled by default , just add dependent jquery.cookie.js and json2.js function can be realized .</p>
+<pre><code>&lt;!--jquery.cookie and json2 optional , if you want to open the final movement positioning memory function , you need to introduce --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.cookie.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/json2.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>If you need to disable the action memory function, remove js files or <code>cookieLast</code> set to <code>false</code> .</p>
+<pre><code class="lang-JS">EasyOPOA.cookieLast=false;</code></pre>
+<h2 id="20-easyopoa-noconflict-non-conflicting-object-return-function">20, EasyOPOA.noConflict non-conflicting object return function</h2>
+<p>Use <code>EasyOPOA</code> and <code>OPOA</code> global variables can be referenced EasyOPOA frame object .</p>
+<p>EasyOPOA.noConflict ([boolean]): You can control EasyOPOA and OPOA release the results of the use of the returned object references EasyOPOA framework to prevent conflicts with other objects or OPOA ‘s called EasyOPOA .</p>
+<p>Control over the operation of the function of the variable <code>OPOA</code> transfer to first realize that its library .</p>
+<pre><code class="lang-JS">var $OPOA=EasyOPOA.noConflict();</code></pre>
+<p>Run this function will control variable <code>OPOA</code> and <code>EasyOPOA</code> the transfer to the first library that implements it .</p>
+<pre><code class="lang-JS">var $OPOA=EasyOPOA.noConflict(true);</code></pre>
+<h2 id="21-prevent-arguments">21, prevent arguments</h2>
+<p>prevent parameters generally do not modify the parameter is true, the action is triggered when the DOM will cancel the default action .<br>For example: cancel the default jump clicking on hyperlinks href tag .</p>
+<p>If you need to modify , through global settings :</p>
+<pre><code class="lang-JS">EasyOPOA.Configs.prevent=false;</code></pre>
+<p>Or opoa instance settings :</p>
+<pre><code class="lang-JS">//opoa instance
+var opoa={
+    &quot;actions&quot;:&quot;#menuDIV .menu&quot;,
+    &quot;show&quot;:&quot;#contentDIV&quot;,
+
+    prevent:false;
+}</code></pre>
+<h2 id="end">End</h2>
+<p>If you have more comments, suggestions or ideas , please contact me.</p>
+<p><a href="http://www.lightfeel.com/easy/easyopoa/en/index.jsp#demo" title="Online Demo">Online Demo</a></p>
+<p>Contact , feedback, customization, training Email: <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x69;&#110;&#x2e;&#116;&#104;&#x69;&#x6e;&#107;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;">&#x69;&#110;&#x2e;&#116;&#104;&#x69;&#x6e;&#107;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;</a></p>
+<p><p></p>
+<p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"></p>
+<p><input type="hidden" name="cmd" value="_xclick"></p>
+<p><input type="hidden" name="business" value="inthinkcolor@gmail.com"></p>
+<p><input type="hidden" name="item_name" value="EasyProject development Donation"></p>
+<p><input type="hidden" name="no_note" value="1"></p>
+<p><input type="hidden" name="tax" value="0"></p>
+<p><input type="image" src="http://www.lightfeel.com/easy/images/paypaldonation5.jpg"  title="PayPal donation"  border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"><br></form><br></P></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
