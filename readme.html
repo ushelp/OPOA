@@ -313,10 +313,13 @@ img {
 </li>
 <li><p>Support action memory function, can record the action last visited achieve OPOA motor recovery.</p>
 </li>
+<li><p>Support AMD（Asynchronous Module Definition） specification</p>
+</li>
 <li><p>Compatible with various browsers (Trident, Gecko, Webkit, Presto), support for multi-platform systems and applications (PC, TabletPC, Mobile).</p>
 </li>
 </ol>
-<p>EasyOPOA framework allows OPOA program specific internal structure is completely transparent to developers and users, and both meet the customer need for traditional Web applications using the experience, but also take into account the developer of a good user experience and search engine friendly. Confusion OPOA cumbersome procedures can become <strong>orderly, unified, standard</strong>, easy maintenance and management, will focus more on the development of the energy business.</p>
+<p>Programming using the framework helps to unify public issues resolved in large projects can build a<strong> more orderly, unified, standard project</strong>; development framework on the basis of certain, can develop <strong>more focused on specific energy business</strong>. Also for the <strong>future expansion and maintenance procedures</strong> are very helpful.</p>
+<p>EasyOPOA framework allows OPOA program specific internal structure is completely transparent to developers and users, and both meet the customer need for traditional Web applications using the experience, but also the developers from the tedious confusion is no standard procedure for OPOA detached, bring good experience, taking into account the search engine friendly.</p>
 <p>EasyOPOA adhering to the author always adhere to “<strong>More Easy, More Powerful.</strong>“ Pursuit of philosophy: lightweight, simple, flexible and comprehensive. Under the premise of providing a powerful comprehensive feature does not limit the user flexibility in development.</p>
 <h3 id="-official-website-home-page-http-www-lightfeel-com-easy-easyopoa-en-index-jsp-easyopoa-official-website-home-page-"><a href="http://www.lightfeel.com/easy/easyopoa/en/index.jsp" title="EasyOPOA official website home page">Official website home page</a></h3>
 <hr>
@@ -1367,10 +1370,43 @@ var opoa={
 
     prevent:false;
 }</code></pre>
+<h2 id="22-modular-programming-support-amd-specification">22、Modular programming support - AMD specification</h2>
+<p>EasyOPOA support for modular programming, and support for AMD (Asynchronous Module Definition, asynchronous definition module) specification.</p>
+<p>EasyOPOA rely <code>jQuery</code>, but it is not absolutely dependent on <code>jquery.cookie</code> and <code>json2</code> (only when action is needed and memory needed).</p>
+<p><code>jQuery</code> and <code>jquery.cookie</code> inside have provided support for the AMD specification, but <code>json2</code> also did not support any specification. So for <code>json2</code> can introduce, or to transform according to the corresponding module definition specification.</p>
+<h3 id="1-amd-support">1、AMD Support</h3>
+<p><strong>home.jsp:</strong></p>
+<pre><code class="lang-html">&lt;!-- Since json2 not support AMD specification, introduced directly (also self-transformation, specifically refer to AMD specifications) --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/json2.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Load master file module (Entry Module) --&gt;
+&lt;script src=&quot;amd/require.min.js&quot; data-main=&quot;js/main_amd&quot;&gt;&lt;/script&gt;</code></pre>
+<p><strong>js/main_amd.js：</strong></p>
+<pre><code class="lang-JS">//Jquery and jqueryCookie path configuration
+require.config({
+    paths:{
+        &quot;jquery&quot;:&quot;jquery-1.10.2.min&quot;,
+        &quot;jqueryCookie&quot;:&quot;jquery.cookie&quot;
+    }
+});
+
+//Introduction of dependence, load module (jqueryCookie optional module)
+//EasyOPOA engine has been cited internal documents dependence jquery
+//So if you do not use jquery in the startup module, you can not introduce jquery
+require([&#39;easy.opoa&#39;,&#39;jquery&#39;,&#39;jqueryCookie&#39;],function(EasyOPOA,$){
+    //……
+}</code></pre>
+<p><strong>WebRoot file structure：</strong></p>
+<pre><code>+amd
+    require.min.js
++js
+    main_amd.js
+    jquery-1.10.2.min.js
+    jquery.cookie.js
+    json2.js</code></pre>
 <h2 id="end">End</h2>
 <p>If you have more comments, suggestions or ideas , please contact me.</p>
 <p><a href="http://www.lightfeel.com/easy/easyopoa/en/index.jsp#demo" title="Online Demo">Online Demo</a></p>
-<p>Contact , feedback, customization, training Email: <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x69;&#110;&#x2e;&#116;&#104;&#x69;&#x6e;&#107;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;">&#x69;&#110;&#x2e;&#116;&#104;&#x69;&#x6e;&#107;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;</a></p>
+<p>Contact , feedback, customization, training Email: <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#105;&#x6e;&#x2e;&#x74;&#104;&#x69;&#110;&#x6b;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#105;&#x6e;&#x2e;&#x74;&#104;&#x69;&#110;&#x6b;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a></p>
 <p><p></p>
 <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"></p>
 <p><input type="hidden" name="cmd" value="_xclick"></p>

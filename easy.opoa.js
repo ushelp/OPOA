@@ -1,5 +1,6 @@
+// EasyOPOA Framework
 //
-// Version 2.0.0
+// Version 2.2.0
 //
 // Copy By RAY
 // inthinkcolor@gmail.com
@@ -7,7 +8,13 @@
 //
 // https://github.com/ushelp/OPOA/
 //
-(function(window) {
+(function(factory) {
+  if (typeof define === "function" && define.amd) {
+    define([ "jquery" ], factory);
+  } else {
+    factory(jQuery);
+  }
+})(function($) {
   var _EasyOPOA = window.EasyOPOA, _OPOA = window.OPOA, caches = {
     eles:{},
     home:{}
@@ -42,7 +49,10 @@
               notFounds[hash]();
               content = "";
             } else {
-              var emptyfind = notFounds[hash].toLowerCase();
+              var emptyfind = EasyOPOA.Configs.notFound;
+              if (notFounds[hash]) {
+                var emptyfind = notFounds[hash].toLowerCase();
+              }
               if (emptyfind == "empty") {
                 content = "";
               } else if (emptyfind == "all") {
@@ -149,6 +159,14 @@
         });
       });
     }
+  }, cookieSave = function(hash, url, opoa) {
+    if (EasyOPOA.cookieLast) {
+      if ($.cookie && window.JSON && JSON.parse) {
+        $.cookie("hash", hash);
+        $.cookie("url", url);
+        $.cookie("opoa", JSON.stringify(opoa));
+      }
+    }
   }, replaceFirst = function(hash, url, opoa) {
     if (window.history.pushState) {
       var saveUrl = home + hash;
@@ -159,6 +177,7 @@
       };
       window.history.replaceState(state, document.title, saveUrl);
     }
+    cookieSave(hash, url, opoa);
   }, backForward = function(hash, url, opoa) {
     if (window.history.pushState) {
       var saveUrl = home + hash;
@@ -171,13 +190,7 @@
     } else {
       window.location.hash = "#" + hash;
     }
-    if (EasyOPOA.cookieLast) {
-      if ($.cookie && window.JSON && JSON.parse) {
-        $.cookie("hash", hash);
-        $.cookie("url", url);
-        $.cookie("opoa", JSON.stringify(opoa));
-      }
-    }
+    cookieSave(hash, url, opoa);
   }, getUrlErrorsAndLoading = function(opoa) {
     var urlErrors = opoa["urlErrors"];
     delete opoa["urlErrors"];
@@ -426,6 +439,7 @@
                   opoa = JSON.parse(opoa);
                   if (url) {
                     replaceFirst(hash, url, opoa);
+                    scanFromRouter(hash);
                     loadShow(hash, url, opoa, null);
                   }
                 } else {
@@ -487,4 +501,5 @@
     }
   };
   window.EasyOPOA = window.OPOA = EasyOPOA;
-})(window);
+  return EasyOPOA;
+});

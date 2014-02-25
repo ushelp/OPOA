@@ -30,9 +30,13 @@ EasyOPOA is a framework OPOA program development progresses, program development
 
 6. Support action memory function, can record the action last visited achieve OPOA motor recovery.
 
-7. Compatible with various browsers (Trident, Gecko, Webkit, Presto), support for multi-platform systems and applications (PC, TabletPC, Mobile).
+7. Support AMD（Asynchronous Module Definition） specification
 
-EasyOPOA framework allows OPOA program specific internal structure is completely transparent to developers and users, and both meet the customer need for traditional Web applications using the experience, but also take into account the developer of a good user experience and search engine friendly. Confusion OPOA cumbersome procedures can become **orderly, unified, standard**, easy maintenance and management, will focus more on the development of the energy business.
+8. Compatible with various browsers (Trident, Gecko, Webkit, Presto), support for multi-platform systems and applications (PC, TabletPC, Mobile).
+
+Programming using the framework helps to unify public issues resolved in large projects can build a** more orderly, unified, standard project**; development framework on the basis of certain, can develop **more focused on specific energy business**. Also for the **future expansion and maintenance procedures** are very helpful.
+
+EasyOPOA framework allows OPOA program specific internal structure is completely transparent to developers and users, and both meet the customer need for traditional Web applications using the experience, but also the developers from the tedious confusion is no standard procedure for OPOA detached, bring good experience, taking into account the search engine friendly.
 
 EasyOPOA adhering to the author always adhere to "**More Easy, More Powerful.**" Pursuit of philosophy: lightweight, simple, flexible and comprehensive. Under the premise of providing a powerful comprehensive feature does not limit the user flexibility in development.
 
@@ -1755,6 +1759,62 @@ var opoa={
 	prevent:false;
 }
 ```
+
+
+
+
+## 22、Modular programming support - AMD specification
+
+EasyOPOA support for modular programming, and support for AMD (Asynchronous Module Definition, asynchronous definition module) specification.
+
+EasyOPOA rely `jQuery`, but it is not absolutely dependent on `jquery.cookie` and `json2` (only when action is needed and memory needed).
+
+`jQuery` and `jquery.cookie` inside have provided support for the AMD specification, but `json2` also did not support any specification. So for `json2` can introduce, or to transform according to the corresponding module definition specification.
+
+
+### 1、AMD Support
+
+
+**home.jsp:**
+
+```html
+<!-- Since json2 not support AMD specification, introduced directly (also self-transformation, specifically refer to AMD specifications) -->
+<script type="text/javascript" src="js/json2.js"></script>
+<!-- Load master file module (Entry Module) -->
+<script src="amd/require.min.js" data-main="js/main_amd"></script>
+```
+
+
+**js/main_amd.js：**
+
+```JS
+//Jquery and jqueryCookie path configuration
+require.config({
+	paths:{
+		"jquery":"jquery-1.10.2.min",
+		"jqueryCookie":"jquery.cookie"
+	}
+});
+
+//Introduction of dependence, load module (jqueryCookie optional module)
+//EasyOPOA engine has been cited internal documents dependence jquery
+//So if you do not use jquery in the startup module, you can not introduce jquery
+require(['easy.opoa','jquery','jqueryCookie'],function(EasyOPOA,$){
+	//……
+}
+```
+
+**WebRoot file structure：**
+```
++amd
+	require.min.js
++js
+    main_amd.js
+	jquery-1.10.2.min.js
+    jquery.cookie.js
+	json2.js
+```	
+
 
 
 ## End
