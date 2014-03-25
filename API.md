@@ -137,9 +137,9 @@ EasyOPOA.Configs.url="href";
 
  Core methods, start EasyOPOA.
 
-Function with two arguments: opoaList (OPOA physical configuration collection), actionMaps (hash action mapping list of objects).
+ Function with two arguments: opoaList (OPOA physical configuration collection), actionMaps (hash action mapping list of objects).
 
->  actionMaps supports three forms of parameters: standard hash mapping object, based on the list of  standard hash action mapping objects array parameter, an array of objects based on the list.
+ >  actionMaps supports three forms of parameters: standard hash mapping object, based on the list of  standard hash action mapping objects array parameter, an array of objects based on the list.
 > 				
 > - **When activated, incoming standard hash action mapping object:**
 > 
