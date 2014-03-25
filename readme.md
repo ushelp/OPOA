@@ -1817,6 +1817,77 @@ require(['easy.opoa','jquery','jqueryCookie'],function(EasyOPOA,$){
 
 
 
+
+
+## 23、Compare OPOA system building and BackboneJS when EasyOPOA
+
+BackBoneJS be OPOA programming is also a favorable technology. Use EasyOPOA and BackBoneJS can complete OPOA design process.
+
+**From a design point:**EasyOPOA OPOA is a purely procedural framework for building; while BackboneJS is essentially a front-end JS MVC framework, rather than OPOA framework.
+
+**From a technical point:**EasyOPOA focus on to build OPOA systems; while BackBoneJS focused on using the front-end MVC to build a module in the system.
+
+
+- ### BackboneJS：
+
+
+ Focus on providing a JavaScript engine side MVC framework. Server-side data is given only model, the client controls all business, views and updates are rendered by the client BackboneJS done with MVC components, systems rely on JS achieve full programming capabilities.
+
+ **Advantages:**
+
+ - BackboneJS is returned from the server-side model data, with no view, on the client side rendering by JS, so use BackboneJS can reduce server-side design, only the output of the model data to the server through the client to control the MVC code, client rendering view, reduce traffic and provide better performance....
+
+ **Inadequate:**
+
+ - Increased the difficulty of front-end development, you need a professional front-end personnel, and also requires the developer must have a high level of system design JavaScript
+
+ - Is not conducive to search engine optimization, you can not grab meaningful information from the server
+ 
+ - Not suitable for business, modules, view the OPOA program to build complex types, complexity has increased the difficulty of enhancing development program with OPOA
+
+
+
+- ### EasyOPOA：
+
+ EasyOPOA to OPOA program provides engine and implement the design. More focused on server-side MVC, with Easy target, so developers do not need to learn the back-end engine and front-end MVC implementation specification, development and use as much as possible to reduce the difficulty of the front.
+
+
+ **Advantages:**
+
+ - EasyOPOA more focused on server-side MVC technology to reduce the cost and difficulty of learning development, only a limited number of master EasyOPOA API can be
+ 
+ - To solve the problem of search engine crawling, use RSP designed to carry out a targeted search engine optimization
+ 
+ - Can use its own master server-side technology to solve problems rather than relying on the superb JS programming capacity, reduce the difficulty of development OPOA
+ 
+ - OPOA service module, the view type of complexity does not increase the complexity and increase the difficulty of building, the level of technical difficulty is not growing
+ 
+ - Abstract Specification and simple, even if you are a novice JS and OPOA, but also to build a consistent, reliable and robust program
+
+ **Inadequate:**
+
+ - Because the view is to rely on server-side rendering and return, so the traffic flow is slightly larger than BackboneJS. (EasyOPOA is to get to render the page (ie, view results) directly from the server; while BackboneJS is to obtain data on the client side rendering view from the server)
+
+
+- ### Differences between design concepts and goals
+
+ It can be said EasyOPOA is designed to solve complex problems OPOA program will OPOA unraveling , to simplify , to provide a framework to support complex business development program designed to reduce the difficulty , allowing developers to more easily develop . Even if you are a novice JS in EasyOPOA framework can help rapidly develop robust , high-quality OPOA program . Consistent with its More Easy, More Powerful concept.
+
+ EasyOPOA uphold a business -friendly , developer-friendly features. By comparison, Backbone, and developers to learn from business point of view, a bit steep , but not equivalent to grasp the MVC components in the design of complex OPOA system can develop quality depends on the level of developers.
+
+ Learn BackboneJS learning curve of traditional developers higher , there is a strong need for JS skills, while the front-end MVC need to understand the characteristics and different, mainly master specification for each module BackboneJS MVC development defined roles and define methods , as well as supporting a huge number of front-end API. The final program quality is also on the front end of the program with a personal understanding of the system design, and JS programming application levels....
+
+
+- ### Summary and recommendations
+
+ Taken from the design and realization of the objectives are not the same, the two decided to completely replace the relationship does not exist, it is not mutually exclusive.
+
+ Instead, both with the use of the program may also allow OPOA become stronger, you can use in the design of the overall system EasyOPOA build and control, as large projects OPOA driving engine; while BackboneJS complex system of partial completion of the module function, play MVC front-end advantages and charm.
+
+
+
+
+
 ## End
 
 

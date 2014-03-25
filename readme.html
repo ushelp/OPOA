@@ -1403,10 +1403,65 @@ require([&#39;easy.opoa&#39;,&#39;jquery&#39;,&#39;jqueryCookie&#39;],function(E
     jquery-1.10.2.min.js
     jquery.cookie.js
     json2.js</code></pre>
+<h2 id="23-compare-opoa-system-building-and-backbonejs-when-easyopoa">23、Compare OPOA system building and BackboneJS when EasyOPOA</h2>
+<p>BackBoneJS be OPOA programming is also a favorable technology. Use EasyOPOA and BackBoneJS can complete OPOA design process.</p>
+<p><strong>From a design point:</strong>EasyOPOA OPOA is a purely procedural framework for building; while BackboneJS is essentially a front-end JS MVC framework, rather than OPOA framework.</p>
+<p><strong>From a technical point:</strong>EasyOPOA focus on to build OPOA systems; while BackBoneJS focused on using the front-end MVC to build a module in the system.</p>
+<ul>
+<li><h3 id="backbonejs-">BackboneJS：</h3>
+</li>
+</ul>
+<p> Focus on providing a JavaScript engine side MVC framework. Server-side data is given only model, the client controls all business, views and updates are rendered by the client BackboneJS done with MVC components, systems rely on JS achieve full programming capabilities.</p>
+<p> <strong>Advantages:</strong></p>
+<ul>
+<li><p>BackboneJS is returned from the server-side model data, with no view, on the client side rendering by JS, so use BackboneJS can reduce server-side design, only the output of the model data to the server through the client to control the MVC code, client rendering view, reduce traffic and provide better performance….</p>
+<p><strong>Inadequate:</strong></p>
+</li>
+<li><p>Increased the difficulty of front-end development, you need a professional front-end personnel, and also requires the developer must have a high level of system design JavaScript</p>
+</li>
+<li><p>Is not conducive to search engine optimization, you can not grab meaningful information from the server</p>
+</li>
+<li><p>Not suitable for business, modules, view the OPOA program to build complex types, complexity has increased the difficulty of enhancing development program with OPOA</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-">EasyOPOA：</h3>
+<p>EasyOPOA to OPOA program provides engine and implement the design. More focused on server-side MVC, with Easy target, so developers do not need to learn the back-end engine and front-end MVC implementation specification, development and use as much as possible to reduce the difficulty of the front.</p>
+</li>
+</ul>
+<p> <strong>Advantages:</strong></p>
+<ul>
+<li><p>EasyOPOA more focused on server-side MVC technology to reduce the cost and difficulty of learning development, only a limited number of master EasyOPOA API can be</p>
+</li>
+<li><p>To solve the problem of search engine crawling, use RSP designed to carry out a targeted search engine optimization</p>
+</li>
+<li><p>Can use its own master server-side technology to solve problems rather than relying on the superb JS programming capacity, reduce the difficulty of development OPOA</p>
+</li>
+<li><p>OPOA service module, the view type of complexity does not increase the complexity and increase the difficulty of building, the level of technical difficulty is not growing</p>
+</li>
+<li><p>Abstract Specification and simple, even if you are a novice JS and OPOA, but also to build a consistent, reliable and robust program</p>
+<p><strong>Inadequate:</strong></p>
+</li>
+<li><p>Because the view is to rely on server-side rendering and return, so the traffic flow is slightly larger than BackboneJS. (EasyOPOA is to get to render the page (ie, view results) directly from the server; while BackboneJS is to obtain data on the client side rendering view from the server)</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="differences-between-design-concepts-and-goals">Differences between design concepts and goals</h3>
+<p>It can be said EasyOPOA is designed to solve complex problems OPOA program will OPOA unraveling , to simplify , to provide a framework to support complex business development program designed to reduce the difficulty , allowing developers to more easily develop . Even if you are a novice JS in EasyOPOA framework can help rapidly develop robust , high-quality OPOA program . Consistent with its More Easy, More Powerful concept.</p>
+<p>EasyOPOA uphold a business -friendly , developer-friendly features. By comparison, Backbone, and developers to learn from business point of view, a bit steep , but not equivalent to grasp the MVC components in the design of complex OPOA system can develop quality depends on the level of developers.</p>
+<p>Learn BackboneJS learning curve of traditional developers higher , there is a strong need for JS skills, while the front-end MVC need to understand the characteristics and different, mainly master specification for each module BackboneJS MVC development defined roles and define methods , as well as supporting a huge number of front-end API. The final program quality is also on the front end of the program with a personal understanding of the system design, and JS programming application levels….</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="summary-and-recommendations">Summary and recommendations</h3>
+<p>Taken from the design and realization of the objectives are not the same, the two decided to completely replace the relationship does not exist, it is not mutually exclusive.</p>
+<p>Instead, both with the use of the program may also allow OPOA become stronger, you can use in the design of the overall system EasyOPOA build and control, as large projects OPOA driving engine; while BackboneJS complex system of partial completion of the module function, play MVC front-end advantages and charm.</p>
+</li>
+</ul>
 <h2 id="end">End</h2>
 <p>If you have more comments, suggestions or ideas , please contact me.</p>
 <p><a href="http://www.lightfeel.com/easy/easyopoa/en/index.jsp#demo" title="Online Demo">Online Demo</a></p>
-<p>Contact , feedback, customization, training Email: <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#105;&#x6e;&#x2e;&#x74;&#104;&#x69;&#110;&#x6b;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#105;&#x6e;&#x2e;&#x74;&#104;&#x69;&#110;&#x6b;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a></p>
+<p>Contact , feedback, customization, training Email: <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#105;&#x6e;&#x2e;&#x74;&#x68;&#x69;&#110;&#x6b;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#105;&#x6e;&#x2e;&#x74;&#x68;&#x69;&#110;&#x6b;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p><p></p>
 <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"></p>
 <p><input type="hidden" name="cmd" value="_xclick"></p>
