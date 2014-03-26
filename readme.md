@@ -1819,7 +1819,7 @@ require(['easy.opoa','jquery','jqueryCookie'],function(EasyOPOA,$){
 
 
 
-## 23、Compare OPOA system building and BackboneJS when EasyOPOA
+## 23、EasyOPOA and BackboneJS comparison when the OPOA system building
 
 BackBoneJS be OPOA programming is also a favorable technology. Use EasyOPOA and BackBoneJS can complete OPOA design process.
 
