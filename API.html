@@ -292,16 +292,12 @@ img {
 </head>
 <body>
 <h1 id="easyopoa-framework-api">EasyOPOA Framework API</h1>
-<p>EasyOPOA Easy uphold the core idea of ​​the framework, in order to ensure the developer-friendly, API is very simple, only a limited number of storm drain functional API.</p>
+<p><strong>EasyOPOA Easy uphold the core idea of ​​the framework, in order to ensure the developer-friendly, API is very simple, only a limited number of storm drain functional API.</strong></p>
 <p>EasyOPOA Framework API is divided into two categories:</p>
-<ol>
-<li><p>OPOA instance (OPOA Instance) defined attributes（Total 11）</p>
-<p>Create OPOA instance API. EasyOPOA action instances as a framework to Hash core, OPOA example is composed of three elements Hash action instances (hash, url, OPOAInstance) one.</p>
-</li>
-<li><p>EasyOPOA Framework API（Total 12）</p>
-<p>System-level global API</p>
-</li>
-</ol>
+<p><strong>1. OPOA instance (OPOA Instance) defined attributes（Total 11）</strong></p>
+<p> Create OPOA instance property API. EasyOPOA action instances as a framework to Hash core, OPOA example is composed of three elements Hash action instances (hash, url, OPOAInstance) one.</p>
+<p><strong>2. EasyOPOA Framework API（Total 12）</strong></p>
+<p> System-level global API.</p>
 <hr>
 <h2 id="1-opoa-instance-opoa-instance-defined-attributes">1、OPOA instance (OPOA Instance) defined attributes</h2>
 <p>In OPOA procedure, each action corresponds to a triggering need OPOA instance, a plurality of operation may correspond to the same instance OPOA. During loading, you must create OPOA instances in advance.</p>
@@ -392,24 +388,27 @@ var opoa = {
 <p>EasyOPOA framework open 12 system-level global API.</p>
 <ul>
 <li><h3 id="easyopoa-configs">EasyOPOA.Configs</h3>
-</li>
-</ul>
-<p><code>EasyOPOA.Configs</code> save the default values ​​OPOA instance properties globally. OPOA global default instance configuration parameters, can be re-set by <code>EasyOPOA.Configs</code>. Example:</p>
+<p><code>EasyOPOA.Configs</code> save the default values ​​OPOA instance properties globally. OPOA global default instance configuration parameters, can be re-set by <code>EasyOPOA.Configs</code>.</p>
+<blockquote>
+<p> Example:</p>
 <pre><code class="lang-JS">// If you do not find the find the specified content data returned from the server, then displays all
 EasyOPOA.Configs.notFound=&quot;all&quot;;
 // Get url DOM attribute values
 EasyOPOA.Configs.url=&quot;href&quot;;
     ...</code></pre>
+</blockquote>
+</li>
+</ul>
 <ul>
 <li><h3 id="easyopoa-cookielast">EasyOPOA.cookieLast</h3>
-<p>= boolean：true || false</p>
+<pre><code class="lang-JS">= boolean：true || false</code></pre>
 <p>Use cookie, open action positioning memory function (dependent jquery.cookie.js and json2.js), the ability to record the action last visit, OPOA action to achieve recovery.</p>
 <p>default: false。</p>
 </li>
 </ul>
 <ul>
 <li><h3 id="easyopoa-start">EasyOPOA.start</h3>
-<p>= function(opoaList, actionMaps)</p>
+<pre><code class="lang-JS">= function(opoaList, [actionMaps])</code></pre>
 <p>Core methods, start EasyOPOA.</p>
 <p>Function with two arguments: opoaList (OPOA physical configuration collection), actionMaps (hash action mapping list of objects).</p>
 <blockquote>
@@ -447,25 +446,23 @@ EasyOPOA.start(opoaList,actionMap);</code></pre>
 //Use opoaList and actionMaps start
 EasyOPOA.start(opoaList,actionMap2);</code></pre>
 </blockquote>
-<ul>
-<li><h3 id="easyopoa-nothash">EasyOPOA.notHash</h3>
 </li>
-</ul>
-<p>= function(hash)</p>
+<li><h3 id="easyopoa-nothash">EasyOPOA.notHash</h3>
+<pre><code class="lang-JS">= function([hash])</code></pre>
 <p>If the user requests a hash unregistered handler does not exist (such as the user to save the bookmark has expired or does not exist).</p>
 <p>Functions can be passed one argument: the name of the user to access an invalid hash.</p>
 </li>
 </ul>
 <ul>
 <li><h3 id="easyopoa-addactionmap-">EasyOPOA.addActionMap :</h3>
-<p>= function(hash, url, opoa)</p>
+<pre><code class="lang-JS">= function(hash, url, opoa)</code></pre>
 <p>addActionMap (hash, url, opoa) function to add a new custom hash action mapping.</p>
 <p>Functions can be passed three parameters: Custom hash name, custom url, custom opoa instance.</p>
 </li>
 </ul>
 <ul>
 <li><h3 id="easyopoa-addactionurlerrors-">EasyOPOA.addActionUrlErrors :</h3>
-<p>= function(hash, urlErrorsObject) </p>
+<pre><code class="lang-JS">= function(hash, urlErrorsObject)</code></pre>
 <p>addActionUrlErrors (hash, urlErrorsObject) function is defined as the hash code action HTTP response object.</p>
 <p>Function with two arguments: hash name, HTTP response object code.</p>
 <blockquote>
@@ -480,7 +477,7 @@ EasyOPOA.start(opoaList,actionMap2);</code></pre>
 </ul>
 <ul>
 <li><h3 id="easyopoa-addactionloadings">EasyOPOA.addActionLoadings</h3>
-<p>= function(hash, loadingObject)</p>
+<pre><code class="lang-JS">= function(hash, loadingObject)</code></pre>
 <p>addActionLoadings (hash, loadingObject) function specifies loading process object to hash action.</p>
 <p>Function with two arguments: hash name, loading the processing object.</p>
 <blockquote>
@@ -501,37 +498,40 @@ EasyOPOA.start(opoaList,actionMap2);</code></pre>
 </ul>
 <ul>
 <li><h3 id="easyopoa-home">EasyOPOA.home</h3>
-<p>= function(hash, postData)</p>
+<pre><code class="lang-JS">= function(hash, [postData])</code></pre>
 <p>Home dynamically loaded by hash name.</p>
 <p>Function with two arguments: hash name, submitted to the server’s data postData….</p>
 </li>
 <li><h3 id="easyopoa-homeurl">EasyOPOA.homeUrl</h3>
-<p>= function(url, opoaInstance, postData)</p>
+<pre><code class="lang-JS">= function(url, opoaInstance, [postData])</code></pre>
 <p>Home dynamically loaded by url.</p>
 <p>Function can be passed two parameters: url, opoaInstance, submitted to the server’s data postData.</p>
 </li>
 </ul>
 <ul>
 <li><h3 id="easyopoa-homefun">EasyOPOA.homeFun</h3>
-<p>= function()</p>
-<p>When OPOA not loaded home from Ajax, the default display page handler.<br>The next scene is mainly used for the static content page, the browser back to the home page Home static content can not update in question. You can set a static page content displayed in this function. Example:</p>
+<pre><code class="lang-JS">= function()</code></pre>
+<p>When OPOA not loaded home from Ajax, the default display page handler.<br>The next scene is mainly used for the static content page, the browser back to the home page Home static content can not update in question. You can set a static page content displayed in this function.</p>
+<blockquote>
+<p>  Example:</p>
 <pre><code class="lang-JS">EasyOPOA.homeFun=function(){
-  $(&quot;#contentDIV&quot;).html(&quot;&lt;h1&gt;welcome!&lt;/h1&gt;&quot;);
+    $(&quot;#contentDIV&quot;).html(&quot;&lt;h1&gt;welcome!&lt;/h1&gt;&quot;);
 }</code></pre>
+</blockquote>
 </li>
 </ul>
 <ul>
 <li><h3 id="easyopoa-load">EasyOPOA.load</h3>
-<p>= function(hash, postData)</p>
+<pre><code class="lang-JS">= function(hash, [postData])</code></pre>
 <p>Loaded via hash action name manually.</p>
 <p>Function with two arguments: hash name, submitted to the server’s data postData.</p>
 </li>
 <li><h3 id="easyopoa-noconflict">EasyOPOA.noConflict</h3>
-<p>= function(deep)</p>
+<pre><code class="lang-JS">= function([deep])</code></pre>
 <p>noConflict function, the control variable EasyOPOA and OPOA of transferring it to the first realization that library.</p>
 <p>Function can pass a parameter: deep (empty or false to release only OPOA namespace is true will be fully released EasyOPOA and OPOA namespace).</p>
 <blockquote>
-<p>Control over the operation of the function of the variable <code>OPOA</code> transfer to first realize that its library.</p>
+<p>Example:<br> Control over the operation of the function of the variable <code>OPOA</code> transfer to first realize that its library.</p>
 <pre><code class="lang-JS">var $OPOA=EasyOPOA.noConflict();</code></pre>
 <p>Run this function will control variable <code>OPOA</code> and <code>EasyOPOA</code> the transfer to the first library that implements it.</p>
 <pre><code class="lang-JS">var $OPOA=EasyOPOA.noConflict(true);</code></pre>
@@ -541,7 +541,7 @@ EasyOPOA.start(opoaList,actionMap2);</code></pre>
 <h2 id="end">END</h2>
 <p>If you have more comments, suggestions or ideas, please contact me.</p>
 <p><a href="http://www.lightfeel.com/easy/easyopoa/en/index.jsp#demo" title="在线 Demo">Demo Online</a></p>
-<p>Contact , feedback, customization, training Email: <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x69;&#x6e;&#x2e;&#116;&#x68;&#x69;&#x6e;&#x6b;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;">&#x69;&#x6e;&#x2e;&#116;&#x68;&#x69;&#x6e;&#x6b;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p>Contact , feedback, customization, training Email: <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#105;&#x6e;&#46;&#116;&#104;&#x69;&#110;&#107;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#105;&#x6e;&#46;&#116;&#104;&#x69;&#110;&#107;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a></p>
 <p><p></p>
 <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"></p>
 <p><input type="hidden" name="cmd" value="_xclick"></p>

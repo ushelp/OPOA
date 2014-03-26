@@ -1,16 +1,16 @@
 # EasyOPOA Framework API
 
-EasyOPOA Easy uphold the core idea of ​​the framework, in order to ensure the developer-friendly, API is very simple, only a limited number of storm drain functional API.
+**EasyOPOA Easy uphold the core idea of ​​the framework, in order to ensure the developer-friendly, API is very simple, only a limited number of storm drain functional API.**
 
 EasyOPOA Framework API is divided into two categories:
 
-1. OPOA instance (OPOA Instance) defined attributes（Total 11）
+**1. OPOA instance (OPOA Instance) defined attributes（Total 11）**
 
- Create OPOA instance API. EasyOPOA action instances as a framework to Hash core, OPOA example is composed of three elements Hash action instances (hash, url, OPOAInstance) one.
+ Create OPOA instance property API. EasyOPOA action instances as a framework to Hash core, OPOA example is composed of three elements Hash action instances (hash, url, OPOAInstance) one.
 
-2. EasyOPOA Framework API（Total 12）
+**2. EasyOPOA Framework API（Total 12）**
 
- System-level global API
+ System-level global API.
 
 
 -----------------
@@ -112,21 +112,22 @@ EasyOPOA framework open 12 system-level global API.
 
  - ### EasyOPOA.Configs 
  
-`EasyOPOA.Configs` save the default values ​​OPOA instance properties globally. OPOA global default instance configuration parameters, can be re-set by `EasyOPOA.Configs`. Example:
+ `EasyOPOA.Configs` save the default values ​​OPOA instance properties globally. OPOA global default instance configuration parameters, can be re-set by `EasyOPOA.Configs`.
 
- ```JS	
-// If you do not find the find the specified content data returned from the server, then displays all
-EasyOPOA.Configs.notFound="all";
-// Get url DOM attribute values
-EasyOPOA.Configs.url="href";
-	...
-```
+ >  Example:
+>   ```JS	
+> // If you do not find the find the specified content data returned from the server, then displays all
+> EasyOPOA.Configs.notFound="all";
+> // Get url DOM attribute values
+> EasyOPOA.Configs.url="href";
+> 	...
+> ```
 
 
  - ### EasyOPOA.cookieLast
- 
+```JS	
  = boolean：true || false
-
+```
  Use cookie, open action positioning memory function (dependent jquery.cookie.js and json2.js), the ability to record the action last visit, OPOA action to achieve recovery.
 
  default: false。
@@ -134,9 +135,9 @@ EasyOPOA.Configs.url="href";
 
 
 - ### EasyOPOA.start
-
- = function(opoaList, actionMaps)
-
+```JS
+ = function(opoaList, [actionMaps])
+```
  Core methods, start EasyOPOA.
 
  Function with two arguments: opoaList (OPOA physical configuration collection), actionMaps (hash action mapping list of objects).
@@ -181,10 +182,10 @@ EasyOPOA.Configs.url="href";
 > EasyOPOA.start(opoaList,actionMap2);
 > ```
 
- - ### EasyOPOA.notHash
- 
- = function(hash)
-
+- ### EasyOPOA.notHash
+```JS
+ = function([hash])
+```
  If the user requests a hash unregistered handler does not exist (such as the user to save the bookmark has expired or does not exist).
 
  Functions can be passed one argument: the name of the user to access an invalid hash.
@@ -193,9 +194,9 @@ EasyOPOA.Configs.url="href";
 
 
  - ### EasyOPOA.addActionMap :
- 
+```JS
   = function(hash, url, opoa)
-
+```
  addActionMap (hash, url, opoa) function to add a new custom hash action mapping.
 
   Functions can be passed three parameters: Custom hash name, custom url, custom opoa instance.
@@ -203,9 +204,9 @@ EasyOPOA.Configs.url="href";
 
 
  - ### EasyOPOA.addActionUrlErrors :
- 
+```JS
   = function(hash, urlErrorsObject) 
-
+```
  addActionUrlErrors (hash, urlErrorsObject) function is defined as the hash code action HTTP response object.
 
   Function with two arguments: hash name, HTTP response object code.
@@ -222,9 +223,9 @@ EasyOPOA.Configs.url="href";
 > ```
 
 - ### EasyOPOA.addActionLoadings
-
+```JS
  = function(hash, loadingObject)
-
+```
  addActionLoadings (hash, loadingObject) function specifies loading process object to hash action.
 
   Function with two arguments: hash name, loading the processing object.
@@ -249,53 +250,55 @@ EasyOPOA.Configs.url="href";
 
 
 - ### EasyOPOA.home
-  
- = function(hash, postData)
-
+```JS
+ = function(hash, [postData])
+```
  Home dynamically loaded by hash name.
 
  Function with two arguments: hash name, submitted to the server's data postData....
 
 - ### EasyOPOA.homeUrl
-  
- = function(url, opoaInstance, postData)
-
+```JS
+ = function(url, opoaInstance, [postData])
+```
  Home dynamically loaded by url.
 
  Function can be passed two parameters: url, opoaInstance, submitted to the server's data postData.
 
 
 - ### EasyOPOA.homeFun
-
+```JS
   = function()
-
- When OPOA not loaded home from Ajax, the default display page handler.
- The next scene is mainly used for the static content page, the browser back to the home page Home static content can not update in question. You can set a static page content displayed in this function. Example:
-
- ```JS
-EasyOPOA.homeFun=function(){
-	$("#contentDIV").html("<h1>welcome!</h1>");
-}
 ```
+ When OPOA not loaded home from Ajax, the default display page handler.
+ The next scene is mainly used for the static content page, the browser back to the home page Home static content can not update in question. You can set a static page content displayed in this function.
+
+ >   Example:
+>   ```JS
+> EasyOPOA.homeFun=function(){
+> 	$("#contentDIV").html("<h1>welcome!</h1>");
+> }
+> ```
 
 
 - ### EasyOPOA.load
-  
- = function(hash, postData)
-
+```JS 
+ = function(hash, [postData])
+```
  Loaded via hash action name manually.
 
  Function with two arguments: hash name, submitted to the server's data postData.
 
 - ### EasyOPOA.noConflict
-  
- = function(deep)
-
+```JS
+ = function([deep])
+```
  noConflict function, the control variable EasyOPOA and OPOA of transferring it to the first realization that library.
 
  Function can pass a parameter: deep (empty or false to release only OPOA namespace is true will be fully released EasyOPOA and OPOA namespace).
 
- > Control over the operation of the function of the variable `OPOA` transfer to first realize that its library.
+ > Example:
+ >  Control over the operation of the function of the variable `OPOA` transfer to first realize that its library.
 > ```JS
 > var $OPOA=EasyOPOA.noConflict();
 > ```
