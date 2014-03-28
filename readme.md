@@ -234,7 +234,7 @@ EasyOPOA.Configs.url = "href";
 	</div>
 	<!-- Bottom DIV -->
 	<div id="footDIV">
-		© 2013 - 2014 Ray <br /> Email: <a href="mailto:in.think@gmail.com"> in.think @ gmail.com </a>
+		© 2013 - 2014 Ray <br /> Email: <a href="mailto:inthinkcolor@gmail.com"> in.think @ gmail.com </a>
 	</div>
 </body>
 ```
@@ -1897,7 +1897,7 @@ If you have more comments, suggestions or ideas , please contact me.
 
 [Online Demo](http://www.lightfeel.com/easy/easyopoa/en/index.jsp#demo 'Online Demo')
 
-Contact , feedback, customization, training Email: <in.think@gmail.com>
+Contact , feedback, customization, training Email: <inthinkcolor@gmail.com>
 
 <p>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">

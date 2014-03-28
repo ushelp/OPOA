@@ -319,7 +319,7 @@ If you have more comments, suggestions or ideas, please contact me.
 
 [Demo Online](http://www.lightfeel.com/easy/easyopoa/en/index.jsp#demo '在线 Demo')
 
-Contact , feedback, customization, training Email: <in.think@gmail.com>
+Contact , feedback, customization, training Email: <inthinkcolor@gmail.com>
 
 <p>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
