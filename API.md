@@ -6,7 +6,9 @@ EasyOPOA Framework API is divided into two categories:
 
 **1. OPOA instance (OPOA Instance) defined attributes（Total 11）**
 
- Create OPOA instance property API. EasyOPOA action instances as a framework to Hash core, OPOA example is composed of three elements Hash action instances (hash, url, OPOAInstance) one.
+ Create OPOA instance property API. 
+
+ EasyOPOA action instances as a framework to Hash core, OPOA example is composed of three elements Hash action instances (hash, url, OPOAInstance) one.
 
 **2. EasyOPOA Framework API（Total 12）**
 
@@ -232,7 +234,7 @@ EasyOPOA framework open 12 system-level global API.
 
  >   **loading process object:**
 >   
-> Loading processing object contains four loading states: start, success, error, end.
+> Loading processing object contains four loading states: start, success, error, end(Can use to change Dom status or UI when loading end).
 > Does not force requirements also define four states, the definition, according to the definitions section needs only.
 >
 >  ```JS
