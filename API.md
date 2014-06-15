@@ -3,7 +3,7 @@
 **EasyOPOA Easy uphold the core idea of ​​the framework, in order to ensure the developer-friendly, API is very simple, only a limited number of storm drain functional API.**
 
 EasyOPOA Framework API is divided into two categories:
-
+![EasyOPOA API](images/eo-4.png)
 **1. OPOA instance (OPOA Instance) defined attributes（Total 11）**
 
  Create OPOA instance property API. 

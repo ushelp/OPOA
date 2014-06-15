@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
 <head>
 <title>readme</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -288,6 +287,201 @@ table tr:nth-child(2n) {
 img {
   max-width: 100%
 }
+
+/* GitHub Theme */
+.prettyprint {
+  
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+ 
+}
+.codeSpan{ font-size: 13px;
+  font-family: "Bitstream Vera Sans Mono", "Consolas", "Courier New", Courier, monospace !important;
+}
+.pln {
+  color: #333333;
+}
+
+@media screen {
+	
+  .str {
+    color: #dd1144;
+  }
+
+  .kwd {
+    color: #333333;
+  }
+
+  .com {
+    color: #999988;
+    font-style: italic;
+  }
+
+  .typ {
+    color: #445588;
+  }
+
+  .lit {
+    color: #008484; font-weight: bold;
+  }
+
+  .pun {
+    color: #333333;
+  }
+
+  .opn {
+    color: #333333;
+  }
+
+  .clo {
+    color: #333333;
+  }
+
+  .tag {
+    color: navy;
+  }
+
+  .atn {
+    color: teal;
+  }
+
+  .atv {
+    color: #dd1144;
+  }
+
+  .dec {
+    color: #333333;
+  }
+
+  .var {
+    color: teal;
+  }
+
+  .fun {
+    color: #990000;
+  }
+}
+@media print, projection {
+  .str {
+    color: #006600;
+  }
+
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+  .lit {
+    color: #004444;
+  }
+
+  .pun, .opn, .clo {
+    color: #444400;
+  }
+
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .atn {
+    color: #440044;
+  }
+
+  .atv {
+    color: #006600;
+  }
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  /* */
+}
+
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* */
+}
+ </style>
+	<script type="text/javascript">
+	!function(){var q=null;window.PR_SHOULD_USE_CONTINUATION=!0;
+(function(){function S(a){function d(e){var b=e.charCodeAt(0);if(b!==92)return b;var a=e.charAt(1);return(b=r[a])?b:"0"<=a&&a<="7"?parseInt(e.substring(1),8):a==="u"||a==="x"?parseInt(e.substring(2),16):e.charCodeAt(1)}function g(e){if(e<32)return(e<16?"\\x0":"\\x")+e.toString(16);e=String.fromCharCode(e);return e==="\\"||e==="-"||e==="]"||e==="^"?"\\"+e:e}function b(e){var b=e.substring(1,e.length-1).match(/\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\[0-3][0-7]{0,2}|\\[0-7]{1,2}|\\[\S\s]|[^\\]/g),e=[],a=
+b[0]==="^",c=["["];a&&c.push("^");for(var a=a?1:0,f=b.length;a<f;++a){var h=b[a];if(/\\[bdsw]/i.test(h))c.push(h);else{var h=d(h),l;a+2<f&&"-"===b[a+1]?(l=d(b[a+2]),a+=2):l=h;e.push([h,l]);l<65||h>122||(l<65||h>90||e.push([Math.max(65,h)|32,Math.min(l,90)|32]),l<97||h>122||e.push([Math.max(97,h)&-33,Math.min(l,122)&-33]))}}e.sort(function(e,a){return e[0]-a[0]||a[1]-e[1]});b=[];f=[];for(a=0;a<e.length;++a)h=e[a],h[0]<=f[1]+1?f[1]=Math.max(f[1],h[1]):b.push(f=h);for(a=0;a<b.length;++a)h=b[a],c.push(g(h[0])),
+h[1]>h[0]&&(h[1]+1>h[0]&&c.push("-"),c.push(g(h[1])));c.push("]");return c.join("")}function s(e){for(var a=e.source.match(/\[(?:[^\\\]]|\\[\S\s])*]|\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\\d+|\\[^\dux]|\(\?[!:=]|[()^]|[^()[\\^]+/g),c=a.length,d=[],f=0,h=0;f<c;++f){var l=a[f];l==="("?++h:"\\"===l.charAt(0)&&(l=+l.substring(1))&&(l<=h?d[l]=-1:a[f]=g(l))}for(f=1;f<d.length;++f)-1===d[f]&&(d[f]=++x);for(h=f=0;f<c;++f)l=a[f],l==="("?(++h,d[h]||(a[f]="(?:")):"\\"===l.charAt(0)&&(l=+l.substring(1))&&l<=h&&
+(a[f]="\\"+d[l]);for(f=0;f<c;++f)"^"===a[f]&&"^"!==a[f+1]&&(a[f]="");if(e.ignoreCase&&m)for(f=0;f<c;++f)l=a[f],e=l.charAt(0),l.length>=2&&e==="["?a[f]=b(l):e!=="\\"&&(a[f]=l.replace(/[A-Za-z]/g,function(a){a=a.charCodeAt(0);return"["+String.fromCharCode(a&-33,a|32)+"]"}));return a.join("")}for(var x=0,m=!1,j=!1,k=0,c=a.length;k<c;++k){var i=a[k];if(i.ignoreCase)j=!0;else if(/[a-z]/i.test(i.source.replace(/\\u[\da-f]{4}|\\x[\da-f]{2}|\\[^UXux]/gi,""))){m=!0;j=!1;break}}for(var r={b:8,t:9,n:10,v:11,
+f:12,r:13},n=[],k=0,c=a.length;k<c;++k){i=a[k];if(i.global||i.multiline)throw Error(""+i);n.push("(?:"+s(i)+")")}return RegExp(n.join("|"),j?"gi":"g")}function T(a,d){function g(a){var c=a.nodeType;if(c==1){if(!b.test(a.className)){for(c=a.firstChild;c;c=c.nextSibling)g(c);c=a.nodeName.toLowerCase();if("br"===c||"li"===c)s[j]="\n",m[j<<1]=x++,m[j++<<1|1]=a}}else if(c==3||c==4)c=a.nodeValue,c.length&&(c=d?c.replace(/\r\n?/g,"\n"):c.replace(/[\t\n\r ]+/g," "),s[j]=c,m[j<<1]=x,x+=c.length,m[j++<<1|1]=
+a)}var b=/(?:^|\s)nocode(?:\s|$)/,s=[],x=0,m=[],j=0;g(a);return{a:s.join("").replace(/\n$/,""),d:m}}function H(a,d,g,b){d&&(a={a:d,e:a},g(a),b.push.apply(b,a.g))}function U(a){for(var d=void 0,g=a.firstChild;g;g=g.nextSibling)var b=g.nodeType,d=b===1?d?a:g:b===3?V.test(g.nodeValue)?a:d:d;return d===a?void 0:d}function C(a,d){function g(a){for(var j=a.e,k=[j,"pln"],c=0,i=a.a.match(s)||[],r={},n=0,e=i.length;n<e;++n){var z=i[n],w=r[z],t=void 0,f;if(typeof w==="string")f=!1;else{var h=b[z.charAt(0)];
+if(h)t=z.match(h[1]),w=h[0];else{for(f=0;f<x;++f)if(h=d[f],t=z.match(h[1])){w=h[0];break}t||(w="pln")}if((f=w.length>=5&&"lang-"===w.substring(0,5))&&!(t&&typeof t[1]==="string"))f=!1,w="src";f||(r[z]=w)}h=c;c+=z.length;if(f){f=t[1];var l=z.indexOf(f),B=l+f.length;t[2]&&(B=z.length-t[2].length,l=B-f.length);w=w.substring(5);H(j+h,z.substring(0,l),g,k);H(j+h+l,f,I(w,f),k);H(j+h+B,z.substring(B),g,k)}else k.push(j+h,w)}a.g=k}var b={},s;(function(){for(var g=a.concat(d),j=[],k={},c=0,i=g.length;c<i;++c){var r=
+g[c],n=r[3];if(n)for(var e=n.length;--e>=0;)b[n.charAt(e)]=r;r=r[1];n=""+r;k.hasOwnProperty(n)||(j.push(r),k[n]=q)}j.push(/[\S\s]/);s=S(j)})();var x=d.length;return g}function v(a){var d=[],g=[];a.tripleQuotedStrings?d.push(["str",/^(?:'''(?:[^'\\]|\\[\S\s]|''?(?=[^']))*(?:'''|$)|"""(?:[^"\\]|\\[\S\s]|""?(?=[^"]))*(?:"""|$)|'(?:[^'\\]|\\[\S\s])*(?:'|$)|"(?:[^"\\]|\\[\S\s])*(?:"|$))/,q,"'\""]):a.multiLineStrings?d.push(["str",/^(?:'(?:[^'\\]|\\[\S\s])*(?:'|$)|"(?:[^"\\]|\\[\S\s])*(?:"|$)|`(?:[^\\`]|\\[\S\s])*(?:`|$))/,
+q,"'\"`"]):d.push(["str",/^(?:'(?:[^\n\r'\\]|\\.)*(?:'|$)|"(?:[^\n\r"\\]|\\.)*(?:"|$))/,q,"\"'"]);a.verbatimStrings&&g.push(["str",/^@"(?:[^"]|"")*(?:"|$)/,q]);var b=a.hashComments;b&&(a.cStyleComments?(b>1?d.push(["com",/^#(?:##(?:[^#]|#(?!##))*(?:###|$)|.*)/,q,"#"]):d.push(["com",/^#(?:(?:define|e(?:l|nd)if|else|error|ifn?def|include|line|pragma|undef|warning)\b|[^\n\r]*)/,q,"#"]),g.push(["str",/^<(?:(?:(?:\.\.\/)*|\/?)(?:[\w-]+(?:\/[\w-]+)+)?[\w-]+\.h(?:h|pp|\+\+)?|[a-z]\w*)>/,q])):d.push(["com",
+/^#[^\n\r]*/,q,"#"]));a.cStyleComments&&(g.push(["com",/^\/\/[^\n\r]*/,q]),g.push(["com",/^\/\*[\S\s]*?(?:\*\/|$)/,q]));if(b=a.regexLiterals){var s=(b=b>1?"":"\n\r")?".":"[\\S\\s]";g.push(["lang-regex",RegExp("^(?:^^\\.?|[+-]|[!=]=?=?|\\#|%=?|&&?=?|\\(|\\*=?|[+\\-]=|->|\\/=?|::?|<<?=?|>>?>?=?|,|;|\\?|@|\\[|~|{|\\^\\^?=?|\\|\\|?=?|break|case|continue|delete|do|else|finally|instanceof|return|throw|try|typeof)\\s*("+("/(?=[^/*"+b+"])(?:[^/\\x5B\\x5C"+b+"]|\\x5C"+s+"|\\x5B(?:[^\\x5C\\x5D"+b+"]|\\x5C"+
+s+")*(?:\\x5D|$))+/")+")")])}(b=a.types)&&g.push(["typ",b]);b=(""+a.keywords).replace(/^ | $/g,"");b.length&&g.push(["kwd",RegExp("^(?:"+b.replace(/[\s,]+/g,"|")+")\\b"),q]);d.push(["pln",/^\s+/,q," \r\n\t\u00a0"]);b="^.[^\\s\\w.$@'\"`/\\\\]*";a.regexLiterals&&(b+="(?!s*/)");g.push(["lit",/^@[$_a-z][\w$@]*/i,q],["typ",/^(?:[@_]?[A-Z]+[a-z][\w$@]*|\w+_t\b)/,q],["pln",/^[$_a-z][\w$@]*/i,q],["lit",/^(?:0x[\da-f]+|(?:\d(?:_\d+)*\d*(?:\.\d*)?|\.\d\+)(?:e[+-]?\d+)?)[a-z]*/i,q,"0123456789"],["pln",/^\\[\S\s]?/,
+q],["pun",RegExp(b),q]);return C(d,g)}function J(a,d,g){function b(a){var c=a.nodeType;if(c==1&&!x.test(a.className))if("br"===a.nodeName)s(a),a.parentNode&&a.parentNode.removeChild(a);else for(a=a.firstChild;a;a=a.nextSibling)b(a);else if((c==3||c==4)&&g){var d=a.nodeValue,i=d.match(m);if(i)c=d.substring(0,i.index),a.nodeValue=c,(d=d.substring(i.index+i[0].length))&&a.parentNode.insertBefore(j.createTextNode(d),a.nextSibling),s(a),c||a.parentNode.removeChild(a)}}function s(a){function b(a,c){var d=
+c?a.cloneNode(!1):a,e=a.parentNode;if(e){var e=b(e,1),g=a.nextSibling;e.appendChild(d);for(var i=g;i;i=g)g=i.nextSibling,e.appendChild(i)}return d}for(;!a.nextSibling;)if(a=a.parentNode,!a)return;for(var a=b(a.nextSibling,0),d;(d=a.parentNode)&&d.nodeType===1;)a=d;c.push(a)}for(var x=/(?:^|\s)nocode(?:\s|$)/,m=/\r\n?|\n/,j=a.ownerDocument,k=j.createElement("li");a.firstChild;)k.appendChild(a.firstChild);for(var c=[k],i=0;i<c.length;++i)b(c[i]);d===(d|0)&&c[0].setAttribute("value",d);var r=j.createElement("ol");
+r.className="linenums";for(var d=Math.max(0,d-1|0)||0,i=0,n=c.length;i<n;++i)k=c[i],k.className="L"+(i+d)%10,k.firstChild||k.appendChild(j.createTextNode("\u00a0")),r.appendChild(k);a.appendChild(r)}function p(a,d){for(var g=d.length;--g>=0;){var b=d[g];F.hasOwnProperty(b)?D.console&&console.warn("cannot override language handler %s",b):F[b]=a}}function I(a,d){if(!a||!F.hasOwnProperty(a))a=/^\s*</.test(d)?"default-markup":"default-code";return F[a]}function K(a){var d=a.h;try{var g=T(a.c,a.i),b=g.a;
+a.a=b;a.d=g.d;a.e=0;I(d,b)(a);var s=/\bMSIE\s(\d+)/.exec(navigator.userAgent),s=s&&+s[1]<=8,d=/\n/g,x=a.a,m=x.length,g=0,j=a.d,k=j.length,b=0,c=a.g,i=c.length,r=0;c[i]=m;var n,e;for(e=n=0;e<i;)c[e]!==c[e+2]?(c[n++]=c[e++],c[n++]=c[e++]):e+=2;i=n;for(e=n=0;e<i;){for(var p=c[e],w=c[e+1],t=e+2;t+2<=i&&c[t+1]===w;)t+=2;c[n++]=p;c[n++]=w;e=t}c.length=n;var f=a.c,h;if(f)h=f.style.display,f.style.display="none";try{for(;b<k;){var l=j[b+2]||m,B=c[r+2]||m,t=Math.min(l,B),A=j[b+1],G;if(A.nodeType!==1&&(G=x.substring(g,
+t))){s&&(G=G.replace(d,"\r"));A.nodeValue=G;var L=A.ownerDocument,o=L.createElement("span");o.className=c[r+1]+" codeSpan";var v=A.parentNode;v.replaceChild(o,A);o.appendChild(A);g<l&&(j[b+1]=A=L.createTextNode(x.substring(t,l)),v.insertBefore(A,o.nextSibling))}g=t;g>=l&&(b+=2);g>=B&&(r+=2)}}finally{if(f)f.style.display=h}}catch(u){D.console&&console.log(u&&u.stack||u)}}var D=window,y=["break,continue,do,else,for,if,return,while"],E=[[y,"auto,case,char,const,default,double,enum,extern,float,goto,inline,int,long,register,short,signed,sizeof,static,struct,switch,typedef,union,unsigned,void,volatile"],
+"catch,class,delete,false,import,new,operator,private,protected,public,this,throw,true,try,typeof"],M=[E,"alignof,align_union,asm,axiom,bool,concept,concept_map,const_cast,constexpr,decltype,delegate,dynamic_cast,explicit,export,friend,generic,late_check,mutable,namespace,nullptr,property,reinterpret_cast,static_assert,static_cast,template,typeid,typename,using,virtual,where"],N=[E,"abstract,assert,boolean,byte,extends,final,finally,implements,import,instanceof,interface,null,native,package,strictfp,super,synchronized,throws,transient"],
+O=[N,"as,base,by,checked,decimal,delegate,descending,dynamic,event,fixed,foreach,from,group,implicit,in,internal,into,is,let,lock,object,out,override,orderby,params,partial,readonly,ref,sbyte,sealed,stackalloc,string,select,uint,ulong,unchecked,unsafe,ushort,var,virtual,where"],E=[E,"debugger,eval,export,function,get,null,set,undefined,var,with,Infinity,NaN"],P=[y,"and,as,assert,class,def,del,elif,except,exec,finally,from,global,import,in,is,lambda,nonlocal,not,or,pass,print,raise,try,with,yield,False,True,None"],
+Q=[y,"alias,and,begin,case,class,def,defined,elsif,end,ensure,false,in,module,next,nil,not,or,redo,rescue,retry,self,super,then,true,undef,unless,until,when,yield,BEGIN,END"],W=[y,"as,assert,const,copy,drop,enum,extern,fail,false,fn,impl,let,log,loop,match,mod,move,mut,priv,pub,pure,ref,self,static,struct,true,trait,type,unsafe,use"],y=[y,"case,done,elif,esac,eval,fi,function,in,local,set,then,until"],R=/^(DIR|FILE|vector|(de|priority_)?queue|list|stack|(const_)?iterator|(multi)?(set|map)|bitset|u?(int|float)\d*)\b/,
+V=/\S/,X=v({keywords:[M,O,E,"caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END",P,Q,y],hashComments:!0,cStyleComments:!0,multiLineStrings:!0,regexLiterals:!0}),F={};p(X,["default-code"]);p(C([],[["pln",/^[^<?]+/],["dec",/^<!\w[^>]*(?:>|$)/],["com",/^<\!--[\S\s]*?(?:--\>|$)/],["lang-",/^<\?([\S\s]+?)(?:\?>|$)/],["lang-",/^<%([\S\s]+?)(?:%>|$)/],["pun",/^(?:<[%?]|[%?]>)/],["lang-",
+/^<xmp\b[^>]*>([\S\s]+?)<\/xmp\b[^>]*>/i],["lang-js",/^<script\b[^>]*>([\S\s]*?)(<\/script\b[^>]*>)/i],["lang-css",/^<style\b[^>]*>([\S\s]*?)(<\/style\b[^>]*>)/i],["lang-in.tag",/^(<\/?[a-z][^<>]*>)/i]]),["default-markup","htm","html","mxml","xhtml","xml","xsl"]);p(C([["pln",/^\s+/,q," \t\r\n"],["atv",/^(?:"[^"]*"?|'[^']*'?)/,q,"\"'"]],[["tag",/^^<\/?[a-z](?:[\w-.:]*\w)?|\/?>$/i],["atn",/^(?!style[\s=]|on)[a-z](?:[\w:-]*\w)?/i],["lang-uq.val",/^=\s*([^\s"'>]*(?:[^\s"'/>]|\/(?=\s)))/],["pun",/^[/<->]+/],
+["lang-js",/^on\w+\s*=\s*"([^"]+)"/i],["lang-js",/^on\w+\s*=\s*'([^']+)'/i],["lang-js",/^on\w+\s*=\s*([^\s"'>]+)/i],["lang-css",/^style\s*=\s*"([^"]+)"/i],["lang-css",/^style\s*=\s*'([^']+)'/i],["lang-css",/^style\s*=\s*([^\s"'>]+)/i]]),["in.tag"]);p(C([],[["atv",/^[\S\s]+/]]),["uq.val"]);p(v({keywords:M,hashComments:!0,cStyleComments:!0,types:R}),["c","cc","cpp","cxx","cyc","m"]);p(v({keywords:"null,true,false"}),["json"]);p(v({keywords:O,hashComments:!0,cStyleComments:!0,verbatimStrings:!0,types:R}),
+["cs"]);p(v({keywords:N,cStyleComments:!0}),["java"]);p(v({keywords:y,hashComments:!0,multiLineStrings:!0}),["bash","bsh","csh","sh"]);p(v({keywords:P,hashComments:!0,multiLineStrings:!0,tripleQuotedStrings:!0}),["cv","py","python"]);p(v({keywords:"caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END",hashComments:!0,multiLineStrings:!0,regexLiterals:2}),["perl","pl","pm"]);p(v({keywords:Q,
+hashComments:!0,multiLineStrings:!0,regexLiterals:!0}),["rb","ruby"]);p(v({keywords:E,cStyleComments:!0,regexLiterals:!0}),["javascript","js"]);p(v({keywords:"all,and,by,catch,class,else,extends,false,finally,for,if,in,is,isnt,loop,new,no,not,null,of,off,on,or,return,super,then,throw,true,try,unless,until,when,while,yes",hashComments:3,cStyleComments:!0,multilineStrings:!0,tripleQuotedStrings:!0,regexLiterals:!0}),["coffee"]);p(v({keywords:W,cStyleComments:!0,multilineStrings:!0}),["rc","rs","rust"]);
+p(C([],[["str",/^[\S\s]+/]]),["regex"]);var Y=D.PR={createSimpleLexer:C,registerLangHandler:p,sourceDecorator:v,PR_ATTRIB_NAME:"atn",PR_ATTRIB_VALUE:"atv",PR_COMMENT:"com",PR_DECLARATION:"dec",PR_KEYWORD:"kwd",PR_LITERAL:"lit",PR_NOCODE:"nocode",PR_PLAIN:"pln",PR_PUNCTUATION:"pun",PR_SOURCE:"src",PR_STRING:"str",PR_TAG:"tag",PR_TYPE:"typ",prettyPrintOne:D.prettyPrintOne=function(a,d,g){var b=document.createElement("div");b.innerHTML="<pre>"+a+"</pre>";b=b.firstChild;g&&J(b,g,!0);K({h:d,j:g,c:b,i:1});
+return b.innerHTML},prettyPrint:D.prettyPrint=function(a,d){function g(){for(var b=D.PR_SHOULD_USE_CONTINUATION?c.now()+250:Infinity;i<p.length&&c.now()<b;i++){for(var d=p[i],j=h,k=d;k=k.previousSibling;){var m=k.nodeType,o=(m===7||m===8)&&k.nodeValue;if(o?!/^\??prettify\b/.test(o):m!==3||/\S/.test(k.nodeValue))break;if(o){j={};o.replace(/\b(\w+)=([\w%+\-.:]+)/g,function(a,b,c){j[b]=c});break}}k=d.className;if((j!==h||e.test(k))&&!v.test(k)){m=!1;for(o=d.parentNode;o;o=o.parentNode)if(f.test(o.tagName)&&
+o.className&&e.test(o.className)){m=!0;break}if(!m){d.className+=" prettyprinted";m=j.lang;if(!m){var m=k.match(n),y;if(!m&&(y=U(d))&&t.test(y.tagName))m=y.className.match(n);m&&(m=m[1])}if(w.test(d.tagName))o=1;else var o=d.currentStyle,u=s.defaultView,o=(o=o?o.whiteSpace:u&&u.getComputedStyle?u.getComputedStyle(d,q).getPropertyValue("white-space"):0)&&"pre"===o.substring(0,3);u=j.linenums;if(!(u=u==="true"||+u))u=(u=k.match(/\blinenums\b(?::(\d+))?/))?u[1]&&u[1].length?+u[1]:!0:!1;u&&J(d,u,o);r=
+{h:m,c:d,j:u,i:o};K(r)}}}i<p.length?setTimeout(g,250):"function"===typeof a&&a()}for(var b=d||document.body,s=b.ownerDocument||document,b=[b.getElementsByTagName("pre"),b.getElementsByTagName("code"),b.getElementsByTagName("xmp")],p=[],m=0;m<b.length;++m)for(var j=0,k=b[m].length;j<k;++j)p.push(b[m][j]);var b=q,c=Date;c.now||(c={now:function(){return+new Date}});var i=0,r,n=/\blang(?:uage)?-([\w.]+)(?!\S)/,e=/\bprettyprint\b/,v=/\bprettyprinted\b/,w=/pre|xmp/i,t=/^code$/i,f=/^(?:pre|code|xmp)$/i,
+h={};g()}};typeof define==="function"&&define.amd&&define("google-code-prettify",[],function(){return Y})})();}()
+PR.registerLangHandler(PR.createSimpleLexer([["pln",/^[\t\n\f\r ]+/,null," \t\r\n\u000c"]],[["str",/^"(?:[^\n\f\r"\\]|\\(?:\r\n?|\n|\f)|\\[\S\s])*"/,null],["str",/^'(?:[^\n\f\r'\\]|\\(?:\r\n?|\n|\f)|\\[\S\s])*'/,null],["lang-css-str",/^url\(([^"')]+)\)/i],["kwd",/^(?:url|rgb|!important|@import|@page|@media|@charset|inherit)(?=[^\w-]|$)/i,null],["lang-css-kw",/^(-?(?:[_a-z]|\\[\da-f]+ ?)(?:[\w-]|\\\\[\da-f]+ ?)*)\s*:/i],["com",/^\/\*[^*]*\*+(?:[^*/][^*]*\*+)*\//],
+["com",/^(?:<\!--|--\>)/],["lit",/^(?:\d+|\d*\.\d+)(?:%|[a-z]+)?/i],["lit",/^#[\da-f]{3,6}\b/i],["pln",/^-?(?:[_a-z]|\\[\da-f]+ ?)(?:[\w-]|\\\\[\da-f]+ ?)*/i],["pun",/^[^\s\w"']+/]]),["css","CSS"]);PR.registerLangHandler(PR.createSimpleLexer([],[["kwd",/^-?(?:[_a-z]|\\[\da-f]+ ?)(?:[\w-]|\\\\[\da-f]+ ?)*/i]]),["css-kw"]);PR.registerLangHandler(PR.createSimpleLexer([],[["str",/^[^"')]+/]]),["css-str"]);
+
+	var myPrettyCode=function(){
+		var codes=document.getElementsByTagName("code");
+		for(var i=0;i<codes.length;i++){
+			codes[i].className=codes[i].className.replace("prettyprinted","")+" prettyprint";
+		}		
+	    prettyPrint();
+	}
+	setInterval(myPrettyCode,2000);
+	
+	window.onscroll=myPrettyCode;
+	
+	</script>
+  
+  	<style type="text/css">
+
 </style>
 </head>
 <body>
@@ -296,7 +490,7 @@ img {
 <p>EasyOPOA is a framework OPOA program development progresses, program development for the OPOA define the concept of a complete set of standards and norms. Just a few simple configuration that is capable of fast, flexible, high-quality OPOA development program.</p>
 <blockquote>
 <p>OPOA(One Page，One Application)，Also known as Single Page Application，which is a popular use of Ajax in a single page to complete the processing of all requests for the design and development methods. Has loads fast, save traffic, efficient, facilitate the design and many other advantages.</p>
-<p>Core OPOA development is Ajax, Ajax itself due to the characteristics of the address is not updated. Development OPOA procedures also take into account the positioning and movement forward and back two problems. Location.hash completed by positioning the main action, forward and back need help History API’s.<br>In addition to the customer experience, search engine friendly and also very important, because the existing search engine technology and will not load content from Ajax, the contents of the different hash anchor will be ignored, so take a Web design program OPOA , because there is only one page, the search engine can not crawl into Ajax loaded content, can not be included, is not conducive to SEO, affecting OPOA practicality.</p>
+<p>Core OPOA development is Ajax, Ajax itself due to the characteristics of the address is not updated. Development OPOA procedures also take into account the positioning and movement forward and back two problems. Location.hash completed by positioning the main action, forward and back need help History API&#39;s.<br>In addition to the customer experience, search engine friendly and also very important, because the existing search engine technology and will not load content from Ajax, the contents of the different hash anchor will be ignored, so take a Web design program OPOA , because there is only one page, the search engine can not crawl into Ajax loaded content, can not be included, is not conducive to SEO, affecting OPOA practicality.</p>
 <p>These different traditions customer experience issues affecting both the user program on OPOA better use experience, but also affect the OPOA practicality.</p>
 </blockquote>
 <h3 id="the-main-features-of-the-development-framework-easyopoa-">The main features of the development framework EasyOPOA：</h3>
@@ -320,17 +514,18 @@ img {
 </ol>
 <p>Programming using the framework helps to unify public issues resolved in large projects can build a<strong> more orderly, unified, standard project</strong>; development framework on the basis of certain, can develop <strong>more focused on specific energy business</strong>. Also for the <strong>future expansion and maintenance procedures</strong> are very helpful.</p>
 <p>EasyOPOA framework allows OPOA program specific internal structure is completely transparent to developers and users, and both meet the customer need for traditional Web applications using the experience, but also the developers from the tedious confusion is no standard procedure for OPOA detached, bring good experience, taking into account the search engine friendly.</p>
-<p>EasyOPOA adhering to the author always adhere to “<strong>More Easy, More Powerful.</strong>“ Pursuit of philosophy: lightweight, simple, flexible and comprehensive. Under the premise of providing a powerful comprehensive feature does not limit the user flexibility in development.</p>
+<p>EasyOPOA adhering to the author always adhere to &quot;<strong>More Easy, More Powerful.</strong>&quot; Pursuit of philosophy: lightweight, simple, flexible and comprehensive. Under the premise of providing a powerful comprehensive feature does not limit the user flexibility in development.</p>
 <h3 id="-official-website-home-page-http-www-lightfeel-com-easy-easyopoa-en-index-jsp-easyopoa-official-website-home-page-"><a href="http://www.lightfeel.com/easy/easyopoa/en/index.jsp" title="EasyOPOA official website home page">Official website home page</a></h3>
 <hr>
 <h2 id="1-easyopoa-core-presentation-framework">1, EasyOPOA core presentation framework</h2>
 <p>EasyOPOA framework from the global level, the depth of analysis and a new understanding of the OPOA procedures, program development for the OPOA define the concept of a complete set of standards and norms. Face of traditional OPOA development, EasyOPOA framework of disorderly orderly, of decentralized to centralized, uniform of confusion as to provide a comprehensive and flexible framework layer support for program development OPOA level.</p>
-<p>EasyOPOA framework of traditional disorderly OPOA program development were highly abstract, the EasyOPOA each request as a “<strong>Hash action instances (Hash Action Instance) </strong>“, and the configuration associated with the request to “<strong>OPOA instance (OPOA Instance) </strong>“in the form of packages.</p>
+<p>EasyOPOA framework of traditional disorderly OPOA program development were highly abstract, the EasyOPOA each request as a &quot;<strong>Hash action instances (Hash Action Instance) </strong>&quot;, and the configuration associated with the request to &quot;<strong>OPOA instance (OPOA Instance) </strong>&quot;in the form of packages.</p>
+<p><img src="images/eo-1.png" alt="EasyOPOA frameWork structure"></p>
 <ul>
 <li><h3 id="hash-action-instances">Hash action instances</h3>
 </li>
 </ul>
-<p> Hash operation examples (Hash Action Instance) is the core object EasyOPOA frame, each request is to be executed EasyOPOA a “<strong>Hash operation examples (Hash Action Instance) </strong>“, each instance of a Hash operation (Hash Action Instance) by <code>hash</code>, <code>url</code>, <code>OPOAInstance</code> composed of three related parts:</p>
+<p> Hash operation examples (Hash Action Instance) is the core object EasyOPOA frame, each request is to be executed EasyOPOA a &quot;<strong>Hash operation examples (Hash Action Instance) </strong>&quot;, each instance of a Hash operation (Hash Action Instance) by <code>hash</code>, <code>url</code>, <code>OPOAInstance</code> composed of three related parts:</p>
 <pre><code>{
     hash : [ url, OPOAInstance ]
 };</code></pre>
@@ -338,7 +533,7 @@ img {
 <p><strong><code>url</code></strong>：URL defines the action to load the request string.</p>
 <p><strong><code>OPOAInstance</code></strong>：OPOA instance, defines the action to perform when the load request, rendering and detail the parameters of the page.</p>
 <h4 id="hash-operation-to-complete-a-three-step-example-">Hash operation to complete a three-step example：</h4>
-<p>1, Use <code>hash</code> trigger action instance Hash (hash value is displayed in the browser URL <code>#hash</code>)</p>
+<p><img src="images/eo-2.png" alt="EasyOPOA Hash Action Instance work"><br>1, Use <code>hash</code> trigger action instance Hash (hash value is displayed in the browser URL <code>#hash</code>)</p>
 <pre><code>http://domain/home.jsp#hash</code></pre>
 <p>2, Examples of backstage action automatically use Ajax request <code>url</code></p>
 <pre><code>http://domain/hash</code></pre>
@@ -456,7 +651,7 @@ EasyOPOA.Configs.url = &quot;href&quot;;
 &lt;/body&gt;</code></pre>
 <p>Main page home.jsp structure OPOA very clear and simple, click on the menu , load content , the content is displayed in the DIV . <code>Examples</code>, <code>documentation</code>, <code>on</code> three menu corresponding load <code>demo.jsp</code>, <code>content readme.jsp</code>, <code>about.jsp</code> a (<code>url</code> and <code>hash</code> values ​​default values. ) .</p>
 <p>This is due to OPOA program content is loaded using Ajax , so A tab menu does not use <code>href</code> attribute to jump , but added a <code>hash</code> attribute specifies the different actions to be loaded , hash DOM object properties Hash values ​​are used as examples of action <code>hash</code> and <code>url</code>. Similarly, as does the use of and dependency href attribute A label , the label can be used to trigger any action, such as DIV can also serve as menus.</p>
-<p>class = “menu” can be identified which is a clickable menu , easy to use jQuery on the back of the menu items were screened using EasyOPOA framework for automatic Hahs action triggers binding.</p>
+<p>class = &quot;menu&quot; can be identified which is a clickable menu , easy to use jQuery on the back of the menu items were screened using EasyOPOA framework for automatic Hahs action triggers binding.</p>
 <p><strong>OPOA Home home.jsp instance to CSS: </strong></p>
 <pre><code class="lang-html">&lt;style type=&quot;text/css&quot;&gt;
     *{Margin: 0; padding: 0;}
@@ -505,7 +700,7 @@ EasyOPOA.Configs.url = &quot;href&quot;;
     &lt;/script&gt;</code></pre>
 <p><strong>OPOA instance parameters: </strong></p>
 <p><code>actions</code> and <code>show</code> are the two core parameters OPOA instance.</p>
-<p><code>actions</code>: jQuery ‘s DOM selector, specify the instance has the ability to trigger action Hash DOM elements EasyOPOA automatically created Hash action instance. Let selector specified DOM element in the click -click when the action can be triggered Hash instance .</p>
+<p><code>actions</code>: jQuery &#39;s DOM selector, specify the instance has the ability to trigger action Hash DOM elements EasyOPOA automatically created Hash action instance. Let selector specified DOM element in the click -click when the action can be triggered Hash instance .</p>
 <pre><code>&lt;a class = &quot;menu&quot; hash = &quot;readme.jsp&quot;&gt;documentation &lt;/a&gt;</code></pre>
 <p>Examples of default triggered action url hash value and the values ​​are values ​​in the current DOM element <code>hash</code> attribute ( depending on the value <code>EasyOPOA.Configs.hash</code> and <code>EasyOPOA.Configs.href</code> a ) of . As the code , because EasyOPOA the <code>EasyOPOA.Configs.hash</code> and <code>EasyOPOA.Configs.href</code> default is <code>hash</code>, then the DOM element is clicked, the action triggered hash of <code>readme.jsp</code>, url also to <code>readme.jsp</code>.</p>
 <p><code>show</code>: hash triggered action request url returned results will appear in the show rendering the specified DOM element.</p>
@@ -526,7 +721,7 @@ EasyOPOA.Configs.url = &quot;href&quot;;
 <p> The different hash value after the request to add HOME HOME (#demo.jsp,#readme.jsp,#about.jsp), to complete the request to locate the different actions.</p>
 </li>
 <li><p><strong>Browser forward and back ( requires HTML5 support ) </strong></p>
-<p> EasyOPOA support the use of the browser’s forward and back buttons , and traditional Web applications to provide the same customer experience for the user experience . Do not support HTML5 browsers , EasyOPOA use compatibility practices without any additional processing , completely transparent , does not affect programs.</p>
+<p> EasyOPOA support the use of the browser&#39;s forward and back buttons , and traditional Web applications to provide the same customer experience for the user experience . Do not support HTML5 browsers , EasyOPOA use compatibility practices without any additional processing , completely transparent , does not affect programs.</p>
 </li>
 </ol>
 <h2 id="3-an-increase-of-search-engines-to-crawl-opoa-program-content-features">3 , an increase of search engines to crawl OPOA program content features</h2>
@@ -542,6 +737,7 @@ EasyOPOA.Configs.url = &quot;href&quot;;
 <p>Such a search engine to climb on the appropriate link href address to access specific content alone can crawl into the action associated with the current ( in order to allow reptiles to get relevant information , the server needs to provide the current seURL (SearchEgine URL) requests related handler returns information )</p>
 <p><strong>Note: </strong><code>href</code> attribute defines the link to add as <strong>seUrl (SearchEngine URL, search engine crawling address )</strong> , and will not be EasyOPOA triggered , it will not trigger a url Hash instance when the action request address. This property is only used as a search engine crawlers provide crawling pages.</p>
 <h2 id="4-easyopoa-the-hash-url-seurl-searchengine-url-of-the-three-configurations-and-relationships-">4, EasyOPOA the hash, url, seURL (SearchEngine URL) of the three configurations and relationships :</h2>
+<p><img src="images/eo-3.png" alt="EasyOPOA hash url seURL"></p>
 <ul>
 <li><p><strong>Hash</strong>:<br>Hash is the name of the user triggers the action instance , responsible for triggering action , the executive behind the corresponding Ajax request. hash values ​​can be displayed in the browser address bar.</p>
 <p> Hash value as the request was demo.jsp and demo:</p>
@@ -567,11 +763,11 @@ EasyOPOA.addActionMap (&quot;demo&quot;, &quot;mydemo.jsp&quot;, opoa);</code></
 </ul>
 <p>Generally , url and server to crawl content seURL OPOA process customer requests show should be the same ( so the content is the same) .</p>
 <h3 id="-design-reasons-"><strong>Design reasons : </strong></h3>
-<p>Due to the use of Ajax request data , does not rely on the href attribute A label , so any element (DIV, P, ……) can be triggered by clicking Hash action instance , complete the request load . So EasyOPOA defined by the concept of <code>hash</code> action trigger request identification , and then use <code>url</code> Hash mapping list associated with the line of action inside the <code>hash</code> action with a request to avoid reliance on <code>href</code>, for example, DIV or Button when the request does not have to be action to force users to add <code>href</code> attribute of DIV and Button.</p>
+<p>Due to the use of Ajax request data , does not rely on the href attribute A label , so any element (DIV, P, ......) can be triggered by clicking Hash action instance , complete the request load . So EasyOPOA defined by the concept of <code>hash</code> action trigger request identification , and then use <code>url</code> Hash mapping list associated with the line of action inside the <code>hash</code> action with a request to avoid reliance on <code>href</code>, for example, DIV or Button when the request does not have to be action to force users to add <code>href</code> attribute of DIV and Button.</p>
 <p>Meanwhile , EasyOPOA take this design allows users to trigger action <code>hash</code> values ​​, <code>url</code> value behind Ajax requests executed , the search engine crawling <code>seURL</code> value of three completely unrelated (<code>hash</code>, <code>url</code> , <code>seURL</code> may be the same or different ) . In advanced applications and content also allows the user to load the request (url) loaded with search engines and content requests (seURL) different , more flexible personalized programs to choose from.</p>
 <p><code>Href</code> in EasyOPOA in a property can be omitted entirely , but the use of <code>href tag in the</code>A<code>to specify the server load path</code>seURL` allows search engines to crawl the content of the program and included OPOA solve the OPOA the program can not be included in the search engine problems , combined with RSP provides more friendly SEO optimization.</p>
 <h2 id="5-the-use-of-search-engine-optimization-rsp-design-crawling">5, the use of search engine optimization RSP design crawling</h2>
-<p>To make the search engines crawl the content can be obtained at the time to more meaningful information , such as web keywords, description, etc. …… seURL corresponding server-side pages can be taken RSP designed to provide a more user-friendly search engine optimization.</p>
+<p>To make the search engines crawl the content can be obtained at the time to more meaningful information , such as web keywords, description, etc. ...... seURL corresponding server-side pages can be taken RSP designed to provide a more user-friendly search engine optimization.</p>
 <p><strong>RSP: Rich Server Page, rich server-side page design/fat server design , server-side with the traditional design of the corresponding thin . </strong></p>
 <p>For example , the traditional design can be based OPOA demo.jsp page :</p>
 <pre><code>&lt;h1 style=&quot;color: red&quot;&gt; This is DEMO.&lt;/h1&gt;</code></pre>
@@ -594,11 +790,11 @@ EasyOPOA.addActionMap (&quot;demo&quot;, &quot;mydemo.jsp&quot;, opoa);</code></
 <h2 id="6-the-data-returned-from-the-rsp-the-extraction-of-the-specified-content-filtering-find-notfound">6, the data returned from the RSP , the extraction of the specified content filtering find, notFound</h2>
 <p>In RSP design, the server returns the contents of the content contains some information not directly related . Typically page titles, keywords, descriptions and other information will not have any impact load and display . However, if the information is loaded into Ajax, hope remove unwanted label items , or filter to extract the contents of the specified , can take advantage of <code>find</code> and <code>notFound</code> parameters to achieve .</p>
 <p><strong><code>find</code></strong>: jQuery DOM selectors to filter out data from a specified area of the obtained data server</p>
-<p><strong><code>notFound</code></strong>: When the <code>find</code> parameter selectors did not find the content of the data returned from the server , the contents of the displayed function or call. There are four possible values ​​”<code>empty</code>“, “<code>all</code>“, “<code>custom content</code>“, <code>function</code>. Default value : <code>empty</code>.</p>
+<p><strong><code>notFound</code></strong>: When the <code>find</code> parameter selectors did not find the content of the data returned from the server , the contents of the displayed function or call. There are four possible values ​​&quot;<code>empty</code>&quot;, &quot;<code>all</code>&quot;, &quot;<code>custom content</code>&quot;, <code>function</code>. Default value : <code>empty</code>.</p>
 <ul>
-<li>“<code>empty</code>“: Show Empty contents</li>
-<li>“<code>all</code>“: displays all the data is loaded into the</li>
-<li>“<code>Custom Content</code>“: custom content display ( messages or pictures can be used to prompt the user )</li>
+<li>&quot;<code>empty</code>&quot;: Show Empty contents</li>
+<li>&quot;<code>all</code>&quot;: displays all the data is loaded into the</li>
+<li>&quot;<code>Custom Content</code>&quot;: custom content display ( messages or pictures can be used to prompt the user )</li>
 <li><code>Function</code>: the function is executed</li>
 </ul>
 <ul>
@@ -651,7 +847,7 @@ var opoa = {
 <p>  <strong> Welcome.jsp:</strong></p>
 <pre><code class="lang-html"> &lt;h1&gt; Welcome. Welcome EasyOPOA frame ! &lt;/h1&gt;</code></pre>
 <h3 id="easyopoa-framework-of-the-forward-and-backward-processing-">EasyOPOA framework of the forward and backward processing :</h3>
-<p><strong>When the user through the browser ‘s forward and back buttons to advance or return , in EasyOPOA will automatically trigger and load -related information and automatically displays the current hash to solve the problem of static content updates . For information on the Home Show , EasyOPOA framework recommendations when EasyOPOA program initialization, assign specific page content loading scheme according to Home mode to prevent the information can not be updated back to the home page and load . </strong></p>
+<p><strong>When the user through the browser &#39;s forward and back buttons to advance or return , in EasyOPOA will automatically trigger and load -related information and automatically displays the current hash to solve the problem of static content updates . For information on the Home Show , EasyOPOA framework recommendations when EasyOPOA program initialization, assign specific page content loading scheme according to Home mode to prevent the information can not be updated back to the home page and load . </strong></p>
 <ul>
 <li><h3 id="static-home-page-design-configurations-by-easyopoa-hemefun-parameter-handler-registered-home">Static home page design configurations : by EasyOPOA.hemeFun parameter handler registered Home</h3>
 <p>  Use EasyOPOA.homeFun parameters can be specified function static home triggered when the function is called automatically when accessing home settings, since carried home with content initialized.</p>
@@ -859,7 +1055,7 @@ EasyOPOA.addActionMap(&quot;demo&quot;,  &quot;demo.jsp&quot; ,opoaList.menu);
 EasyOPOA.addActionMap(&quot;readme&quot;,  &quot;readme.jsp&quot; ,opoaList.menu);</code></pre>
 <p><strong> AddActionMap function also supports passing parameters array list ( action mapping element can be represented using the object or array ) : </strong></p>
 <ul>
-<li><strong>Based on standard action mapping array list object’s parameters : </strong></li>
+<li><strong>Based on standard action mapping array list object&#39;s parameters : </strong></li>
 </ul>
 <p>Syntax:</p>
 <pre><code class="lang-JS">[
@@ -1150,7 +1346,7 @@ EasyOPOA.addActionLoadings ([&quot;about.jsp&quot;, &quot;readme.jsp&quot;], {
 </li>
 </ul>
 <h2 id="16-for-handling-http-response-code">16,for handling HTTP response code</h2>
-<p>In addition to the Loading friendly tips , the server may generate an error in the Ajax request process, for different errors should also be given the necessary time to the user prompts . For example, 404 on behalf of the request is not found, server error 500 delegates ……</p>
+<p>In addition to the Loading friendly tips , the server may generate an error in the Ajax request process, for different errors should also be given the necessary time to the user prompts . For example, 404 on behalf of the request is not found, server error 500 delegates ......</p>
 <p>Each request will be submitted by the HTTP server returns the corresponding numerical code , EasyOPOA use <code>urlErrors</code> representatives <strong>HTTP response code object (urlErrors Object)</strong>, different support when returning HTTP code , call the appropriate function response.</p>
 <ul>
 <li><h3 id="use-easyopoa-configs-modify-global-default-object-defined-http-response-code-">Use <code>EasyOPOA.Configs</code> modify global default object defined HTTP response code :</h3>
@@ -1229,13 +1425,13 @@ EasyOPOA.addActionUrlErrors([&quot;demo.jsp&quot;,&quot;about.jsp&quot;],{
 </ul>
 <h2 id="17-easyopoa-framework-action-triggered-manually-hash-load">17, EasyOPOA framework action triggered manually hash load</h2>
 <p>load function allows control over the actions triggered by the developers to manage .</p>
-<p>Under normal circumstances EasyOPOA default management framework to automatically trigger actions , before the action is triggered by clicking on the page ‘s DOM element triggered. If you want to manually trigger a defined Hash action instance , use <code>EasyOPOA.load</code> function .</p>
+<p>Under normal circumstances EasyOPOA default management framework to automatically trigger actions , before the action is triggered by clicking on the page &#39;s DOM element triggered. If you want to manually trigger a defined Hash action instance , use <code>EasyOPOA.load</code> function .</p>
 <p><code>EasyOPOA.load (hash [, postData])</code>: Manually trigger the specified hash action , postData submit a request for the optional parameter data (key1 = value1 &amp; key2 = value2).</p>
 <p><strong>Note : load function must be called after the start function to start ( for instance initialization is complete Hash action ) to be used in EasyOPOA framework. </strong></p>
 <pre><code class="lang-JS">EasyOPOA.load(&quot;readme.jsp&quot;);</code></pre>
 <ul>
 <li><h3 id="use-load-manual-trigger-function-used-to-submit-a-form-in-easyopoa">Use load manual trigger function used to submit a form in EasyOPOA</h3>
-<p> In OPOA program to modify, add , will need to submit the form data is loaded , this time to manually submit .<br> Using jQuery ‘s $ (‘# editForm’) serialize ()) to specify the content of the form can be obtained :</p>
+<p> In OPOA program to modify, add , will need to submit the form data is loaded , this time to manually submit .<br> Using jQuery &#39;s $ (&#39;# editForm&#39;) serialize ()) to specify the content of the form can be obtained :</p>
 <pre><code class="lang-html">&lt;form id=&quot;editForm&quot;&gt;
     &lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;&quot; /&gt;
     &lt;input type=&quot;text&quot; name=&quot;title&quot; value=&quot;&quot; /&gt;
@@ -1276,7 +1472,7 @@ demo.jsp?v=v2&amp;id=456
 <p><code>:param</code>:  URL placeholder component parameters , a colon ( :) at the beginning , matching slash / between .</p>
 <p><code>*splat</code>： (*) at the beginning of a wildcard placeholder asterisk matches multiple URL component that supports matching slash / .</p>
 <ul>
-<li>( If you are familiar with Backbone of Backbone.Router , here ‘s configuration parameters are identical. ) *</li>
+<li>( If you are familiar with Backbone of Backbone.Router , here &#39;s configuration parameters are identical. ) *</li>
 </ul>
 <ul>
 <li><h3 id="use-parameter-placeholders-">Use parameter placeholders (:) :</h3>
@@ -1319,7 +1515,7 @@ about.jsp?info=company</code></pre>
 EasyOPOA.addActionMap(&quot;readme/*info&quot;,  &quot;about.jsp?info={0}&quot; ,opoaList.menu);</code></pre>
 </li>
 <li><h3 id="sub-page-to-define-the-action-in-special-instructions">Sub-page to define the action in special instructions</h3>
-<p>  In OPOA application, if requested within the sub-page to define the mapping object and initializes , then only when the request is triggered, there are parameters defined action mapping to initialize . So, this will lead to a child if the page is loaded directly inside the action requested by the browser’s action can not match , no corresponding action mapping , perform notFound.</p>
+<p>  In OPOA application, if requested within the sub-page to define the mapping object and initializes , then only when the request is triggered, there are parameters defined action mapping to initialize . So, this will lead to a child if the page is loaded directly inside the action requested by the browser&#39;s action can not match , no corresponding action mapping , perform notFound.</p>
 <p>  Therefore, in order to avoid such a situation , you can map the sub- page action with wildcard parameter is defined to the Home page, so that when the page is loaded with sub-pages can be scanned into the match action, and execute the corresponding load .</p>
 <p>  home.jsp</p>
 <pre><code class="lang-JS">// Register Home page there reference Hash action
@@ -1344,7 +1540,7 @@ EasyOPOA.addActionMap(&quot;delete/:id&quot;,  &quot;delete.jsp?id={id}&quot; ,o
 </ul>
 <h2 id="19-action-orientation-and-memory-function-action-state-recovery-">19,action orientation and memory function ( action state recovery )</h2>
 <p>When a user accesses OPOA program directly home page , such as when <a href="http://127.0.0.1:8080/opoa/home.jsp">http://127.0.0.1:8080/opoa/home.jsp</a>, generally show the same load each time the default home page content.</p>
-<p>If you want when the user next visit home.jsp home , to show the contents of their last last action performed by the user , to provide users save and restore the state ‘s action . Open action can locate memory function in EasyOPOA framework.</p>
+<p>If you want when the user next visit home.jsp home , to show the contents of their last last action performed by the user , to provide users save and restore the state &#39;s action . Open action can locate memory function in EasyOPOA framework.</p>
 <p>EasyOPOA framework action memory function is enabled by default , just add dependent jquery.cookie.js and json2.js function can be realized .</p>
 <pre><code>&lt;!--jquery.cookie and json2 optional , if you want to open the final movement positioning memory function , you need to introduce --&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.cookie.js&quot;&gt;&lt;/script&gt;
@@ -1353,7 +1549,7 @@ EasyOPOA.addActionMap(&quot;delete/:id&quot;,  &quot;delete.jsp?id={id}&quot; ,o
 <pre><code class="lang-JS">EasyOPOA.cookieLast=false;</code></pre>
 <h2 id="20-easyopoa-noconflict-non-conflicting-object-return-function">20, EasyOPOA.noConflict non-conflicting object return function</h2>
 <p>Use <code>EasyOPOA</code> and <code>OPOA</code> global variables can be referenced EasyOPOA frame object .</p>
-<p>EasyOPOA.noConflict ([boolean]): You can control EasyOPOA and OPOA release the results of the use of the returned object references EasyOPOA framework to prevent conflicts with other objects or OPOA ‘s called EasyOPOA .</p>
+<p>EasyOPOA.noConflict ([boolean]): You can control EasyOPOA and OPOA release the results of the use of the returned object references EasyOPOA framework to prevent conflicts with other objects or OPOA &#39;s called EasyOPOA .</p>
 <p>Control over the operation of the function of the variable <code>OPOA</code> transfer to first realize that its library .</p>
 <pre><code class="lang-JS">var $OPOA=EasyOPOA.noConflict();</code></pre>
 <p>Run this function will control variable <code>OPOA</code> and <code>EasyOPOA</code> the transfer to the first library that implements it .</p>
@@ -1414,7 +1610,7 @@ require([&#39;easy.opoa&#39;,&#39;jquery&#39;,&#39;jqueryCookie&#39;],function(E
 <p> Focus on providing a JavaScript engine side MVC framework. Server-side data is given only model, the client controls all business, views and updates are rendered by the client BackboneJS done with MVC components, systems rely on JS achieve full programming capabilities.</p>
 <p> <strong>Advantages:</strong></p>
 <ul>
-<li><p>BackboneJS is returned from the server-side model data, with no view, on the client side rendering by JS, so use BackboneJS can reduce server-side design, only the output of the model data to the server through the client to control the MVC code, client rendering view, reduce traffic and provide better performance….</p>
+<li><p>BackboneJS is returned from the server-side model data, with no view, on the client side rendering by JS, so use BackboneJS can reduce server-side design, only the output of the model data to the server through the client to control the MVC code, client rendering view, reduce traffic and provide better performance....</p>
 <p><strong>Inadequate:</strong></p>
 </li>
 <li><p>Increased the difficulty of front-end development, you need a professional front-end personnel, and also requires the developer must have a high level of system design JavaScript</p>
@@ -1449,7 +1645,7 @@ require([&#39;easy.opoa&#39;,&#39;jquery&#39;,&#39;jqueryCookie&#39;],function(E
 <li><h3 id="differences-between-design-concepts-and-goals">Differences between design concepts and goals</h3>
 <p>It can be said EasyOPOA is designed to solve complex problems OPOA program will OPOA unraveling , to simplify , to provide a framework to support complex business development program designed to reduce the difficulty , allowing developers to more easily develop . Even if you are a novice JS in EasyOPOA framework can help rapidly develop robust , high-quality OPOA program . Consistent with its More Easy, More Powerful concept.</p>
 <p>EasyOPOA uphold a business -friendly , developer-friendly features. By comparison, Backbone, and developers to learn from business point of view, a bit steep , but not equivalent to grasp the MVC components in the design of complex OPOA system can develop quality depends on the level of developers.</p>
-<p>Learn BackboneJS learning curve of traditional developers higher , there is a strong need for JS skills, while the front-end MVC need to understand the characteristics and different, mainly master specification for each module BackboneJS MVC development defined roles and define methods , as well as supporting a huge number of front-end API. The final program quality is also on the front end of the program with a personal understanding of the system design, and JS programming application levels….</p>
+<p>Learn BackboneJS learning curve of traditional developers higher , there is a strong need for JS skills, while the front-end MVC need to understand the characteristics and different, mainly master specification for each module BackboneJS MVC development defined roles and define methods , as well as supporting a huge number of front-end API. The final program quality is also on the front end of the program with a personal understanding of the system design, and JS programming application levels....</p>
 </li>
 </ul>
 <ul>
@@ -1461,7 +1657,7 @@ require([&#39;easy.opoa&#39;,&#39;jquery&#39;,&#39;jqueryCookie&#39;],function(E
 <h2 id="end">End</h2>
 <p>If you have more comments, suggestions or ideas , please contact me.</p>
 <p><a href="http://www.lightfeel.com/easy/easyopoa/en/index.jsp#demo" title="Online Demo">Online Demo</a></p>
-<p>Contact , feedback, customization, training Email: <a href="mailto:inthinkcolor@gmail.com">inthinkcolor@gmail.com</a></p>
+<p>Contact , feedback, customization, training Email: <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#105;&#110;&#116;&#104;&#x69;&#x6e;&#107;&#x63;&#111;&#108;&#111;&#114;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#105;&#110;&#116;&#104;&#x69;&#x6e;&#107;&#x63;&#111;&#108;&#111;&#114;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></p>
 <p><p></p>
 <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"></p>
 <p><input type="hidden" name="cmd" value="_xclick"></p>

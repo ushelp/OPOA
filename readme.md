@@ -63,7 +63,7 @@ EasyOPOA framework from the global level, the depth of analysis and a new unders
 
 EasyOPOA framework of traditional disorderly OPOA program development were highly abstract, the EasyOPOA each request as a "**Hash action instances (Hash Action Instance) **", and the configuration associated with the request to "**OPOA instance (OPOA Instance) **"in the form of packages.
 
-
+![EasyOPOA frameWork structure](images/eo-1.png)
 
 
 - ### Hash action instances 
@@ -82,7 +82,7 @@ EasyOPOA framework of traditional disorderly OPOA program development were highl
 **`OPOAInstance`**：OPOA instance, defines the action to perform when the load request, rendering and detail the parameters of the page.
 
 #### Hash operation to complete a three-step example：
-
+![EasyOPOA Hash Action Instance work](images/eo-2.png)
 1, Use `hash` trigger action instance Hash (hash value is displayed in the browser URL `#hash`)
 
 	http://domain/home.jsp#hash
@@ -419,7 +419,7 @@ Such a search engine to climb on the appropriate link href address to access spe
 
 
 ## 4, EasyOPOA the hash, url, seURL (SearchEngine URL) of the three configurations and relationships :
-
+![EasyOPOA hash url seURL](images/eo-3.png)
 - **Hash**:
 Hash is the name of the user triggers the action instance , responsible for triggering action , the executive behind the corresponding Ajax request. hash values ​​can be displayed in the browser address bar.
 
