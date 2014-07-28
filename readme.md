@@ -1380,7 +1380,7 @@ In actual OPOA development and use, and not simply load request , obtain content
 	  EasyOPOA.start([opoa]);
   </script>
 ```
-  ** Note : **Because , so no need to repeat the request url page framework document and other introduced easyopoa.js been introduced in Home page dependencies ( in IE this behavior will lead to an error ) . In fact, this program also reflects the OPOA efficient and easy to maintain.
+  ** Note : **Because  the home side hava bean introduced easyopoa.js, so no need to repeat the request url page framework document and other introduced easyopoa.js been introduced in Home page dependencies ( in IE this behavior will lead to an error ) . In fact, this program also reflects the OPOA efficient and easy to maintain.
 
 
 
