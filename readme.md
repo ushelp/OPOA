@@ -1823,9 +1823,9 @@ require(['easy.opoa','jquery','jqueryCookie'],function(EasyOPOA,$){
 
 BackBoneJS be OPOA programming is also a favorable technology. Use EasyOPOA and BackBoneJS can complete OPOA design process.
 
-**From a design point:**EasyOPOA OPOA is a purely procedural framework for building; while BackboneJS is essentially a front-end JS MVC framework, rather than OPOA framework.
+**From a design point:**EasyOPOA focus on to build OPOA systems(System); while BackBoneJS focused on using the front-end MVC to build a module in the system(Module).
 
-**From a technical point:**EasyOPOA focus on to build OPOA systems; while BackBoneJS focused on using the front-end MVC to build a module in the system.
+**From a technical point:**EasyOPOA OPOA is a purely procedural framework for building; while BackboneJS is essentially a front-end JS MVC framework, rather than OPOA framework.
 
 
 - ### BackboneJS：
