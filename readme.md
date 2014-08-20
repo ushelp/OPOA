@@ -2,7 +2,7 @@
 
 中文版请进入[EasyOPOA](https://github.com/ushelp/EasyOPOA/)
 
-EasyOPOA is a framework OPOA program development progresses, program development for the OPOA define the concept of a complete set of standards and norms. Just a few simple configuration that is capable of fast, flexible, high-quality OPOA development program.
+EasyOPOA is a framework OPOA program development progresses, program development for the OPOA define the concept of a complete set of standards and norms. Just a few simple configuration that is capable of fast, flexible, high-quality OPOA development program. Can help you quickly and easily build a complex like Gmail single page program.
 
 
 
