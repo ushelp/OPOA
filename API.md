@@ -319,7 +319,7 @@ EasyOPOA framework open 12 system-level global API.
 If you have more comments, suggestions or ideas, please contact me.
 
 
-[Demo Online](http://www.lightfeel.com/easy/easyopoa/en/index.jsp#demo '在线 Demo')
+[Demo Online](http://www.easyproject.cn/easyopoa/en/index.jsp#demo '在线 Demo')
 
 Contact , feedback, customization, training Email: <inthinkcolor@gmail.com>
 
@@ -330,6 +330,6 @@ Contact , feedback, customization, training Email: <inthinkcolor@gmail.com>
 <input type="hidden" name="item_name" value="EasyProject development Donation">
 <input type="hidden" name="no_note" value="1">
 <input type="hidden" name="tax" value="0">
-<input type="image" src="http://www.lightfeel.com/easy/images/paypaldonation5.jpg"  title="PayPal donation"  border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="image" src="http://www.easyproject.cn/images/paypaldonation5.jpg"  title="PayPal donation"  border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 </form>
 </P>

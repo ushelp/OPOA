@@ -43,7 +43,7 @@ EasyOPOA adhering to the author always adhere to "**More Easy, More Powerful.**"
 
 
 
-### [Official website home page](http://www.lightfeel.com/easy/easyopoa/en/index.jsp 'EasyOPOA official website home page')
+### [Official website home page](http://www.easyproject.cn/easyopoa/en/index.jsp 'EasyOPOA official website home page')
 
 
 
@@ -1895,7 +1895,7 @@ BackBoneJS be OPOA programming is also a favorable technology. Use EasyOPOA and 
 If you have more comments, suggestions or ideas , please contact me.
 
 
-[Online Demo](http://www.lightfeel.com/easy/easyopoa/en/index.jsp#demo 'Online Demo')
+[Online Demo](http://www.easyproject.cn/easyopoa/en/index.jsp#demo 'Online Demo')
 
 Contact , feedback, customization, training Email: <inthinkcolor@gmail.com>
 
@@ -1906,6 +1906,6 @@ Contact , feedback, customization, training Email: <inthinkcolor@gmail.com>
 <input type="hidden" name="item_name" value="EasyProject development Donation">
 <input type="hidden" name="no_note" value="1">
 <input type="hidden" name="tax" value="0">
-<input type="image" src="http://www.lightfeel.com/easy/images/paypaldonation5.jpg"  title="PayPal donation"  border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="image" src="http://www.easyproject.cn/images/paypaldonation5.jpg"  title="PayPal donation"  border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 </form>
 </P>
