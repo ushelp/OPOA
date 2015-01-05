@@ -11,17 +11,17 @@
 "easy",
 "easyproject","singlePage","single","page"
     ],
-    "version": "2.2.0",
+    "version": "2.3.0",
     "author": {
         "name": "Ray",
 "email": "inthinkcolor@gmail.com",
-        "url": ""
+        "url": "http://www.easyproject.cn"
     },
     "maintainers": [
         {
             "name": "Ray",
             "email": "inthinkcolor@gmail.com",
-            "url": ""
+            "url": "http://www.easyproject.cn"
         }
     ],
     "licenses": [
@@ -31,10 +31,10 @@
         }
     ],
     "bugs": "https://github.com/ushelp/OPOA/issues",
-    "homepage": "https://github.com/ushelp/OPOA",
-    "docs": "https://github.com/ushelp/OPOA/blob/master/readme.md",
+    "homepage": "http://www.easyproject.cn/easyopoa/en/index.jsp#readme",
+    "docs": "http://www.easyproject.cn/easyopoa/en/index.jsp#readme",
     "download": "https://github.com/ushelp/OPOA/archive/master.zip",
-	"demo":"http://www.easyproject.cn/easyopoa/en/index.jsp",
+	"demo":"http://www.easyproject.cn/easyopoa/en/index.jsp#demo",
     "dependencies": {
         "jquery": ">=1.5"
     }
