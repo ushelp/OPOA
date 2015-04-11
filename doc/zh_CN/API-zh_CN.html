@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<head>
+<title>API</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+
+/* GitHub Theme */
+.prettyprint {
+  
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+ 
+}
+.codeSpan{ font-size: 13px;
+  font-family: "Bitstream Vera Sans Mono", "Consolas", "Courier New", Courier, monospace !important;
+}
+.pln {
+  color: #333333;
+}
+
+@media screen {
+	
+  .str {
+    color: #dd1144;
+  }
+
+  .kwd {
+    color: #333333;
+  }
+
+  .com {
+    color: #999988;
+    font-style: italic;
+  }
+
+  .typ {
+    color: #445588;
+  }
+
+  .lit {
+    color: #008484; font-weight: bold;
+  }
+
+  .pun {
+    color: #333333;
+  }
+
+  .opn {
+    color: #333333;
+  }
+
+  .clo {
+    color: #333333;
+  }
+
+  .tag {
+    color: navy;
+  }
+
+  .atn {
+    color: teal;
+  }
+
+  .atv {
+    color: #dd1144;
+  }
+
+  .dec {
+    color: #333333;
+  }
+
+  .var {
+    color: teal;
+  }
+
+  .fun {
+    color: #990000;
+  }
+}
+@media print, projection {
+  .str {
+    color: #006600;
+  }
+
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+  .lit {
+    color: #004444;
+  }
+
+  .pun, .opn, .clo {
+    color: #444400;
+  }
+
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .atn {
+    color: #440044;
+  }
+
+  .atv {
+    color: #006600;
+  }
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  /* */
+}
+
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  /* */
+}
+ </style>
+	
+</head>
+<body>
+<h1 id="easyopoa-api">EasyOPOA 框架API</h1>
+<p><strong>EasyOPOA框架秉持Easy的核心思想，为了保证对开发人员的友好，API非常简单，仅暴漏了有限的几个功能性API。</strong></p>
+<p>EasyOPOA框架的API主要分为两类：<br><img src="images/eo-4.png" alt="EasyOPOA API"><br><strong>1. OPOA实例（OPOA Instance）定义属性（11个）</strong></p>
+<p> 创建OPOA实例的属性API。EasyOPOA以Hash动作实例为框架核心，OPOA实例是Hash动作实例的三大组成元素（hash，url，OPOAInstance）之一。</p>
+<p><strong>2. EasyOPOA框架API（12个）</strong></p>
+<p> 系统级的全局API。</p>
+<hr>
+<h2 id="1-opoa-opoa-instance-">1、OPOA实例（OPOA Instance）定义属性</h2>
+<p> 在OPOA程序中，每一个触发的动作都需要对应一个OPOA实例，多个动作可对应同一个OPOA实例。在进行加载时，必须提前创建OPOA实例。</p>
+<blockquote>
+<p>OPOA实例（OPOA Instance）是Hash动作实例的组成部分之一。定义了当动作执行时，对url请求加载、渲染页面的方式和细节参数。</p>
+</blockquote>
+<p>一个OPOA实例对象包含了十一个与Ajax请求和页面渲染相关的属性：<code>actions</code>、<code>show</code>、<code>hash</code>、<code>url</code>、<code>find</code>、<code>notfound</code>、<code>method</code>、<code>prevent</code>、<code>actionMaps</code>、<code>urlErrors</code>、<code>loading</code>。部分属性具有默认值，可根据需要定义或修改相应属性。如果需要修改OPOA全局默认定义，可参考<code>EasyOPOA.Configs</code>参数。</p>
+<ul>
+<li><h3 id="opoa-">opoa实例默认定义：</h3>
+</li>
+</ul>
+<p><input type="button" value="test" onclick="alert(window.document.body.innerHTML)"/></p>
+<pre><code class="lang-JS"> var opoa = {  
+    // jQuery的DOM选择器，让DOM具有动作触发能力，自动创建Hash动作实例
+    // 单击（click）该DOM元素时即会触发一个Hash动作实例
+    // （可从选择的DOM中获得&#39;Hash动作实例&#39;所需的hash,url）
+    // （结合当前opoa实例，自动创建DOM点击时触发的&#39;Hash动作实例&#39;）
+    // 例如，通过该参数选择菜单选项，让OPOA程序的菜单选项能够触发Hash动作实例
+    &quot;actions&quot; : null,
+    // jQuery的DOM选择器，显示从请求的url加载到的内容
+    // 将动作请求url返回的结果显示到选择器指定的区域
+    &quot;show&quot; : null,
+    // 从DOM节点中获取&#39;Hash动作实例&#39;的hash值的DOM属性名称
+    // 默认值：hash
+    &quot;hash&quot; : &quot;hash&quot;,
+    // 从DOM节点中获取&#39;Hash动作实例&#39;的url值的DOM属性名称
+    // 默认值：hash (url值默认也等同于hash值)
+    &quot;url&quot;:&quot;hash&quot;,
+    // 从服务器获得的数据中，利用find指定的jQuery DOM选择器筛选出指定区域的数据
+    // 例如，从服务器中返回的数据中仅获取某个DIV中的内容
+    &quot;find&quot; : null,
+    // 当find参数的选择器，没有从服务器返回的数据中找到内容时，显示的内容
+    // 可选值为&quot;empty&quot;,&quot;all&quot;,&quot;自定义内容&quot;,function
+    // &quot;empty&quot; 显示空内容
+    // &quot;all&quot; 显示加载到的所有数据
+    // &quot;自定义内容&quot; 将自定义内容的内容显示(可使用消息或图片提示用户)
+    // function 执行该函数
+    // 默认值：empty
+    &quot;notfound&quot; : &quot;empty&quot;,
+    // 对url进行Ajax请求的具体方式 ：post/get
+    // post方式会自动将url请求后的参数转换为post参数发送
+    // 默认值：post
+    &quot;method&quot; : &quot;post&quot;,
+    // 阻止默认事件动作。如A标签点击时不触发href
+    &quot;prevent&quot; : true,
+    // 使用actionMaps修改指定hash对应的默认url为其他值
+    // Hash动作映射的`opoaInstance`默认即为当前opoa对象this
+    &quot;actionMaps&quot; : {
+        // &quot;hash&quot;:&quot;url&quot;，
+        // &quot;demo&quot;:&quot;demo.jsp&quot;
+    },
+    // 当对url的请求从服务器端返回错误代码时，如何处理
+    // 一组数值的HTTP代码和函数对象，当响应时调用了相应的代码。
+    &quot;urlErrors&quot; : {
+        // 如果执行的动作发生404错误时，如何处理
+        // 默认：如果发生404加载错误，页面不会有任何响应
+        404 : function() {
+        },
+        // 如果执行的动作发生500错误时，如何处理
+        // 默认：如果发生500加载错误，页面不会有任何响应
+        500 : function() {
+        }
+        // 也可定义其他状态
+    },
+    // 在ajax请求的不同状态时分别调用的函数，可用来进行loading提示
+    &quot;loading&quot; : {
+        // ajax请求开始
+        &quot;start&quot; : function(hash, url, opoa, postData) {
+        },
+        // ajax请求成功
+        &quot;success&quot; : function(hash, url, opoa, postData) {
+        },
+        // ajax请求出错
+        &quot;error&quot; : function(hash, url, opoa, postData) {
+        },
+        // ajax请求结束（无论成功失败都会调用）
+        &quot;end&quot; : function(hash, url, opoa, postData) {
+        }
+    }
+};</code></pre>
+<ul>
+<li><h3 id="opoa-">OPOA实例创建示例：</h3>
+<pre><code class="lang-JS">// opoa实例
+var opoa = {
+  &quot;actions&quot; : &quot;#menuDIV .menu&quot;,
+  &quot;show&quot; : &quot;#contentDIV&quot;
+};</code></pre>
+</li>
+</ul>
+<h2 id="2-easyopoa-api">2. EasyOPOA框架API</h2>
+<p>EasyOPOA框架暴漏了12个系统级的全局API。</p>
+<ul>
+<li><h3 id="easyopoa-configs">EasyOPOA.Configs</h3>
+<p><code>EasyOPOA.Configs</code>保存了OPOA实例属性全局的默认值。OPOA实例配置参数的全局默认值，均可以通过<code>EasyOPOA.Configs</code>来重新设置。</p>
+<blockquote>
+<p>示例：</p>
+<pre><code class="lang-JS">// 如果从服务器返回的数据中没有找到find指定的内容，则显示所有
+EasyOPOA.Configs.notFound=&quot;all&quot;;
+// 获取url值的DOM属性
+EasyOPOA.Configs.url=&quot;href&quot;;
+ ...</code></pre>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-cookielast">EasyOPOA.cookieLast</h3>
+<pre><code class="lang-JS">= boolean：true || false</code></pre>
+<p>利用cookie，开启动作定位的记忆功能(依赖jquery.cookie.js和json2.js),能够记录最后访问的动作，实现OPOA动作恢复。</p>
+<p>默认值：false。</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-start">EasyOPOA.start</h3>
+<pre><code class="lang-JS">= function(opoaList, [actionMaps])</code></pre>
+<p>核心方法，启动EasyOPOA。</p>
+<p>函数可传入两个参数：opoaList（OPOA实体配置集合）、actionMaps（hash动作映射对象列表）。</p>
+<blockquote>
+<p> actionMaps支持三种形式的参数：标准映射对象、基于标准对象的数组参数列表、基于数组对象的列表。</p>
+<ul>
+<li><strong>启动时，传入标准动作映射对象：</strong></li>
+</ul>
+<pre><code class="lang-JS">//标准动作映射对象
+var actionMap={&quot;demo&quot;:[ &quot;demo.jsp&quot; ,opoaList.menu]};
+
+//使用opoaList和actionMaps启动
+EasyOPOA.start(opoaList,actionMap);</code></pre>
+<ul>
+<li><strong>启动时，传入数组列表参数（基于标准映射对象）：</strong></li>
+</ul>
+<pre><code class="lang-JS">var actionMaps=[
+    // 基于标准动作映射对象
+    // {hash: [ url, opoaInstance ]}
+    {&quot;demo&quot; : [ &quot;demo.jsp&quot; ,opoaList.menu]},
+    {&quot;readme&quot; : [ &quot;readme.jsp&quot;,opoaList.menu ]}
+];
+
+//使用opoaList和actionMaps启动
+EasyOPOA.start(opoaList,actionMap);</code></pre>
+<ul>
+<li><strong>启动时，传入数组列表参数（基于数组对象）：</strong></li>
+</ul>
+<pre><code class="lang-JS">var actionMaps2=[
+    // 基于数组
+    // [hash, url, opoaInstance]
+    [&quot;demo&quot;, &quot;demo.jsp&quot;, opoaList.menu],
+    [&quot;readme&quot;, &quot;readme.jsp&quot;, opoaList.menu]
+];
+
+//使用opoaList和actionMaps启动
+EasyOPOA.start(opoaList,actionMap2);</code></pre>
+</blockquote>
+</li>
+<li><h3 id="easyopoa-nothash">EasyOPOA.notHash</h3>
+<pre><code class="lang-JS">= function([hash])</code></pre>
+<p>如果用户请求的hash未注册不存在时的处理函数（如用户保存的书签已经失效或不存在）。</p>
+<p>函数可传入一个参数：用户访问的无效hash名称。</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-addactionmap-">EasyOPOA.addActionMap :</h3>
+<pre><code class="lang-JS">= function(hash, url, opoa)</code></pre>
+<p>addActionMap(hash,url,opoa)函数可添加一个新的自定义hash动作映射。</p>
+<p>函数可传入三个参数：自定义hash名称、自定义url、自定义opoa实例。</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-addactionurlerrors-">EasyOPOA.addActionUrlErrors :</h3>
+<pre><code class="lang-JS">= function(hash, urlErrorsObject)</code></pre>
+<p>addActionUrlErrors(hash, urlErrorsObject)函数为hash动作定义HTTP代码响应对象。</p>
+<p>函数可传入两个参数：hash名称、HTTP代码响应对象。</p>
+<blockquote>
+<p>  <strong>HTTP代码响应对象：</strong><br>等同jQuery的Ajax状态处理参数statusCode。</p>
+<pre><code class="lang-JS">{
+    //http代码 : 处理函数
+    404:function(){},
+    500:function(){}
+}</code></pre>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-addactionloadings">EasyOPOA.addActionLoadings</h3>
+<pre><code class="lang-JS">= function(hash, loadingObject)</code></pre>
+<p>addActionLoadings(hash, loadingObject)函数为hash动作指定loading处理对象。</p>
+<p>函数可传入两个参数：hash名称、loading处理对象。</p>
+<blockquote>
+<p>  <strong>loadingObject对象：</strong></p>
+<p>loadingObject处理对象包含4个loading状态：开始，成功，出错，结束。<br>不强迫要求同时定义4个状态，定义时，可根据需要仅定义部分。</p>
+<pre><code class="lang-JS">{
+  //ajax请求开始
+  &quot;start&quot;:function(hash, url, opoa, postData){},
+  //ajax请求成功
+  &quot;success&quot;:function(hash, url, opoa, postData){},
+  //ajax请求出错
+  &quot;error&quot;:function(hash, url, opoa, postData){},
+  //ajax请求结束（无论成功失败都会调用）
+  &quot;end&quot;:function(hash, url, opoa, postData){}
+}</code></pre>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-home">EasyOPOA.home</h3>
+<pre><code class="lang-JS">= function(hash, [postData])</code></pre>
+<p>通过hash名称动态加载首页。</p>
+<p>函数可传入两个参数：hash名称、提交到服务器的数据postData。</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-homeurl">EasyOPOA.homeUrl</h3>
+<pre><code class="lang-JS">= function(url, opoaInstance, [postData])</code></pre>
+<p>通过url动态加载首页。</p>
+<p>函数可传入两个参数：url、opoaInstance、提交到服务器的数据postData。</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-homefun">EasyOPOA.homeFun</h3>
+<pre><code class="lang-JS">= function()</code></pre>
+<p>当OPOA没有从Ajax加载首页时，默认显示首页的处理函数。<br>主要用于首页为静态内容的场景下，浏览器后退到首页时，首页静态内容无法更新问题。可在此函数中设置静态首页显示的内容。</p>
+<blockquote>
+<p>示例：</p>
+<pre><code class="lang-JS">EasyOPOA.homeFun=function(){
+    $(&quot;#contentDIV&quot;).html(&quot;&lt;h1&gt;欢迎使用！&lt;/h1&gt;&quot;);
+}</code></pre>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-load">EasyOPOA.load</h3>
+<pre><code class="lang-JS">= function(hash, [postData])</code></pre>
+<p>通过hash动作名称，手动进行加载。</p>
+<p>函数可传入两个参数：hash名称、提交到服务器的数据postData。</p>
+</li>
+</ul>
+<ul>
+<li><h3 id="easyopoa-noconflict">EasyOPOA.noConflict</h3>
+<pre><code class="lang-JS">= function([deep])</code></pre>
+<p>noConflict函数，将变量EasyOPOA和OPOA的控制权让渡给第一个实现它的那个库。</p>
+<p>函数可传入一个参数：deep（为空或false仅释放OPOA命名空间， 为true 将完全释放EasyOPOA和OPOA命名空间）。</p>
+<blockquote>
+<p>示例：<br>运行这个函数将变量<code>OPOA</code>的控制权让渡给第一个实现它的那个库。</p>
+<pre><code class="lang-JS">var $OPOA=EasyOPOA.noConflict();</code></pre>
+<p>运行这个函数将变量<code>OPOA</code>和<code>EasyOPOA</code>的控制权让渡给第一个实现它的那个库。</p>
+<pre><code class="lang-JS">var $OPOA=EasyOPOA.noConflict(true);</code></pre>
+</blockquote>
+</li>
+</ul>
+<h2 id="-">结束</h2>
+<p>如果您有更好意见，建议或想法，请联系我。</p>
+<p><a href="http://www.easyproject.cn/easyopoa/zh-cn/index.jsp#demo" title="在线 Demo">在线Demo</a></p>
+<p>联系、反馈、定制、培训 Email：<a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x69;&#x6e;&#116;&#104;&#105;&#x6e;&#107;&#99;&#111;&#x6c;&#111;&#114;&#x40;&#103;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#x69;&#x6e;&#116;&#104;&#105;&#x6e;&#107;&#99;&#111;&#x6c;&#111;&#114;&#x40;&#103;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a></p>
+<p><p><br><strong>支付宝钱包扫一扫捐助：</strong><br></p></p>
+<p>
+
+<p><img alt="支付宝钱包扫一扫捐助" src="http://www.easyproject.cn/images/s.png"  title="支付宝钱包扫一扫捐助"  height="256" width="256"></img></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
