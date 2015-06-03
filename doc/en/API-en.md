@@ -3,14 +3,14 @@
 **EasyOPOA Easy uphold the core idea of ​​the framework, in order to ensure the developer-friendly, API is very simple, only a limited number of storm drain functional API.**
 
 EasyOPOA Framework API is divided into two categories:
-![EasyOPOA API](images/eo-4.png)
-**1. OPOA instance (OPOA Instance) defined attributes（Total 11）**
+
+**1. OPOA instance (OPOA Instance) defined attributes（Total 12）**
 
  Create OPOA instance property API. 
 
  EasyOPOA action instances as a framework to Hash core, OPOA example is composed of three elements Hash action instances (hash, url, OPOAInstance) one.
 
-**2. EasyOPOA Framework API（Total 12）**
+**2. EasyOPOA Framework API（Total 14）**
 
  System-level global API.
 
@@ -22,7 +22,7 @@ In OPOA procedure, each action corresponds to a triggering need OPOA instance, a
 
 > OPOA Examples (OPOA Instance) is one example of a part of the Hash operation. Defined when the action is executed, the request url loaded, rendering and detail the parameters of the page.
 
-A OPOA instance object contains 11 pages with Ajax requests and rendering related properties: `actions`, `show`, `hash`, `url`, `find`, `notfound`, `method`, `prevent`, `actionMaps`, `urlErrors`, `loading`. Part of the property has a default value, according to the definition of need or modify the properties. If you need to modify the OPOA global default definition, refer to `EasyOPOA.Configs` parameter.
+A OPOA instance object contains 12 pages with Ajax requests and rendering related properties: `actions`, `show`, `hash`, `url`, `find`, `notfound`, `method`, `pushHash`, `prevent`, `actionMaps`, `urlErrors`, `loading`. Part of the property has a default value, according to the definition of need or modify the properties. If you need to modify the OPOA global default definition, refer to `EasyOPOA.Configs` parameter.
 
 - ### opoa instance of the default definition:
 
@@ -58,6 +58,11 @@ A OPOA instance object contains 11 pages with Ajax requests and rendering relate
 	// Post mode parameters will be automatically converted to the request url parameter to send post
 	// Default value : post
 	"method": "post",
+	// Whether to change the browser address bar of hash, used to locate the action
+	// In support HTML5 browsers can be achieved based hash of forward and back
+	// If set to false, the action will not record clicks when loading content, the browser address bar will not change
+	// default: true
+	"pushHash" : true,
 	// Prevent the default event action . If the label does not trigger when clicked href A
 	"prevent": true,
 	// Use actionMaps modify the default url specified hash corresponding to other values
@@ -134,15 +139,15 @@ EasyOPOA framework open 12 system-level global API.
 
  default: false。
 
-
-
 - ### EasyOPOA.start
 ```JS
+ /**
+  *  Core methods, start EasyOPOA.
+  * @param opoaList OPOA instance, or OPOA instance collection( array collection , a collection of objects )
+  * @param actionMaps hash action mapping list of objects, optional 
+  */
  = function(opoaList, [actionMaps])
 ```
- Core methods, start EasyOPOA.
-
- Function with two arguments: opoaList (OPOA physical configuration collection), actionMaps (hash action mapping list of objects).
 
  >  actionMaps supports three forms of parameters: standard hash mapping object, based on the list of  standard hash action mapping objects array parameter, an array of objects based on the list.
 > 				
@@ -290,6 +295,60 @@ EasyOPOA framework open 12 system-level global API.
  Loaded via hash action name manually.
 
  Function with two arguments: hash name, submitted to the server's data postData.
+
+
+
+
+- ### EasyOPOA.loadLinked
+```JS
+ /**
+	 * 
+	 * @param loadList  Press the array list to load the action sequence, on a fully loaded action to complete before loading the next action
+	 * Data format is:
+	 * [ [hash, postData], [hash, postData], [hash, postData], ... ]
+	 * postData optional
+	 */
+ = function(loadList)
+```
+ 
+ List manually in order to load the specified hash action name. In turn can be used to achieve the effect of multi-level hit loaded. For example, loading a hash request to start within the hash request, we turn to load.
+```JS
+ // In turn trigger api, EasyImageUtilsAPI hash action
+ EasyOPOA.loadLinked([ [ "api" ], [ "EasyImageUtilsAPI", "lang=en&version=1.1" ] ]);
+```
+
+
+- ### EasyOPOA.preFirstHash
+```JS
+/**
+ *
+ * @param hash The browser first loads of hash
+ * @returns {Boolean} If it returns false, then the engine does not resolve hash OPOA first address bar
+ */
+ = function(hash)
+```
+ 
+ In the browser first request and resolve window.location.hash before executing the function returns false to prevent EasyOPOA default resolution. Usually when the browser loads, to override the default of Hash resolution.
+ For example:
+```JS
+	// API API menu operation process within the specified load
+	OPOA.preFirstHash = function(hash) {
+  		if (hash.indexOf("API") != "-1") {
+    			// Load the corresponding API
+    			if (hash == "EasyImageUtilsAPI") {
+    			  	// In turn trigger api, EasyImageUtilsAPI hash
+    			  	EasyOPOA.loadLinked([ [ "api" ], [ "EasyImageUtilsAPI" ] ]);
+    			} else if (hash == "EasyObjectUtilsAPI") {
+    				  EasyOPOA.loadLinked([ [ "api" ], [ "EasyObjectUtilsAPI" ] ]);
+    			} else if (hash == "EasyPropertiesUtilsAPI") {
+    			 	 EasyOPOA.loadLinked([ [ "api" ], [ "EasyPropertiesUtilsAPI" ] ]);
+    			}
+    			return false; // stop default action
+  		}
+  		return true; // execute default action
+	}
+```
+
 
 - ### EasyOPOA.noConflict
 ```JS

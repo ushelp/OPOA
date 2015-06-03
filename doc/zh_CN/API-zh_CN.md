@@ -3,12 +3,12 @@
 **EasyOPOA框架秉持Easy的核心思想，为了保证对开发人员的友好，API非常简单，仅暴漏了有限的几个功能性API。**
 
 EasyOPOA框架的API主要分为两类：
-![EasyOPOA API](images/eo-4.png)
-**1. OPOA实例（OPOA Instance）定义属性（11个）**
+
+**1. OPOA实例（OPOA Instance）定义属性（12个）**
 
  创建OPOA实例的属性API。EasyOPOA以Hash动作实例为框架核心，OPOA实例是Hash动作实例的三大组成元素（hash，url，OPOAInstance）之一。
 
-**2. EasyOPOA框架API（12个）**
+**2. EasyOPOA框架API（14个）**
 
  系统级的全局API。
 
@@ -21,7 +21,7 @@ EasyOPOA框架的API主要分为两类：
 > OPOA实例（OPOA Instance）是Hash动作实例的组成部分之一。定义了当动作执行时，对url请求加载、渲染页面的方式和细节参数。
 
 
-一个OPOA实例对象包含了十一个与Ajax请求和页面渲染相关的属性：`actions`、`show`、`hash`、`url`、`find`、`notfound`、`method`、`prevent`、`actionMaps`、`urlErrors`、`loading`。部分属性具有默认值，可根据需要定义或修改相应属性。如果需要修改OPOA全局默认定义，可参考`EasyOPOA.Configs`参数。
+一个OPOA实例对象包含了12个与Ajax请求和页面渲染相关的属性：`actions`、`show`、`hash`、`url`、`find`、`notfound`、`method`、`pushHash`、`prevent`、`actionMaps`、`urlErrors`、`loading`。部分属性具有默认值，可根据需要定义或修改相应属性。如果需要修改OPOA全局默认定义，可参考`EasyOPOA.Configs`参数。
 
 - ### opoa实例默认定义：
 
@@ -58,6 +58,11 @@ EasyOPOA框架的API主要分为两类：
 	// post方式会自动将url请求后的参数转换为post参数发送
 	// 默认值：post
 	"method" : "post",
+	// 是否改变浏览器地址栏的hash，用来定位动作
+	// 在支持HTML5的浏览器可以实现基于hash的前进后退
+	// 如果设为false，则加载内容时不会记录点击的动作，浏览器地址栏不会改变
+	// 默认值：true
+	"pushHash" : true,
 	// 阻止默认事件动作。如A标签点击时不触发href
 	"prevent" : true,
 	// 使用actionMaps修改指定hash对应的默认url为其他值
@@ -109,7 +114,7 @@ var opoa = {
 
 ## 2. EasyOPOA框架API
 
-EasyOPOA框架暴漏了12个系统级的全局API。
+EasyOPOA框架暴漏了14个系统级的全局API。
 
 
  - ### EasyOPOA.Configs 
@@ -138,11 +143,15 @@ EasyOPOA框架暴漏了12个系统级的全局API。
 
 - ### EasyOPOA.start
 ```JS 
- = function(opoaList, [actionMaps])
+ /**
+  *  核心方法，启动EasyOPOA。
+  * @param opoaList OPOA单个实例，或OPOA实体配置集合
+  * @param actionMaps hash动作映射对象列表，可选
+  */
+ = function(opoaList [, actionMaps])
 ```
- 核心方法，启动EasyOPOA。
 
- 函数可传入两个参数：opoaList（OPOA实体配置集合）、actionMaps（hash动作映射对象列表）。
+
 
  >  actionMaps支持三种形式的参数：标准映射对象、基于标准对象的数组参数列表、基于数组对象的列表。
 > 				
@@ -292,6 +301,57 @@ EasyOPOA框架暴漏了12个系统级的全局API。
 
  函数可传入两个参数：hash名称、提交到服务器的数据postData。
 
+
+- ### EasyOPOA.loadLinked
+```JS
+ /**
+	 * 
+	 * @param loadList  按顺序加载的动作数组列表，上一个动作完全加载完成后才加载下一个动作
+	 * 数据格式为：
+	 * [ [hash, postData], [hash, postData], [hash, postData], ... ]
+	 * postData可选
+	 */
+ = function(loadList)
+```
+ 
+ 手动按顺序加载指定的hash动作名称列表。可用来实现依次多级点击加载的效果。例如，加载一个hash请求内部启动的hash请求，需要依次加载。
+```JS
+ // 依次触发api、EasyImageUtilsAPI hash动作
+ EasyOPOA.loadLinked([ [ "api" ], [ "EasyImageUtilsAPI", "lang=en&version=1.1" ] ]);
+```
+
+
+
+- ### EasyOPOA.preFirstHash
+```JS
+/**
+ *
+ * @param hash 浏览器第一次加载的hash
+ * @returns {Boolean} 如果返回false，则OPOA引擎不解析第一次地址栏的hash
+ */
+ = function(hash)
+```
+ 
+ 在浏览器第一次请求和解析window.location.hash之前执行该函数，返回false可以阻止EasyOPOA默认的解析。通常可以在浏览器加载时，用来替代默认的Hash解析。
+ 例如：
+```JS
+	// 处理 API 菜单内的指定API动作加载
+	OPOA.preFirstHash = function(hash) {
+  		if (hash.indexOf("API") != "-1") {
+    			//加载对应API
+    			if (hash == "EasyImageUtilsAPI") {
+    			  	// 依次触发api、EasyImageUtilsAPI hash
+    			  	EasyOPOA.loadLinked([ [ "api" ], [ "EasyImageUtilsAPI" ] ]);
+    			} else if (hash == "EasyObjectUtilsAPI") {
+    				  EasyOPOA.loadLinked([ [ "api" ], [ "EasyObjectUtilsAPI" ] ]);
+    			} else if (hash == "EasyPropertiesUtilsAPI") {
+    			 	 EasyOPOA.loadLinked([ [ "api" ], [ "EasyPropertiesUtilsAPI" ] ]);
+    			}
+    			return false; //终止解析
+  		}
+  		return true; //正常解析
+	}
+```
 
 - ### EasyOPOA.noConflict
 ```JS

@@ -105,7 +105,7 @@ EasyOPOA framework of traditional disorderly OPOA program development were highl
 Examples OPOA (OPOA Instance) is one example of a part of the Hash operation. When describing the actions performed on the url in the process of loading and rendering methods and specific details of the request.
 
 
-An instance of an object that contains eleven OPOA with Ajax requests and page rendering related properties：`actions`,`show`,`hash`,`url`,`find`,`notfound`,`method`,`prevent`,`actionMaps`,`urlErrors`,`loading`。
+An instance of an object that contains 12 OPOA with Ajax requests and page rendering related properties：`actions`,`show`,`hash`,`url`,`find`,`notfound`,`method`,`pushHash`, `prevent`,`actionMaps`,`urlErrors`,`loading`。
 
 opoa instance of the default definitions：
 
@@ -141,6 +141,11 @@ var opoa = {
     //Post mode parameters will be automatically converted to the request url parameter to send post
 	// Default value : post
 	"method": "post",
+ // Whether to change the browser address bar of hash, used to locate the action
+	// In support HTML5 browsers can be achieved based hash of forward and back
+	// If set to false, the action will not record clicks when loading content, the browser address bar will not change
+	// default: true
+	"pushHash" : true,
 	// Prevent the default event action . If the label does not trigger when clicked href A
 	"prevent": true,
 	// Use actionMaps modify the default url specified hash corresponding to other values
@@ -294,7 +299,7 @@ about.jsp:
 
 Introducing the necessary JS files (EasyOPOA be dependent on jQuery DOM processing ) , use `EasyOPOA.start (opoaList)` initialize Hash action instance and started directly OPOA program .
 
-`opoaList`: a collection OPOA instance ( array collection , a collection of objects ) .
+`opoaList`: OPOA instance, or OPOA instance collection( array collection , a collection of objects ) .
 
 
 
@@ -1569,7 +1574,49 @@ EasyOPOA.load("readme.jsp");
 
 
 
-## 18, hash action mapping configuration with parameters
+## 18, perform hash chain operation
+load function can start an action specified, loadLinked function can load multiple consecutive actions, each action (hash) are completely finished after an action is triggered, and submit a request to support additional parameter (postData) in the implementation of the action.
+
+`EasyOPOA.loadLinked([ [hash, postData], [hash2, postData2], [hash3, postData3], ... ])`; 
+
+List manually in order to load the specified hash action name. In turn can be used to achieve the effect of multi-level hit loaded. For example, loading a hash request to start within the hash request, we turn to load.
+```JS
+ // In turn trigger api, EasyImageUtilsAPI hash action
+ EasyOPOA.loadLinked([ [ "api" ], [ "EasyImageUtilsAPI", "lang=en&version=1.1" ] ]);
+```
+
+
+## 19, Hash initial pre-load handler preFirstHash
+EasyOPOA framework can automatically handle hash action occurs in all browsers address, when the engine first treatment in the browser hash action, you may want to do some custom analytical hash operations before action, including termination default parsing .
+For example, when loading a hash action, but the action can only be executed after the implementation of an action, it can terminate the default resolution, manually operated resolution.
+
+`preFirstHash` function includes a first loaded into the` hash` motion parameters can be executed before the first load of hash, if it returns `false` may also terminate the default hash execution.
+
+
+```JS
+// API API menu operation process within the specified load
+OPOA.preFirstHash = function(hash) {
+ 		if (hash.indexOf("API") != "-1") {
+   			// Load the corresponding API
+   			if (hash == "EasyImageUtilsAPI") {
+   			  	// In turn trigger api, EasyImageUtilsAPI hash
+   			  	EasyOPOA.loadLinked([ [ "api" ], [ "EasyImageUtilsAPI" ] ]);
+   			} else if (hash == "EasyObjectUtilsAPI") {
+   				  EasyOPOA.loadLinked([ [ "api" ], [ "EasyObjectUtilsAPI" ] ]);
+   			} else if (hash == "EasyPropertiesUtilsAPI") {
+   			 	 EasyOPOA.loadLinked([ [ "api" ], [ "EasyPropertiesUtilsAPI" ] ]);
+   			}
+   			return false; // stop default action
+ 		}
+ 		return true; // execute default action
+}
+```
+
+
+
+
+
+## 20, hash action mapping configuration with parameters
 
 The traditional hash, hash value as the default request url. If the url hash and requests inconsistent, you need to use addActionMap hash function specified separately for each specific request url.
 
@@ -1702,7 +1749,7 @@ When using the hash action with data parameters , simply specify a placeholder i
   
    3. as the `hash` value `url` value
 
-## 19,action orientation and memory function ( action state recovery )
+## 21,action orientation and memory function ( action state recovery )
 
 When a user accesses OPOA program directly home page , such as when http://127.0.0.1:8080/opoa/home.jsp, generally show the same load each time the default home page content.
 
@@ -1722,7 +1769,7 @@ EasyOPOA.cookieLast=false;
 ```
 
 
-## 20, EasyOPOA.noConflict non-conflicting object return function
+## 22, EasyOPOA.noConflict non-conflicting object return function
 
 Use `EasyOPOA` and `OPOA` global variables can be referenced EasyOPOA frame object .
 
@@ -1740,7 +1787,7 @@ Run this function will control variable `OPOA` and `EasyOPOA` the transfer to th
 var $OPOA=EasyOPOA.noConflict(true);
 ```
 
-## 21, prevent arguments
+## 23, prevent arguments
 
 prevent parameters generally do not modify the parameter is true, the action is triggered when the DOM will cancel the default action .
 For example: cancel the default jump clicking on hyperlinks href tag .
@@ -1763,7 +1810,7 @@ var opoa={
 
 
 
-## 22、Modular programming support - AMD specification
+## 24、Modular programming support - AMD specification
 
 EasyOPOA support for modular programming, and support for AMD (Asynchronous Module Definition, asynchronous definition module) specification.
 
@@ -1819,7 +1866,7 @@ require(['easy.opoa','jquery','jqueryCookie'],function(EasyOPOA,$){
 
 
 
-## 23、EasyOPOA and BackboneJS comparison when the OPOA system building
+## 25、EasyOPOA and BackboneJS comparison when the OPOA system building
 
 BackBoneJS be OPOA programming is also a favorable technology. Use EasyOPOA and BackBoneJS can complete OPOA design process.
 

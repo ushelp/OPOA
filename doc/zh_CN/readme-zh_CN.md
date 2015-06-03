@@ -108,7 +108,7 @@ Hash动作实例（Hash Action Instance）是EasyOPOA框架的的核心对象，
 OPOA实例（OPOA Instance）是Hash动作实例的组成部分之一。描述了动作执行时，对url请求加载和渲染过程中的方式和具体细节。
 
 
-一个OPOA实例对象包含十一个与Ajax请求和页面渲染相关的属性：`actions`、`show`、`hash`、`url`、`find`、`notfound`、`method`、`prevent`、`actionMaps`、`urlErrors`、`loading`。
+一个OPOA实例对象包含12个与Ajax请求和页面渲染相关的属性：`actions`、`show`、`hash`、`url`、`find`、`notfound`、`method`、`pushHash`、`prevent`、`actionMaps`、`urlErrors`、`loading`。
 
 opoa实例默认定义：
 
@@ -144,6 +144,11 @@ var opoa = {
 	// post方式会自动将url请求后的参数转换为post参数发送
 	// 默认值：post
 	"method" : "post",
+	// 是否改变浏览器地址栏的hash，用来定位动作
+	// 在支持HTML5的浏览器可以实现基于hash的前进后退
+	// 如果设为false，则加载内容时不会记录点击的动作，浏览器地址栏不会改变
+	// 默认值：true
+	"pushHash" : true,
 	// 阻止默认事件动作。如A标签点击时不触发href
 	"prevent" : true,
 	// 使用actionMaps修改指定hash对应的默认url为其他值
@@ -296,7 +301,7 @@ about.jsp：
 
 引入所需JS文件（EasyOPOA依赖jQuery进行DOM处理），使用`EasyOPOA.start(opoaList)`可初始化Hash动作实例，并直接启动OPOA程序。
 
-`opoaList`：OPOA实例的集合（数组集合，对象集合）。
+`opoaList`：OPOA单个实例，或OPOA实例的集合（数组集合，对象集合）。
 
 
 
@@ -1579,8 +1584,44 @@ EasyOPOA.load("readme.jsp");
 ```
 
 
+## 18、 执行hash动作链
+load函数可以出发指定的一个动作，loadLinked函数可以按顺序连续加载多个动作，每个动作(hash)都在上一个动作完全完成后触发，并且支持在执行动作时附加提交请求参数(postData)。
 
-## 18、带参数的hash动作映射配置
+`EasyOPOA.loadLinked([ [hash, postData], [hash2, postData2], [hash3, postData3], ... ])`; 
+
+手动按顺序加载指定的hash动作名称列表。可用来实现依次多级点击加载的效果。例如，加载一个hash请求内部启动的hash请求，需要依次加载。
+```JS
+ // 依次触发api、EasyImageUtilsAPI hash动作
+ EasyOPOA.loadLinked([ [ "api" ], [ "EasyImageUtilsAPI", "lang=en&version=1.1" ] ]);
+```
+
+
+## 19、 初次Hash加载前置处理函数preFirstHash
+EasyOPOA框架可以自动处理所有的浏览器地址中发生的hash动作，当引擎第一次处理浏览器中的hash动作时，可能会希望在解析hash动作前执行一些自定义的操作，甚至终止默认的解析。
+例如，当加载一个hash动作，但该动作必须在某个动作执行之后才能执行时，可以终止默认的解析，手动进行动作解析。
+`preFirstHash`函数包含一个第一次加载到的`hash`动作参数，能在第一次加载hash前执行，如果返回`false`还可以终止默认hash执行。
+
+```JS
+// 处理 API 菜单内的指定API动作加载
+OPOA.preFirstHash = function(hash) {
+ 		if (hash.indexOf("API") != "-1") {
+   			//加载对应API
+   			if (hash == "EasyImageUtilsAPI") {
+   			  	// 依次触发api、EasyImageUtilsAPI hash
+   			  	EasyOPOA.loadLinked([ [ "api" ], [ "EasyImageUtilsAPI" ] ]);
+   			} else if (hash == "EasyObjectUtilsAPI") {
+   				  EasyOPOA.loadLinked([ [ "api" ], [ "EasyObjectUtilsAPI" ] ]);
+   			} else if (hash == "EasyPropertiesUtilsAPI") {
+   			 	 EasyOPOA.loadLinked([ [ "api" ], [ "EasyPropertiesUtilsAPI" ] ]);
+   			}
+   			return false; //终止解析
+ 		}
+ 		return true; //正常解析
+}
+```
+
+
+## 20、带参数的hash动作映射配置
 
 传统的hash，默认hash值作为请求的url。如果hash和请求的url不一致，则需要使用addActionMap函数为每个hash单独指定具体的请求url。
 
@@ -1717,7 +1758,7 @@ EasyOPOA.addActionMap("about/*info",  "about.jsp?info={info}" ,opoaList.menu);
 
 
 
-## 19、动作定位的记忆功能（动作状态恢复）
+## 21、动作定位的记忆功能（动作状态恢复）
 
 当用户直接访问OPOA程序的home页面时，如 http://127.0.0.1:8080/opoa/home.jsp 时，一般每次都是加载显示相同的默认首页内容。
 
@@ -1737,7 +1778,7 @@ EasyOPOA.cookieLast=false;
 ```
 
 
-## 20、EasyOPOA.noConflict非冲突对象返回函数
+## 22、EasyOPOA.noConflict非冲突对象返回函数
 
 使用`EasyOPOA`和`OPOA`全局变量均可引用EasyOPOA框架对象。
 
@@ -1755,7 +1796,7 @@ var $OPOA=EasyOPOA.noConflict();
 var $OPOA=EasyOPOA.noConflict(true);
 ```
 
-## 21、prevent参数
+## 23、prevent参数
 
 prevent参数一般请勿修改，该参数为true，在动作触发时会取消DOM默认的动作。
 例如：在点击超链标签时取消默认对href的跳转。
@@ -1777,7 +1818,7 @@ var opoa={
 
 
 
-## 22、模块化编程支持——AMD规范
+## 24、模块化编程支持——AMD规范
 
 EasyOPOA支持模块化编程， 并支持AMD（Asynchronous Module Definition，异步模块定义）规范。
 
@@ -1831,7 +1872,7 @@ require(['easy.opoa','jquery','jqueryCookie'],function(EasyOPOA,$){
 
 
 
-## 23、EasyOPOA和BackboneJS在OPOA系统构建时的比较
+## 25、EasyOPOA和BackboneJS在OPOA系统构建时的比较
 
 BackBoneJS也是一个进行OPOA程序设计的有利技术。使用EasyOPOA和BackBoneJS都可以完成OPOA程序的设计。
 
