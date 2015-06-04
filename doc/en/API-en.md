@@ -114,7 +114,7 @@ var opoa = {
 
 ## 2. EasyOPOA Framework API
 
-EasyOPOA framework open 12 system-level global API.
+EasyOPOA framework open 14 system-level global API.
 
 
  - ### EasyOPOA.Configs 
