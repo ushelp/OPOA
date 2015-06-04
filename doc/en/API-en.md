@@ -54,7 +54,7 @@ A OPOA instance object contains 12 pages with Ajax requests and rendering relate
 	// Function execution of the function
 	// default:  empty
 	"notfound": "empty",
-	Specific methods // on the url Ajax request : post / get
+	// Specific method on the url Ajax request : post / get
 	// Post mode parameters will be automatically converted to the request url parameter to send post
 	// Default value : post
 	"method": "post",

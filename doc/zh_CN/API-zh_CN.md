@@ -25,7 +25,6 @@ EasyOPOA框架的API主要分为两类：
 
 - ### opoa实例默认定义：
 
-<input type="button" value="test" onclick="alert(window.document.body.innerHTML)"/>
  ```JS
  var opoa = {  
 	// jQuery的DOM选择器，让DOM具有动作触发能力，自动创建Hash动作实例

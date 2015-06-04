@@ -137,11 +137,11 @@ var opoa = {
 	//  Function execution of the function
 	//  Default: empty
 	"notfound" : "empty",
-    //Specific methods / / on the url Ajax request : post / get		
-    //Post mode parameters will be automatically converted to the request url parameter to send post
+	// Specific methods on the url Ajax request : post / get		
+	// Post mode parameters will be automatically converted to the request url parameter to send post
 	// Default value : post
 	"method": "post",
- // Whether to change the browser address bar of hash, used to locate the action
+	// Whether to change the browser address bar of hash, used to locate the action
 	// In support HTML5 browsers can be achieved based hash of forward and back
 	// If set to false, the action will not record clicks when loading content, the browser address bar will not change
 	// default: true
